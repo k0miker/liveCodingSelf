@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hintergrund-Bilder</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Hintergrund-Bilder</h1>
+  <p>Neben dem <code>img</code>-Element gibt es noch einen zweiten Weg wie wir Bilder zu unserer Webseite hinzufügen können und das ist als Hintergrund-Bild.</p>
+  <p>Dazu gibt es die <code>background-image</code> Eigenschaft in CSS (bzw dessen Abkürzung <code>background</code>).</p>
+  <p>Mit <code>background-image</code> bitte nur dekorative Bilder zur Seite hinzufügen, denn ein Screen-Reader kann ein <code>background-image</code> nicht auslesen. Für inhaltliche Bilder bitte immer das <code>img</code>-Element benutzen.</p>
+  <h3>Einstellungen:</h3>
+  <ul>
+    <li><code>background-image</code>: Verlinkt zum Bild</li>
+    <li><code>background-size</code>: Gibt an wie das Bild den Hintergrund ausfüllen soll (Typische Werte sind <code>cover</code>, <code>contain</code> oder Größenangaben in Prozent oder Pixel)</li>
+    <li><code>background-repeat</code>: Gibt an ob das Bild wiederhollt werden soll, wenn freier Platz ist (Werte: <code>repeat</code> oder <code>no-repeat</code>)</li>
+    <li><code>background-position</code>: Definiert die Position des Bildes im Hintergrund</li>
+  </ul>
+  <h2>Background-Image / Cover / No-Repeat</h2>
+  <div class="box bg-image-cover"></div>
+  <h2>Background-Image / Contain / No-Repeat</h2>
+  <div class="box bg-image-contain"></div>
+  <h2>Background-Image / Contain / Repeat</h2>
+  <div class="box bg-image-repeat"></div>
+  <h2>Background-Image / Contain / Repeat</h2>
+  <p>Mit <code>repeat</code> können wir Muster aus kleinen Bild-Dateien erstellen, indem diese wiederholt werden.</p>
+  <div class="box bg-image-pattern"></div>
+  <h2>Parallax-Effekt</h2>
+  <p><code>background-attachment: fixed</code></p>
+  <div class="box bg-image-parallax">Hier steht Text über dem Bild</div>
+  <h2>Position von Hintergrundbildern anpassen</h2>
+  <p>Mit <code>background-position</code> können wir die Position eines Hintergrundbildes verschieben.</p>
+  <p><code>background-position: top right</code></p>
+  <div class="box bg-image-position"></div>
+  <p><code>background-position: 50% 100%</code></p>
+  <div class="box bg-image-position-2"></div>
+  <p><code>background-position: center</code></p>
+  <div class="box bg-image-position-3"></div>
+  <h2>Background-Shortcut</h2>
+  <div class="box bg-image-shortcut"></div>
+  <h2>Farbverläufe</h2>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient">Dokumentation</a></p>
+  <h3>Linearer Farbverlauf</h3>
+  <p><code>linear-gradient(90deg, yellow, blue, red)</code></p>
+  <div class="box bg-linear-gradient"></div>
+  <p><code>background-image: linear-gradient(90deg, 
+    yellow 0%, 
+    blue 25%, 
+    purple 50%, 
+    pink 100%);</code></p>
+  <div class="box bg-linear-gradient-2"></div>
+  <h3>Radialer Farbverlauf</h3>
+  <div class="box bg-radial-gradient"></div>
+  <h2>Farbverläufe mit Fotos kombinieren</h2>
+  <p>Wir können im <code>background-image</code> mehrere Farbverläufe und ein Bild definieren. Diese werden dann übereinander gelegt.</p>
+  <div class="box bg-gradient-image"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, dolores omnis ut beatae consectetur repellat cumque quidem laborum nemo sit amet rem incidunt laboriosam numquam, sunt ipsam soluta? Dolore ipsum omnis ducimus, ea voluptate nobis vel inventore eos reprehenderit incidunt quam libero fugiat ad a quas nostrum eum totam, saepe id odio magnam deserunt distinctio officiis. Ullam cupiditate iure quibusdam aspernatur consectetur, a architecto numquam voluptates est eius minus facilis, obcaecati dolorum mollitia, veritatis officia? Numquam est omnis natus. Enim quidem blanditiis, maxime dignissimos nesciunt ratione deleniti! Eaque sint quis unde deserunt dolor, laudantium odio cupiditate, mollitia soluta, incidunt eos?</p>
+</body>
+</html>

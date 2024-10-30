@@ -1,0 +1,125 @@
+:root {
+  font-family: sans-serif;
+}
+
+body {
+  /* Rand am Browser-Fenster entfernen */
+  margin: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  background-color: yellow;
+
+  padding: 0 2rem;
+  display: inline-block;
+}
+
+
+/* Main */
+main {
+  background-color: grey;
+  
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+section.img-caption {
+  text-align: center;
+}
+
+.img-caption img {
+  /* height: 24rem;
+  width: auto; */
+
+  /* width: 30%;
+  height: auto; */
+
+  /* Relative Breite setzen + die maximale Breite limitieren */
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+}
+
+.img-caption img {
+  /* Option 1: Box-Shadow für die Rote Linie */
+  /* box-shadow: -8px 0px 0px red; */
+
+  /* Option 2: Border-left für die Rote Linie */
+  border-left: 8px solid red;
+}
+
+.img-caption h3 {
+  font-size: 1rem;
+}
+
+.timeline ul {
+  list-style-type: none;
+  padding: 0;
+
+  /* Wie setzen wir die Schriftgröße? */
+  /* Schriftgröße 14px */
+  /* (Mit Pixel setzen wir die Schriftgröße fix & diese reagiert nicht auf ein Ändern der Basis-Schriftgröße durch den Nutzer */
+  /* font-size: 14px; */
+
+  /* 14px => 0.875rem || 1rem => 16px */
+  /* (Mit rem setzen wir die Schriftgröße relativ zur Basis-Schriftgröße & damit reagiert diese dann auch auf ein ändern der Basis-Schriftgröße durch den Nutzer */
+  font-size: 0.875rem;
+}
+
+.timeline ul li {
+  margin-top: 0.5rem;
+}
+
+section.timeline {
+  /* Breite der Sektion beschränken */
+  /* Option 1: Feste Breite setzen */
+  /* (Probleme bei kleinen Screens) */ 
+  /* width: 600px; */
+
+  /* Option 2: Relative Breite setzen & Maximale Breite beschränken */
+  /* (Responsiveres Layout) */
+  width: 80%;
+  max-width: 600px;
+
+  /* Horizontale Zentrierung mit margin auto */
+  margin: 0 auto;
+}
+
+blockquote.quote {
+  background-color: rgb(163, 167, 170);
+  padding: 1.5rem 3rem;
+  border-radius: 4px;
+}
+
+blockquote.quote p {
+  margin-top: 0;
+}
+
+div.quote {
+  background-color: rgb(163, 167, 170);
+  padding: 1.5rem 3rem;
+  margin: 1rem 2.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: yellow;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+}
+
+footer p {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}

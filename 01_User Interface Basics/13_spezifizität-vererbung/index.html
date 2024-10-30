@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Kaskade, Spezifizität & Vererbung</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+    }
+
+    code {
+      background-color: rgb(218, 224, 186);
+    }
+
+    /* CSS-Kaskade */
+    h1 {
+      color: orange;
+    }
+
+    h1 {
+      color: orangered;
+    }
+
+    /* CSS-Spezifizität */
+    
+    /* Zwei Elemente sind spezifischer als ein Element */
+    body p {
+      color: darkred;
+    }
+    
+    p {
+      color: darkblue;
+    }
+
+    /* Eine Klasse ist spezifischer als jede Anzahl an Elementen */
+    .paragraph {
+      color: darkgoldenrod;
+    }
+
+    /* Mehrere Klassen sind spezifischer als eine Klasse */
+    .paragraph.small-text {
+      color: darkcyan;
+    }
+
+    /* Zwei Klassen + Element sind spezifischer als nur zwei Klassen */
+    p.paragraph.small-text {
+      color: darkmagenta;
+    }
+
+    /* Eine ID ist spezifischer als jegliche Anzahl an Klassen & Elementen */
+    #first-paragraph {
+      color: darkorange;
+    }
+
+    /* !important */
+    /* !important können wir zu allen CSS-Eigenschaften hinzufügen & es überschreibt IMMER (!) alle anderen Eigenschaften, die wir definiert haben */
+    /* p {
+      color: red !important;
+    } */
+
+    /* Inline CSS */
+    /* Inline CSS ist spezifischer als eine ID */
+    #headline-cascade {
+      color: red;
+    }
+
+
+    /* CSS-Vererbung */
+    #vererbung {
+      /* Nicht vererbte Eigenschaft: */
+      border: 4px solid blue;
+      margin-top: 4rem;
+      padding-top: 1rem;
+      padding-bottom: 4rem;
+      width: 50%;
+
+      /* Vererbte Eigenschaften: */
+      font-family: sans-serif;
+      font-weight: 600;
+      color: darkblue;
+      text-decoration: line-through;
+    }
+
+    /* CSS-Vererbung überschreiben */
+    #vererbung-2 {
+      /* Nicht vererbte Eigenschaft: */
+      border: 4px solid orange;
+    }
+
+    .inherit-border {
+      /* Die Border-Eigenschaft vom Eltern-Element erben/übernehmen */
+      border: inherit;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS-Kaskade, Spezifizität & Vererbung</h1>
+  <h2 id="headline-cascade" style="color: purple;">CSS-Kaskade</h2>
+  <p>Die CSS-Kaskade ist die Reihenfolge, in der die CSS-Regeln definiert sind. Später definierte Regeln bei gleicher Spezifizität überschreiben vorher definierte Regeln.</p>
+  <h2>CSS-Spezifizät</h2>
+  <p class="paragraph small-text" id="first-paragraph">
+    Je spezifischer ein CSS-Selektor, desto wichtiger sind die in ihm definierten Regeln.
+  </p>
+  <p class="paragraph small-text">
+    Regeln, die spezifischer definiert sind, überschreiben Regeln, die weniger
+    spezifisch definiert sind.
+  </p>
+  <p>
+    Die exakte Spezifizität findet ihr hier heraus:
+    <a
+      href="https://polypane.app/css-specificity-calculator/#selector=.headline"
+      >Spezifizitäts-Rechner</a
+    >
+  </p>
+  <h4>Alle Regeln nach Spezifizität sortiert:</h4>
+  <ol>
+    <li><code>!important</code>: 
+      <p>
+        Ein mit `!important` markierter Style überschreibt alle anderen Stile
+        immer
+      </p>
+      <p>Bitte NIEMALS benutzen</p>
+      <p>
+        Es gibt immer eine andere Lösung & es macht das CSS unübersichtlich.
+      </p>
+    </li>
+    <li>
+      <code>Inline CSS</code>: Inline CSS überschreibt alle anderen Selektoren. Bitte nicht in der Praxis benutzen (höchstens zum Debugging).
+    </li>
+    <li>
+      <code>#id</code>: Eine ID ist spezifischer als jegliche Anzahl an Klassen oder Elementen.
+    </li>
+    <li>
+      <code>.class1.class2</code>: Zwei Klassen zu definieren als spezifischer
+      als eine Klasse.
+    </li>
+    <li>
+      <code>.class</code>: Eine Klasse zu definieren ist spezifischer als Elemente zu definieren.
+    </li>
+    <li>
+      <code>html body h1</code>: Drei Elemente. Noch spezifischer als zwei.
+    </li>
+    <li><code>body h1</code>: Zwei Elemente. Spezifischer als nur `h1`</li>
+    <li><code>h1</code>: Ein Element. Am wenigsten spezifisch</li>
+  </ol>
+  <h2>CSS-Vererbung</h2>
+  <p>Einige CSS-Eigenschaften werden automatisch vererbt und andere nicht.</p>
+  <p>
+    <a
+      href="https://stackoverflow.com/questions/5612302/which-css-properties-are-inherited"
+      >Übersicht über alle vererbten Eigenschaften</a
+    >
+  </p>
+  <h4>Vererbung testen</h4>
+  <p>Vererbte Eigenschaften werden direkt an alle Kind-Elemente weiter gegeben. Nicht vererbte Eigenschaften werden nur fürs Element selbst gesetzt.</p>
+  <ul id="vererbung">
+    <li>Lorem</li>
+    <li>Lorem</li>
+    <li>Lorem</li>
+    <li>
+      <ul>
+        <li>Lorem</li>
+        <li>Lorem</li>
+        <li>Lorem</li>
+        <li>Lorem</li>
+        <li>
+          <ul>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Lorem</li>
+  </ul>
+  <h4>Vererbungsverhalten überschreiben</h4>
+  <p>
+    Wir können dieses Vererbungsverhalten für unserer Elemente auch
+    überschreiben:
+  </p>
+  <ul>
+    <li><code>inherit</code>: Eigenschaft vom Eltern-Element erben</li>
+    <li>
+      <code>unset</code>: Vererbungsverhalten zurücksetzen (vererbte
+      Eigenschaften werden wieder vererbt, nicht vererbte Eigenschafter werden
+      nicht mehr vererbt.
+    </li>
+    <li>
+      <code>initial</code>: Styling auf den ursprünglichen Wert zurücksetzen
+      (bevor der Browser überhaupt gestylt hat).
+    </li>
+  </ul>
+  <ul id="vererbung-2">
+    <li>Lorem</li>
+    <li class="inherit-border">Ich erbe meinen Border-Style.</li>
+    <li>Lorem</li>
+    <li>
+      <ul>
+        <li>Lorem</li>
+        <li>Lorem</li>
+        <li>Lorem</li>
+        <li>Lorem</li>
+        <li>
+          <ul>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Lorem</li>
+  </ul>
+</body>
+</html>

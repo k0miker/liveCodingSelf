@@ -1,0 +1,46 @@
+---
+import '../css/variables.css'
+import '../css/fonts.css'
+import '../css/style.css'
+
+import Navigation from '../components/Navigation.astro'
+
+import snowboardImg from '../assets/images/snowboard.jpeg'
+---
+
+
+<!-- Wie unsere index.html-Datei -->
+<!-- Hier kommt das HTML rein (ohne das CSS-Stylesheet) -->
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<Navigation/>
+		<h1 class="headline-xl">Startseite</h1>
+		<a href="/kontakt">Link zur Kontaktseite</a>
+		<img src={snowboardImg.src} alt="">
+	</body>
+</html>
+
+<style>
+	/* Hier kommt das CSS für unsere Seite rein: */
+	h1 {
+		background-color: orange;
+	}
+
+	a {
+		color: var(--blue);
+		text-decoration: underline;
+	}
+
+	img {
+		width: 50%;
+		object-fit: cover;
+	}
+</style>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Forms</title>
+</head>
+
+<body>
+  <!-- Emmet für Variante 2 -->
+  <!-- 
+    header>h1^main>h2+p+form>(label>input)*7+label+textarea+button 
+  -->
+
+
+  <header>
+    <h1>A very basic form</h1>
+  </header>
+  <main>
+    <h2>Personal Data</h2>
+    <p>Please fill in the form below</p>
+
+    <!-- Variante 1 => Label Elemente über Input Elementen-->
+    <!-- <form action="https://formspree.io/f/mqkngeka" method="POST">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" />
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" />
+
+      <label for="street">Street:</label>
+      <input type="text" id="street" name="street" />
+
+      <label for="zipcode">Zipcode:</label>
+      <input type="text" id="zipcode" name="zipcode" />
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="comments">Comments:</label>
+      <textarea name="comments" id="comments" rows="4" placeholder="Tell us more..."></textarea>
+
+      <button class="btn" type="submit">Submit</button>
+    </form> -->
+
+
+    <!-- Variante 2: input Elemente in Label Elementen -->
+    <!-- Auf Zuweisung von id & for kann verzichtet werden -->
+    <!-- <form action="https://formspree.io/f/mqkngeka" method="POST">
+      <label>First Name:
+        <input type="text" name="firstname" />
+      </label>
+      <label for="lastname">Last Name:
+        <input type="text" id="lastname" name="lastname" />
+      </label>
+      <label for="street">Street:
+        <input type="text" id="street" name="street" />
+      </label>
+      <label for="zipcode">Zipcode:
+        <input type="text" id="zipcode" name="zipcode" />
+      </label>
+      <label for="city">City:
+        <input type="text" id="city" name="city" />
+      </label>
+      <label for="phone">Phone:
+        <input type="tel" id="phone" name="phone" />
+      </label>
+      <label for="email">Email:
+        <input type="email" id="email" name="email" />
+      </label>
+      <label for="comments">Comments:</label>
+      <textarea name="comments" id="comments" rows="4" placeholder="Tell us more...">
+      </textarea>
+      <button class="btn">Submit</button>
+    </form> -->
+
+
+    <!-- Variante 3 => Mit Fieldset und Legend Elementen semantisch passend -->
+
+    <form action="https://formspree.io/f/mqkngeka" method="POST">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" />
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+      </fieldset>
+      <fieldset>
+        <legend>Address</legend>
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street" />
+
+        <label for="zipcode">Zipcode:</label>
+        <input type="text" id="zipcode" name="zipcode" />
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" />
+      </fieldset>
+      <fieldset>
+        <legend>Comments</legend>
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments" rows="4" placeholder="Tell us more..."></textarea>
+      </fieldset>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+1. Input-Felder außerhalb der Label-Tags
+Vorteile:
+
+Flexibilität im Layout: Bietet mehr Flexibilität bei der Positionierung und Gestaltung der Formularelemente.
+Klarheit und Trennung: Der Code kann klarer und übersichtlicher sein, insbesondere in größeren Formularen.
+
+Nachteile:
+
+Zusätzlicher Code: Erfordert id-Attribute für jedes Eingabefeld und das for-Attribut im Label, was zu mehr Code führen
+kann.
+Klickbare Fläche: Nur das Label selbst ist klickbar, nicht der Raum um das Eingabefeld herum. 
+-->
+
+<!-- 
+2. Input-Felder innerhalb der Label-Tags
+Vorteile:
+
+Einfachheit: Der Code ist oft kürzer und einfacher zu lesen, da keine zusätzlichen id-Attribute benötigt werden.
+Klickbare Fläche: Die gesamte Fläche des Labels ist klickbar und setzt den Fokus auf das Eingabefeld, was die
+Benutzerfreundlichkeit verbessert.
+
+Nachteile:
+
+Flexibilität: Es kann schwieriger sein, das Layout zu gestalten, insbesondere wenn komplexere Formularelemente verwendet
+werden.
+Stilierung: Manchmal schwieriger zu stylen, besonders bei umfangreichen CSS-Frameworks.
+-->
+
+
+
+<!-- 
+Empfehlung
+
+Die Wahl zwischen diesen beiden Methoden hängt stark vom spezifischen Anwendungsfall und den Anforderungen an das Design
+und die Benutzerfreundlichkeit ab. Hier sind einige Empfehlungen:
+
+Kleinere, einfache Formulare: Für kleinere und einfachere Formulare kann die Platzierung der Eingabefelder innerhalb der
+Label-Tags von Vorteil sein, da sie einfacher zu schreiben und zu verstehen sind.
+Komplexere Formulare: Für komplexere Layouts und bei Verwendung von CSS-Frameworks ist es oft besser, die Eingabefelder
+außerhalb der Label-Tags zu platzieren und das for-Attribut zu verwenden, um eine bessere Kontrolle über das Layout zu
+haben. 
+-->

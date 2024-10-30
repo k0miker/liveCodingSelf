@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Eingabeformulare</h1>
+    <h3>Erste Sammlung an Elementen</h3>
+    <input type="text" placeholder="Dein Vorname" />
+    <input type="password" name="passwort" />
+    <input type="email" placeholder="Deine Email" />
+    <input type="tel" />
+    <input type="checkbox" />
+    <input type="radio" />
+    <input type="color" />
+    <input type="date" />
+    <input type="range" />
+    <input type="file" />
+    <input type="number" />
+    <button>Ein Knopf</button>
+    <!-- Dropdown -->
+    <select name="" id="">
+      <option value="">Erste Option</option>
+      <option value="">Zweite Option</option>
+    </select>
+
+    <h3>Ein ganz simples Formular mit Formspree</h3>
+    <!-- Innerhalb des <form>-Elements befinden sich alle Eingabefelder -->
+    <form action="https://formspree.io/f/xdoqqekn" method="POST">
+      <!-- name => Titel des Eingabefeldes, wenn die Daten ausgelesen werden -->
+
+      <!-- Damit ein Label mit dem Eingabefeld verbunden ist, muss das for-Attribut des labels dem id-Attribut des Eingabefeldes entsprechen -->
+      <div>
+        <label for="vorname-id">Vorname</label>
+        <input type="text" name="vorname" placeholder="John" id="vorname-id" />
+      </div>
+
+      <div>
+        <label for="nachname-id">Nachname</label>
+        <input type="text" name="nachname" placeholder="Doe" id="nachname-id" />
+      </div>
+
+      <button type="reset">Daten zurücksetzen</button>
+      <!-- Dieser Button sendet die Daten des Formulars ab -->
+      <button type="submit">Daten senden</button>
+    </form>
+
+    <h3>Ein Formular bestehend aus mehreren Bereichen (Fieldsets):</h3>
+    <!-- Ein <fieldset> ist eine Gruppe an Eingabefeldern -->
+    <!-- <legend> beinhaltet den Titel für das <fieldset> -->
+    <form action="https://formspree.io/f/xdoqqekn" method="POST">
+      <fieldset>
+        <legend>Deine Details</legend>
+        <div>
+          <label for="vorname-id">Vorname</label>
+          <input
+            type="text"
+            name="vorname"
+            placeholder="John"
+            id="vorname-id"
+          />
+        </div>
+        <div>
+          <label for="nachname-id">Nachname</label>
+          <input
+            type="text"
+            name="nachname"
+            placeholder="Doe"
+            id="nachname-id"
+            value="Mueller"
+          />
+        </div>
+        <div>
+          <label for="geburtstag-id">Geburtstag</label>
+          <input type="date" name="geburtstag" id="geburtstag-id" />
+        </div>
+        <div>
+          <label for="lebenslauf-id">Lebenslauf</label>
+          <!-- textarea ist eine Textbox über mehrere Zeilen -->
+          <!-- cols => Buchstabenanzahl pro Zeile; rows => Zeilen -->
+          <textarea
+            name="lebenslauf"
+            id="lebenslauf-id"
+            cols="40"
+            rows="5"
+          ></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Radio Buttons -->
+      <!-- Radio Button erlauben nur die Auswahl eines Elementes -->
+      <!-- name =>  Titel des Eingabefeldes, wenn die Daten ausgelesen werden (muss für alle Radio Buttons gleich sein) -->
+      <!-- value => Wert eines Radio Buttons -->
+      <fieldset>
+        <legend>Meine Lieblings-Programmiersprache</legend>
+        <input
+          type="radio"
+          name="programmiersprache"
+          value="css"
+          id="radio-btn-css"
+        />
+        <label for="radio-btn-css">CSS</label>
+
+        <input
+          type="radio"
+          name="programmiersprache"
+          value="javascript"
+          id="js-btn-css"
+          checked
+        />
+        <label for="js-btn-css">Javascript</label>
+
+        <input
+          type="radio"
+          name="programmiersprache"
+          value="html"
+          id="htmll-btn-css"
+        />
+        <label for="html-btn-css">HTML</label>
+      </fieldset>
+
+      <!-- Checkboxen -->
+      <!-- Checkboxen erlauben die Auswahl mehrerer Optionen -->
+      <!-- checked => Element auswählen -->
+      <fieldset>
+        <legend>Meine Skills</legend>
+        <div>
+          <input
+            type="checkbox"
+            name="skills"
+            value="entwicklung"
+            id="checkbox-entwicklung"
+            checked
+          />
+          <label for="checkbox-entwicklung">Entwicklung</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="skills"
+            value="design"
+            id="checkbox-design"
+          />
+          <label for="checkbox-design">Design</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="management-checkbox"
+            name="skills"
+            value="management"
+          />
+          <label for="management-checkbox">Management</label>
+        </div>
+      </fieldset>
+
+      <!-- Dropdown Menü -->
+      <fieldset>
+        <legend>Mehr Informationen</legend>
+        <div>
+          <label for="dropdown-os">Betriebssystem</label>
+          <select name="betriebssystem" id="dropwdown-os">
+            <option value="vbuntu">Ubuntu</option>
+            <option value="mac">Mac</option>
+            <option value="windows">Windows</option>
+          </select>
+        </div>
+
+        <!-- Gruppierung von Dropdown-Werten mit <optgroup> -->
+        <div>
+          <label for="dropdown-country">Mein Aufenthaltsland</label>
+          <select name="country" id="country">
+            <optgroup label="Europa">
+              <option value="uk">UK</option>
+              <option value="deutschland">Deutschland</option>
+              <option value="frankreich">Frankreich</option>
+            </optgroup>
+            <optgroup label="Südamerika">
+              <option value="ecuador">Ecuador</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="brasilien">Brasilien</option>
+            </optgroup>
+          </select>
+        </div>
+      </fieldset>
+      <button type="submit">Daten senden</button>
+    </form>
+  </body>
+</html>

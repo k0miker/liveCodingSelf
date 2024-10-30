@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margin & Padding</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+      background-color: rgb(5, 5, 41);
+      color: aliceblue;
+    }
+
+    .box {
+      background-color: rgb(194, 194, 61);
+      width: 100px;
+      height: 100px;
+      border: 4px solid rgb(201, 120, 15);
+    }
+
+    .box-big {
+      background-color: rgb(194, 194, 61);
+      width: 200px;
+      height: 120px;
+      border: 4px solid rgb(201, 120, 15);
+    }
+
+    .child-box {
+      background-color: white;
+      color: rgb(62, 62, 62);
+    }
+
+    .margin-box {
+      margin-left: 4rem;
+      margin-top: 6rem;
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+    }
+
+    .margin-box-short {
+      /* 32 px in alle Richtungen: */
+      /* margin: 32px; */
+
+      /* 32px nach oben & unten + 16px nach links & rechrts */
+      /* margin: 32px 16px; */
+
+      /* Margin aller Seiten einzeln definieren: */
+      margin: 8px 16px 64px 32px;
+    }
+
+    .margin-child-box {
+      margin-left: 16px;
+      margin-top: 32px;
+    }
+
+
+    /* Was passiert wenn mehrere Boxen nebeinander stehen? */
+    .inline-block-box {
+      width: 50px;
+      height: 50px;
+      background-color: orangered;
+      
+      /* Boxen nebeneinander darstellen: */
+      display: inline-block;
+
+      /* Abstände zwischen Boxen: */
+      margin: 16px;
+    }
+
+    .inline-block-box.margin-large {
+      margin-left: 42px;
+      background-color: orange;
+    }
+
+    .block-box {
+      width: 50px;
+      height: 50px;
+      background-color: orangered;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .block-box.margin-large {
+      margin-top: 42px;
+      background-color: orange;
+    }
+
+    /* Padding */
+    .padding-box {
+      background-color: rgb(194, 194, 61);
+      border: 4px solid rgb(201, 120, 15);
+
+      /* Padding zusammen setzen: */
+      padding: 1rem 2rem;
+
+      margin-bottom: 32px;
+    }
+
+    .padding-box-2 {
+      background-color: rgb(194, 194, 61);
+      border: 4px solid rgb(201, 120, 15);
+
+      /* Padding können wir auch einzeln setzen: */
+      padding-left: 16px;
+      padding-top: 32px;
+      padding-right: 50%;
+      padding-bottom: 20%;
+    }
+
+    .color-box {
+      background-color: orangered;
+    }
+  </style>
+</head>
+<body>
+  <h1>Margin & Padding</h1>
+  <h2>Margin</h2>
+  <p>Margin ist der Außenabstand eines Elementes zum nächstgelegenen Element oder zum Rand des Eltern-Elementes.</p>
+  <p>Die Margin ist ein Mindestabstand.<br><br> Wenn der Abstand kleiner ist als die definierte Margin, dann wird das Element weiter weg verschoben. Falls der Abstand sowieso größer als die definierte Margin ist, dann verändert sich das Layout nicht.</p>
+  <div class="box margin-box"></div>
+  <div class="box margin-box-short"></div>
+  <div class="box-big">
+    <div class="child-box margin-child-box">margin-left: 16px; margin-top: 32px;</div>
+  </div>
+  <h3>Was passiert mit sich überlappenden Margins?</h3>
+  <p><strong>Horizontale Margins</strong> werden einfach zusammengezählt. Das heißt der Abstand zwischen zwei Elementen ist die Summe beider Margins.</p>
+  <div class="inline-block-box"></div>
+  <div class="inline-block-box"></div>
+  <div class="inline-block-box margin-large"></div>
+  <div class="inline-block-box"></div>
+  <p><strong>Vertikale Margins</strong> werden nicht zusammengezählt, stattdessen wird einfach die größere der Beiden übernommen. Das heißt der vertikale Abstand zwischen zwei Elementen ist die Größere der beiden Margins.</p>
+  <div class="block-box"></div>
+  <div class="block-box"></div>
+  <div class="block-box margin-large"></div>
+  <div class="block-box"></div>
+  <h2>Padding</h2>
+  <p>Padding ist der Innenabstand eines Elementes, d.h. der Mindestabstand der Inhalte zum Rand des Containers.</p>
+  <p>Wenn ihr euch unsicher seid, ob ihr Margin oder Padding benutzen sollt, dann versucht es erst einmal mit Padding.</p>
+  <div class="padding-box">Dieser Text einen Mindestabstanz zum Rand mittels Padding.</div>
+  <div class="padding-box-2">Dieser Text einen Mindestabstanz zum Rand mittels Padding.</div>
+  <div class="color-box" style="padding-top: 16px; padding-left: 16px; margin-top: 16px;">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam officia ullam fugiat debitis quasi labore expedita, fugit doloribus consectetur incidunt. Natus suscipit voluptatem non ratione?</p>
+  </div>
+</body>
+</html>

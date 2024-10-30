@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        font-family: sans-serif;
+      }
+
+      /* Label als Interaktionsfläche für Switch nutzen */
+      .switch-label {
+        display: inline-block;
+        width: 60px;
+        height: 25px;
+        background-color: orange;
+        position: relative;
+      }
+
+      /* Checkbox vertstecken */
+      #toggle-switch {
+        display: none;
+      }
+
+      .switch-label span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: #ccc;
+
+        cursor: pointer;
+
+        transition: all 1s ease-in-out;
+      }
+
+      .switch-label span:before {
+        content: "";
+
+        position: absolute;
+        /* right: auto;
+        left: 4px;
+        bottom: 4px; */
+        transform: translate(5px, 4px);
+        
+        height: 18px;
+        width: 26px;
+        
+        background-color: white;
+
+        transition: all 1s ease-in-out;
+      }
+
+      #toggle-switch:checked + span:before {
+        content: "";
+
+        position: absolute;
+        /* left: auto;
+        right: 4px;
+        bottom: 4px; */
+        transform: translate(30px, 4px);
+        
+        height: 18px;
+        width: 26px;
+        
+        background-color: rgb(224, 252, 254);
+      }
+
+      #toggle-switch:checked + span {
+        background-color: cyan;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Toggle Switch</h1>
+    <label for="toggle-switch" class="switch-label">
+      <input type="checkbox" id="toggle-switch" />
+      <span></span>
+    </label>
+  </body>
+</html>

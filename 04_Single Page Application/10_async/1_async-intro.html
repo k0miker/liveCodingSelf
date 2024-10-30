@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Mit async wird dieses Script asynchron geladen und blockert nicht mehr das 
+    Ausführen vom weiteren Code -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.157.0/three.js"></script>
+
+    <script>
+        console.log("Vor fetch")
+        const fetchPromise = fetch("./witz.txt"); // fetch ist asynchron
+
+        // Erst wenn der fetchPromise fertig ist, wird then ausgeführt
+        // response.text(): gibt auch einen Promise zurück. Text() weil wir wissen
+        // das in der Datei reiner Text steht (und z.B. kein JSON)
+        const textPromise = fetchPromise.then( response =>  response.text() );
+
+        textPromise.then( text => { console.log("data:", text) });
+
+        console.log("Am Ende");
+
+        // * Verkettung * 
+        // Gleiches wie oben in einer anderen Schreibweise
+        console.log("Kette vorher")
+
+        fetch("./witz.txt")
+            .then( response =>  response.text() )
+            .then( text => { 
+                console.log("text:", text) 
+
+                // wir könnten (oder würden) hier mehr machen
+                // als nur console.log, Z.B.:
+                // document.body.innerText = text;
+            } );
+        console.log("Kette nachher");
+
+        // Ein weiteres Beispiel für das Verketten von Operationen
+        // (Verketten ist nämlich nichts fetch-exklusives, sondern
+        // eine JavaScript Sache die mit bestimmten Funktionen geht)
+
+        // Dieses Mal synchroner Code
+        const name = "rauli fitzgerald thunderkitten";
+        const x = name
+            .toUpperCase() // Alles großschreiben im String
+            .split(" ") // Array aus String, gesplitet beim Leerzeichen
+            .map( x => x[0] )
+            .join("")
+        
+        console.log("x", x)
+
+    </script>
+
+</head>
+<body>
+    <h1>Hello world</h1>
+</body>
+</html>

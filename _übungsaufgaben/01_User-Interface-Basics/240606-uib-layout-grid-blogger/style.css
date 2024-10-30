@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+/* VORGESTALTUNG */
+
+body {
+  padding: 1rem;
+  background-color: #cfcfcf;
+}
+
+.gridBox {
+  background-color: rgb(206, 207, 207);
+
+  /* ! ! ! */
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  /* grid-template-rows: repeat(7, 1fr); */
+  grid-template-rows: repeat(3, 200px) 150px 150px 100px 200px;
+  gap: 1rem;
+}
+
+.gridBox__div {
+  background-color: white;
+
+  /* ! ! ! */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* INDIVIDUELLE BOX GESTALTUNG */
+
+/* HEADER */
+.gridBox__div--1 {
+  border: 1px solid red;
+
+  /* ! ! ! */
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  align-items: center;
+
+  /* grid-area: 1 / 1 / 2 / 3; */
+}
+
+/* BLOG 1 */
+.gridBox__div--2 {
+  border: 1px solid green;
+  padding: 10px 20px;
+
+  /* ! ! ! */
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+/* ABOUT ME */
+.gridBox__div--3 {
+  border: 1px solid greenyellow;
+
+  /* ! ! ! */
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* POPULAR POST */
+.gridBox__div--4 {
+  border: 1px solid blue;
+  padding: 10px 20px;
+
+  /* ! ! ! */
+  grid-row: 3 / 5;
+  grid-column: 2 / 3;
+}
+
+.gridBox__div--4 img {
+  margin-bottom: 10px;
+  width: 60%;
+  height: 20%;
+  object-fit: cover;
+}
+
+/* BLOG 2 */
+.gridBox__div--5 {
+  border: 1px solid purple;
+  padding: 10px 20px;
+
+  /* ! ! ! */
+  grid-column: 1 / 2;
+  grid-row: 4 / 7;
+}
+
+/* FOLLOW ME */
+.gridBox__div--6 {
+  border: 1px solid orange;
+  padding: 10px 20px;
+
+  /* ! ! ! */
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+}
+
+/* FOOTER */
+.gridBox__div--7 {
+  border: 1px solid yellow;
+  align-items: center;
+  background-color: rgb(222, 222, 222);
+
+  /* ! ! ! */
+  grid-column: 1 / 3;
+  grid-row: 7 / 8;
+}
+
+/* BESTANDTEILE */
+
+.headline--h3 {
+  padding: 10px 0;
+}
+
+.headline--h4 {
+  padding: 10px 20px;
+}
+
+.img--long {
+  height: 50%;
+  object-fit: cover;
+}
+
+.img--user {
+  width: 30%;
+  height: 30%;
+  object-fit: contain;
+}
+
+.paragraph--datatime {
+  padding: 10px 0;
+}
+
+.paragraph--userDescription {
+  font-size: 0.8rem;
+  line-height: 1.5em;
+  padding: 10px 20px;
+}
+
+.paragraph-popularPost {
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 10px 0px;
+}
+
+.paragraph--long {
+  height: 40%;
+  font-size: 0.8rem;
+  line-height: 1.5em;
+  text-align: justify;
+  padding: 20px 0 40px 0;
+}
+
+.paragraph--followMe {
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 10px 20px;
+}
+
+.paragraph--someText {
+  font-size: 0.8rem;
+  line-height: 1.5em;
+  padding: 10px 20px;
+}
+
+.paragraph--footer {
+  font-weight: bold;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1098px) {
+  .paragraph--long {
+    overflow: scroll;
+  }
+}

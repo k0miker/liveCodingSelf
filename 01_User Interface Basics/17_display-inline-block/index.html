@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        font-family: sans-serif;
+      }
+
+      .orange {
+        background-color: orange;
+      }
+
+      .margin-top {
+        margin-top: 8px;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .inline-block {
+        display: inline-block;
+      }
+
+      code {
+        background-color: rgb(230, 214, 143);
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flow Layout</h1>
+    <p>
+      Das Flow Layout ist der Layout-Modus, in dem wir uns standardmäßig
+      befinden.
+    </p>
+    <p>Weitere Layout-Modi sind z.B. Flexbox-Modus oder der Grid-Modus.</p>
+    <p>Es gibt drei verschieden Layout-Verhalten für unsere Elemente:</p>
+    <ul>
+      <li>Block</li>
+      <li>Inline-Block</li>
+      <li>Inline</li>
+    </ul>
+    <h2>Block-Elemente</h2>
+    <p>Elemente im Block-Layout verhalten sich folgendermaßen:</p>
+    <ul>
+      <li>Nehmen die gesamte Breite des Browser-Fensters ein</li>
+      <li>
+        Positionieren sich auf einer neuen Zeile unter dem vorherigen Element
+      </li>
+      <li>Breite und Höhe können wir definieren</li>
+      <li>Margin und Padding können wir ebenfalls definieren</li>
+    </ul>
+    <div class="orange margin-top">div: Ich bin ein Block-Element</div>
+    <section class="orange margin-top">
+      section: Ich bin ein Block-Element
+    </section>
+    <main class="orange margin-top">main: Ich bin ein Block-Element</main>
+    <h4 class="orange margin-top">h4: Ich bin ein Block-Element</h4>
+    <h4>Wie definiert sich ein Block-Element?</h4>
+    <p><code>display: block;</code> ist die CSS-Einstellung.</p>
+    <h4>Beispiele für Block-Elemente:</h4>
+    <ul>
+      <li>div</li>
+      <li>p</li>
+      <li>header</li>
+      <li>section</li>
+      <li>main</li>
+      <li>ul</li>
+      <li>hr</li>
+      <li>h1 / h2 / h3 / h4 ...</li>
+      <li>...</li>
+      <li>(Fast alle Elemente sind Block-Elemente)</li>
+    </ul>
+    <h2>Inline-Block-Elemente</h2>
+    <p>Elemente im Inline-Block-Layout verhalten sich folgendermaßen:</p>
+    <ul>
+      <li>Elemente folgen einander in derselben Zeile</li>
+      <li>Die Breite richtet sich nach dem Inhalt</li>
+      <li>Breite und Höhe können wir definieren</li>
+      <li>Margin & Padding können wir definieren</li>
+    </ul>
+    <img src="./img/giphy.gif" />
+    <img src="./img/giphy.gif" />
+    <img src="./img/giphy.gif" />
+    <img src="./img/giphy.gif" />
+    <img src="./img/giphy.gif" />
+    <h4>Wie definiert sich ein Inline-Block-Element?</h4>
+    <p><code>display: inline-block;</code> ist die CSS-Einstellung.</p>
+    <h4>Beispiele für Inline-Block-Elemente:</h4>
+    <ul>
+      <li>img</li>
+      <li>button</li>
+      <li>input</li>
+      <li>textarea</li>
+    </ul>
+    <h4>
+      Wir können auch ganz einfach aus Block-Elementen Inline-Block-Elemente
+      machen:
+    </h4>
+    <div class="orange margin-top inline-block">Inline-Block</div>
+    <div class="orange margin-top inline-block">Inline-Block</div>
+    <div class="orange margin-top inline-block">Inline-Block</div>
+    <h2>Inline-Elemente</h2>
+    <p>
+      Bei Inline-Elementen handelt es sich um reine Text-Elemente. Diese
+      verhalten sich folgendermaßen:
+    </p>
+    <ul>
+      <li>Die Größe ist immer abhängig vom Inhalt</li>
+      <li>Können sich auf mehrere Zeilen aufteilen (wie Text eben)</li>
+      <li>
+        Die Größe können wir nicht selbst setzen (width & height funktionieren
+        nicht)
+      </li>
+      <li>Vertikale Margin & vertikales Padding funktionieren nicht</li>
+    </ul>
+    <h4>Beispiele:</h4>
+    <p style="color: rgb(181, 181, 181)">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta inventore
+      quibusdam <code>Das ist ein Inline-Element</code>excepturi unde magnam
+      <a href="">Ich bin auch ein Inline-Element</a>temporibus doloremque
+      dolores fugit nostrum eos harum
+      <span style="color: orange">ich bin auch ein Inline-Element</span>, eius
+      repellendus, commodi quod exercitationem!
+    </p>
+    <h4>Wie definiert sich ein Inline-Element?</h4>
+    <p><code>display: inline;</code> ist die CSS-Einstellung.</p>
+    <p>Beispiele für Inline-Elemente:</p>
+    <ul>
+      <li>a</li>
+      <li>span</li>
+      <li>strong</li>
+      <li>em</li>
+      <li>code</li>
+      <li>...</li>
+    </ul>
+    <p>
+      Wir können Nicht-Inline-Elemente nicht zu Inline-Elementen konvertieren.
+    </p>
+  </body>
+</html>

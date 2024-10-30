@@ -1,0 +1,63 @@
+h1 {
+  font-size: 12vw;
+  height: 100vh;
+  background-color: red;
+}
+
+.first-section {
+  width: 50%;
+  background-color: lightpink;
+}
+
+.first-paragraph {
+  font-size: 18px;
+}
+
+.second-paragraph {
+  font-size: 3vw;
+}
+
+.third-paragraph {
+  font-size: 5vh;
+}
+
+/* Alternative, um die Paragrafen auszuwählen */
+.first-section p:nth-child(1) {
+ /* Erster Paragraf */ 
+}
+
+.first-section p:nth-child(2) {
+  /* Zweiter Paragraf */ 
+ }
+
+ .first-section p:nth-child(3) {
+  /* Dritter Paragraf */ 
+ }
+
+
+ /* Task 4 */
+ .blauer-block {
+  background-color: lightblue;
+  font-size: 32px;
+ }
+
+ .blauer-block p:nth-child(1) {
+  font-size: 18px;
+ }
+
+ .blauer-block p:nth-child(2) {
+  font-size: 1em;
+ }
+
+ .blauer-block p:nth-child(3) {
+  font-size: 1rem;
+ }
+
+
+ /* Task 5 */
+ .orange-box {
+  background-color: orange;
+  /* width: 80vw; */
+  width: 80%;
+  height: 50vh;
+ }

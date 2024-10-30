@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  #user-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .user-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  #post-form {
+    margin-top: 20px;
+  }
+  
+  #message {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .success {
+    color: green;
+  }
+  

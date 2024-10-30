@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilder</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+    }
+
+    .img-200 {
+      width: 200px;
+    }
+
+    img {
+      background-color: rgb(192, 202, 211);
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    .img-small {
+      width: 40%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    li {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bilder Wiederholung</h1>
+  <h2>Ein Bild implementieren</h2>
+  <img class="img-200" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden." title="La persistencia de la memoria von Salvador Dali">
+  <h2>Das Alt-Attribut</h2>
+  <p>Das Alt-Attribut ist eine textliche Beschreibung des Bildes & wird dargestellt, wenn das Bild nicht geladen wird. Suchmaschinen nutzen das Alt-Attribut ebenfalls für SEO.</p>
+  <img class="img-200" src="./img/missing-photo.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <h2>Das Title-Attribut</h2>
+  <p>Das Title-Attribut ist der Titel des Bildes. Dieser wird angezeigt, wenn wir mit der Maus über das Bild hovern.</p>
+  <h2>Die Größe eines Bildes setzen</h2>
+  <h4>width & height-Eigenschaften</h4>
+  <p>Wir können die Größe eines Bildes mit <code>width</code> & <code>height</code> definieren. Alle Größeneinheiten sind nutzbar hier.</p>
+  <img style="width: 100%;" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <p><code>auto</code> ist ein spezieller Wert für Breite & Höhe. Damit wird die Größe automatisch an das Format des Bildes angepasst. <code>auto</code> stellt sicher, dass nichts verzerrt wird.</p>
+  <img style="width: 100px; height: auto;" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="width: auto; height: 150px;" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <h4>Wie implementieren wir eigene Größenformate ohne Verzerrung?</h4>
+  <h6>object-fit: cover;</h6>
+  <p>Das Bild füllt den Container aus</p>
+  <img style="width: 100%; height: 150px; object-fit: cover;" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <h6>object-fit: contain;</h6>
+  <p>Das komplette Bild wird innerhalb des Containers angezeigt.</p>
+  <img style="width: 100%; height: 50px; object-fit: contain;" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <h2>Bilder stylen</h2>
+  <h4>Border</h4>
+  <p>Rahmen um das Bild hinzufügen</p>
+  <img style="border: 4px solid red" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="border: 4px dotted red" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="border: 4px groove red" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="border: 4px dashed red" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <h4>Filter</h4>
+  <p>Filter auf das Bild anwenden - wie in Instagram...</p>
+  <img style="filter: blur(4px)" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="filter: grayscale(80%)" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  
+  <h4>Transparenz setzen</h4>
+  <img style="filter: opacity(50%)" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="opacity: 0.5;" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+
+  <h4>Schatten hinzufügen</h4>
+  <img style="box-shadow: 10px 5px 10px blue" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+
+  <h4>Ecken abrunden</h4>
+  <img style="border-radius: 16px;" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="border-radius: 16px 32px 4px 8px;" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="border-radius: 16px 32px" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="border-radius: 50%" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <img style="border-radius: 0px 32px 4px 8px;" class="img-small" src="./img/dali-time.png" alt="Ein Gemälde des Künstlers Dali, auf dem sich drei schmelzende Taschenuhren in einer öden Landschaft befinden.">
+  <h2>Bildformate</h2>
+  <ul>
+    <li>JPG/JPEG: Standardformat für Fotos mit viel Detail. Pixel-basiert. Ohne Transparenz</li>
+    <li>PNG: Bilder mit Transparenz. Pixel-basiert.</li>
+    <li>SVG: Vektor-Dateien. Verlustfreie Darstellung von Logos, Icons & Vektor-Grafiken</li>
+    <li>GIF: Ein kurzes loopendes Video. Stark komprimiert.</li>
+    <li>WEBP: Für das Web optimierte Bild-Datei. Extra starke Konvertierung. (Alternative zum JPG)</li>
+    <li>ICO: Format fürs Favicon</li>
+  </ul>  
+</body>
+</html>

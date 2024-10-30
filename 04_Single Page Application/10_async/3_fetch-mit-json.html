@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+    <script>
+
+       const url = "https://jsonplaceholder.typicode.com/todos";
+       fetch(url)
+            .then( response => {
+
+                // parse Antwort als JSON (und nicht als Text, denn wir wissen
+                // dass es sich bei der Antwort um einem String handelt, der JSON enthält)
+                return response.json()
+            } )
+            .then( jsonData => {
+                console.log("jsonData", jsonData);
+            })
+            
+
+        console.log("Skript fertig.")
+    </script>
+</head>
+
+<body>
+ <h1>This is the way</h1>
+ <pre>
+ - Was hat `fetch()` nochmal gemacht?
+    - `fetch()` stellt eine Anfrage
+    - `fetch()` gibt ein Promise zurück
+    - `fetch()` ist Teil der Fetch API
+    - Die Fetch API ermöglicht es Browsern, asynchrone HTTP-Anfragen an Server zu senden
+</pre>
+</body>
+
+</html>

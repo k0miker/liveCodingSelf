@@ -1,0 +1,174 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: rgb(182, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(182, 255, 255, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.robot {
+  /* position: absolute;
+  left: 200px;
+  top: 100px; */
+
+  /* Roboter auf der Seite horizontal & vertikal zentrieren */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.robot .head {
+  width: 200px;
+  height: 150px;
+  border-radius: 25px 25px 0 0;
+
+  /* Kopf mit Position relative verschieben */
+  position: relative;
+  top: 75px;
+  left: 95px;
+}
+
+.robot .eye {
+  width: 25px;
+  height: 25px;
+}
+
+.robot .left-eye {
+  position: absolute;
+  left: 25%;
+  top: 40px;
+}
+
+.robot .right-eye {
+  position: absolute;
+  right: 25%;
+  top: 40px;
+}
+
+.robot .mouth {
+  width: 100px;
+  height: 25px;
+  border-radius: 0 0 25px 25px;
+
+  /* Option 1: Einfaches Verschieben */
+  /* position: absolute;
+  right: 50px;
+  bottom: 30px; */
+
+  /* Option 2: Bei Position absolute gibt es einen kleinen Trick zum Zentrieren: */
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 30px;
+}
+
+.robot .body {
+  /* position: absolute;
+  top: 200px; */
+
+  position: relative;
+  top: 50px;
+}
+
+.robot .neck {
+  width: 120px;
+  height: 50px;
+
+  /* Mit Position: Absolute wird das Element aus dem Flow der Seite rausgenommen */
+  position: absolute;
+  top: 200px;
+  left: 135px;
+  z-index: -1;
+}
+
+.robot .torso {
+  width: 400px;
+  height: 200px;
+  border-radius: 0 0 25px 25px;
+}
+
+.robot .torso .name {
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-size: 40px;
+  font-weight: 900;
+  color: aliceblue;
+
+  /* Mit Position relative verschieben */
+  position: relative;
+  top: 30px;
+}
+
+.robot .arm {
+  width: 50px;
+  height: 120px;
+
+  position: absolute;
+  top: 0;
+}
+
+.robot .left-arm {
+  position: absolute;
+  right: 0;
+}
+
+.robot .right-arm {
+}
+
+.robot .hand {
+  width: 50px;
+  height: 50px;
+
+  position: relative;
+  right: 50px;
+  top: 120px;
+}
+
+.robot .leg {
+  width: 50px;
+  height: 100px;
+
+  /* Mit transform: rotate können wir ein Element rotieren */
+  transform: rotate(180deg);
+  /* rotate: 180deg; */
+} 
+
+.robot .left-leg {
+  position: absolute;
+  right: 80px;
+}
+
+.robot .right-leg {
+  position: absolute;
+  left: 80px;
+}
+
+.robot .foot {
+  height: 50px;
+  width: 100px;
+}
+
+.robot .left-foot {
+}
+
+.robot .right-foot {
+}
+
+.lightest-colour {
+  background-color: aliceblue;
+}
+
+.light-colour {
+  background-color: black;
+}
+
+.dark-colour {
+  background-color: slateblue;
+}

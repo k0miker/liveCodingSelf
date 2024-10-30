@@ -1,0 +1,36 @@
+---
+const { title, imageLink } = Astro.props
+---
+
+<div class="card">
+  <img src={imageLink} alt="">
+  <h3>{title}</h3>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat distinctio officia cupiditate recusandae. Veritatis possimus officiis inventore voluptate blanditiis minus laudantium fugiat assumenda quam! Cumque harum tempora doloremque corrupti quaerat.</p>
+</div>
+
+<style>
+  /* Das CSS hier bezieht sich ausschließlich auf die Elemente innerhalb der Komponente */
+
+  /* Finales CSS: h3[data-astro-cid-tjdfhdqb] {} */
+  h3 {
+    background-color: yellow;
+  }
+  
+  /* Finales CSS: .card[data-astro-cid-tjdfhdqb] */
+  .card {
+    border-radius: 16px;
+    background-color: rgb(206, 206, 206);
+    padding: 16px;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    flex-basis: 200px;
+    flex-grow: 1;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+</style>

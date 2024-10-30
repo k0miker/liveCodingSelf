@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schere, Stein, Papier</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .players {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .player {
+            margin: 0 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Schere, Stein, Papier</h1>
+        <div class="players">
+            <div class="player" id="player1Container">
+                <label for="player1">Spieler eins: </label>
+                <select id="player1">
+                    <option value="schere">Schere</option>
+                    <option value="stein">Stein</option>
+                    <option value="papier">Papier</option>
+                </select>
+                <button id="player1Confirm">Bestätigen</button>
+            </div>
+            <div class="player" id="player2Container" style="display: none;">
+                <label for="player2">Spieler zwei: </label>
+                <select id="player2">
+                    <option value="schere">Schere</option>
+                    <option value="stein">Stein</option>
+                    <option value="papier">Papier</option>
+                </select>
+                <button id="player2Confirm">Bestätigen</button>
+            </div>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        document.getElementById("player1Confirm").addEventListener("click", function() {
+            document.getElementById("player1Container").style.display = "none";
+            document.getElementById("player2Container").style.display = "block";
+        });
+
+        document.getElementById("player2Confirm").addEventListener("click", function() {
+            let player1 = document.getElementById("player1").value;
+            let player2 = document.getElementById("player2").value;
+            let result = "";
+
+            if ((player1 === "schere" && player2 === "stein") || 
+                (player1 === "stein" && player2 === "papier") || 
+                (player1 === "papier" && player2 === "schere")) {
+                result = "Spieler zwei gewinnt";
+            } else if ((player2 === "schere" && player1 === "stein") || 
+                       (player2 === "stein" && player1 === "papier") || 
+                       (player2 === "papier" && player1 === "schere")) {
+                result = "Spieler eins gewinnt";
+            } else {
+                result = "Unentschieden, nochmal!";
+            }
+
+            document.getElementById("result").innerText = result;
+        });
+    </script>
+</body>

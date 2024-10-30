@@ -1,0 +1,129 @@
+:root {
+  font-family: sans-serif;
+  --animation-duration: 2s;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.processing-container {
+  position: relative;
+
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+}
+
+.processing-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  
+  overflow: hidden;
+}
+
+.processing-item img {
+  width: 100%;
+  height: auto;
+}
+
+.processing-container span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.processing-item {
+  animation: appear-disappear var(--animation-duration) ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+
+.processing-item:nth-of-type(2) {
+  animation-delay: var(--animation-duration);
+}
+
+.processing-item:nth-of-type(3) {
+  animation: appear-stay var(--animation-duration) ease-in-out 1;
+  animation-delay: calc(2 * var(--animation-duration));
+  animation-fill-mode: both;
+}
+
+.processing-label {
+  animation: blink var(--animation-duration) ease-in-out;
+  animation-fill-mode: both;
+}
+
+.processing-label:nth-of-type(1) {
+  animation-iteration-count: 2;
+}
+
+.processing-label:nth-of-type(2) {
+  animation-delay: calc(2 * var(--animation-duration));
+  animation-fill-mode: backwards;
+}
+
+@keyframes appear-disappear {
+  0% {
+    transform: translateX(600px) scale(0.5);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0px, 40px) scale(1);
+  }
+
+  60% {
+    transform: translate(0px, 40px) scale(0.8);
+  }
+
+  100% {
+    transform: translateX(-600px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes appear-stay {
+  0% {
+    transform: translateX(600px) scale(0.5);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0px, 40px) scale(1);
+  }
+
+  100% {
+    transform: translate(0px, 40px) scale(1);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

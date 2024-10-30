@@ -1,0 +1,1 @@
+console.log('Dieses Skript wird ganz am Ende ausgeführt (aber vor `defer`-Skripten).');

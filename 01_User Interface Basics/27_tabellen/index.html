@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabellen</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Tabellen</h1>
+
+      <p>
+        Es gibt grundsätzlich zwei verschiedene Wege Tabellen zu definieren.
+        Entweder wir nutzen die tabellen-spezifischen HTML-Elemente (table, tr,
+        td, th) oder wir lassen normale HTML-Elemente sich wie Tabellen-Elemente
+        verhalten (mittels display: table/table-row/table-cell).
+      </p>
+
+      <h2>Weg 1: Tabellen-spezifische HTML-Elemente</h2>
+      <table>
+        <!-- caption => Titel der Tabelle bzw. Info zur Tabelle -->
+        <caption>
+          Meine Einkaufsliste, Copyright - Jan Alexander
+        </caption>
+
+        <!-- Kopf der Tabelle -->
+        <thead>
+          <!-- <tr> => Eine Zeile ("table row")-->
+          <tr>
+            <!-- <th> => Headline-Tabellen-Zelle (für Überschriften) ("table headline") -->
+
+            <!-- colspan => Anzahl der Spalten, über die sich eine Zelle erstrecken soll -->
+            <th colspan="5">Meine Einkaufsliste</th>
+          </tr>
+          <tr>
+            <!-- <td> Standard-Zellen in der Tabellen (für Inhalte & Leerzellen) ("table data") -->
+            <td></td>
+            <!-- scope="col" => Bedienungshilfe; Information, dass sich diese Überschrift auf die Spalte der Tabelle bezieht-->
+            <th scope="col">Produkte</th>
+            <th scope="col">Einzelpreis</th>
+            <th scope="col">Anzahl</th>
+            <th scope="col">Kosten</th>
+          </tr>
+        </thead>
+
+        <!-- Inhalt der Tabelle -->
+        <tbody>
+
+          <!-- colgroup beinhaltet die Referenzen zu den Spalten -->
+          <!-- col referenziert die Spalten unserer Tabelle -->
+          <colgroup>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+          </colgroup>
+
+          <tr>
+            <!-- rowspan => Anzahl der Zeilen, über die sich eine Zelle erstrecken soll -->
+            <!-- scope="row" => Bedienungshilfe; Information, dass sich diese Überschrift auf die Zeile der Tabelle bezieht-->
+            <th rowspan="3" scope="row">Früchte</th>
+            <td>Banane</td>
+            <td>0.5</td>
+            <td>3</td>
+            <td>1.50</td>
+          </tr>
+          <tr>
+            <td>Apfel</td>
+            <td>0.25</td>
+            <td>4</td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <td>Orangen</td>
+            <td>0.25</td>
+            <td>4</td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <th rowspan="2" scope="row">Aufschnitt</th>
+            <td>Salami</td>
+            <td>1.50</td>
+            <td>4</td>
+            <td>6.00</td>
+          </tr>
+          <tr>
+            <td>Käse</td>
+            <td>1.50</td>
+            <td>4</td>
+            <td>6.00</td>
+          </tr>
+        </tbody>
+
+        <!-- Footer der Tabelle -->
+        <tfoot>
+          <tr>
+            <th colspan="4" scope="row">Gesamtpreis</th>
+            <td>9.60</td>
+          </tr>
+        </tfoot>
+      </table>
+      <h2>Weg 2: Divs zur Tabelle umwandeln</h2>
+      <div id="table">
+        <div class="tr">
+          <div class="td">Row 1, <br />Column 1</div>
+          <div class="td">Row 1, Column 2</div>
+          <div class="td"></div>
+        </div>
+        <div class="tr">
+          <div class="td">Row 2, <br />Column 1</div>
+          <div class="td">Row 2, Column 2</div>
+          <div class="td"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

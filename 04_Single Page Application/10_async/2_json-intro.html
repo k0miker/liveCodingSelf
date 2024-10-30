@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+    <script>
+        const data = '{ "id": 1, "name": "Din Djarin", "born": "1978-11-12" }';
+        console.log("data", data); // gibt data als String aus
+        console.log("data.id", data.id); // undefined
+
+        // jetzt möchten wir aus dem String, der JSON enthält,
+        // ein JavaScript Object machen
+        const mandalorian = JSON.parse(data); // mache aus (JSON-)String Object
+        console.log("mandalorian", mandalorian); // gibt mandalorian als javascript object aus
+        console.log("mandalorian.id", mandalorian.id); // 1
+        // => mandalorian ist also ein JavaScript Object, kein String mehr
+
+
+        // Jetzt: Aus JavaScript Object einen JSON-String machen
+        //(zum Beispiel um ein JavaScript Object in Datenbank zu speichern)
+        const address = {
+            street: "Saarbrücker Str",
+            no: "23",
+            postCode: 123456
+        }
+        console.log("address", address);
+        console.log("address.street", address.street);
+
+        const addressJSONString = JSON.stringify(address); // mache aus Object (JSON-)String 
+        console.log("addressJSONString", addressJSONString);
+        console.log("addressJSONString.street", addressJSONString.street); // undefined
+
+        // den JSON String schöner formatieren
+        const addressStringPretty = JSON.stringify(address, null, 2);
+        console.log("addressStringPretty", addressStringPretty);
+
+        // Der formatierte String enthält nun zusätzliche Zeichen wie z.B.
+        // "\n" für neue Zeile und ist somit größer. Deswegen würde man
+        // ihn so eher nicht in einer Datenbank speichern.
+        // Man würde diese schöner formatierte Variante z.B. benutzen,
+        // wenn man sie auf einer Website ausgibt.
+
+        // * Weiteres JSON Beispiel mit allen gültigen Datentypen *
+
+        const alleDatentypen = `{
+            "string": "Dies ist ein Text",          // String
+            "number": 42,                           // Number (Ganzzahl)
+            "float": 3.14,                          // Number (Fließkommazahl)
+            "booleanTrue": true,                    // Boolean (true)
+            "booleanFalse": false,                  // Boolean (false)
+            "nullValue": null,                      // Null-Wert
+            "object": {                             // Objekt
+                "key": "value",
+                "number": 123
+            },
+            "array": [                              // Array
+                "element1",
+                2,
+                false,
+                null,
+                { "subObject": "value" },
+                [1, 2, 3]                              // Verschachteltes Array
+            ]
+        }`
+
+        console.log( "JSON.parse(alleDatentypen)", JSON.parse(alleDatentypen) ) 
+        // => "Uncaught SyntaxError: Expected double-quoted property name in JSON..."
+        // Das würde also zu einem Parsing-Error führen, da JSON keine KOmmentare
+        // unterstützt. Wenn wir also die Kommentare entfernen, dann
+        // würde alleDatentypen wie erwartet zu einem JavaSCript Object werden
+
+
+        
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

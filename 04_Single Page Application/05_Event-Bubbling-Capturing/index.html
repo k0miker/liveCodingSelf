@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root { font-family: sans-serif; }
+
+    .linethrough { text-decoration: line-through; background-color: orange; }
+  </style>
+  <script src="event-bubbling.js" defer></script>
+</head>
+<body>
+  <h1>Event-Bubbling & Capturing bzw. Event-Delegation</h1>
+  <h2>Beispiel 01: Event-Delegation am Beispiel einer ToDo-Liste</h2>
+  <ul id="todos">
+    <li>Todo 1 | <span class="done-btn">Done</span></li>
+    <li>Todo 2 | <span class="done-btn">Done</span></li>
+    <li>Todo 3 | <span class="done-btn">Done</span></li>
+    <li>Todo 4 | <span class="done-btn">Done</span></li>
+    <li>Todo 5 | <span class="done-btn">Done</span></li>
+  </ul>
+  <h2>
+    Beispiel 02: Capture & Bubbling kombinieren & mit stopPropagation() stoppen
+  </h2>
+  <ul id="event-listener-1">Event Listener #1
+    <li>...</li>
+    <li>...</li>
+    <li>...
+        <ul>
+            <li>...</li>
+            <li id="event-listener-2">Event Listener #2
+                <ul>
+                    <li>...</li>
+                    <li id="click-me">Click Me</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li>...</li>
+        </ul>
+    </li>
+    <li>...</li>
+    <li>...</li>
+</ul>
+</body>
+</html>

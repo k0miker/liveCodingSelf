@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Größeneinheiten</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>CSS-Größeneinheiten</h1>
+  <p>Mit jeder Größeneinheit wolllen wir eine Box definieren, die 150px breit und 100px hoch ist.</p>
+  <h2>Pixel</h2>
+  <p><strong>Nutzungsszenario:</strong> Ein Element soll optisch gleich groß auf allen Geräten sein.</p>
+  <div class="box pixel-box">Diese Box ist 150px breit & 100px hoch</div>
+  <h2>Prozent</h2>
+  <p><strong>Nutzungsszenario:</strong> Die Größe eines Elements soll relativ zu einem anderen Element sein.</p>
+  <p>Wichtig: Wenn sich ein Element direkt im body befindet, dann können wir die Höhe nicht in Prozent angeben.</p>
+  <p>Um mit Prozent zu arbeiten, brauchen wir ein Eltern-Element, bei dem die Größe definiert ist.</p>
+  <div class="pixel-box secondary-box">
+    <div class="box percentage-box">Diese Box ist 100% breit & 100% hoch</div>
+  </div>
+  <h2>Em</h2>  
+  <p>Em bezieht sich auf die Schriftgröße vom Element.<br><br> Die Schriftgröße ist eine Eigenschaft, die vererbt wird. Wenn die Schriftgröße auf einem Element nicht direkt definiert ist, dann handelt es sich um die Schriftgröße des nächstgelegenen Eltern-Elementes.</p>
+  <p><strong>Nutzungsszenario:</strong> Die Größe eines Elements soll relativ zur Schriftgröße dieses Elements sein.</p>
+  <p>Em nutzen wir in der Praxis eigentlich nicht.</p>
+  <div class="em-box box">Diese Box ist 15em & 10em groß.</div>
+  <h2>Rem</h2>
+  <p>Rem (Root Em) bezieht sich auf die Schriftgröße vom Root Element (:root / html).</p>
+  <p><strong>Nutzungsszenario:</strong> Die Größe eines Elements soll relativ zur Grund-Schriftgröße der Webseite sein.</p>
+  <p>Praktische Fälle für die Nutzung von Rem sind die Definition von Schriftgrößen oder Abständen (Padding, Margin).</p>
+  <div class="box rem-box">Diese Box ist 9.375rem breit & 6.25rem hoch.</div>
+  <h2>VH & VW</h2>
+  <p><strong>Nutzungsszenario:</strong> Die Größe eines Elements soll relativ zur Größe des Browserfensters sein</p>
+  <p>100vw = 100% Fenster-Breite</p>
+  <p>100vh = 100% Fenster-Höhe</p>
+  <p>Mit VH & VW können wir keine exakte Größe angeben & uns nur an 100px annähern. Eine Lösung kann sein mit <code>max-width</code>, <code>max-height</code>, <code>min-width</code> oder <code>min-height</code> die Größe zu limitieren.</p>
+  <div class="box vh-vw-box">Ich bin 40vw & 20vh groß</div>
+  <div class="box vh-vw-box-limited">Ich bin 40vw & 20vh groß. Mit limitierter maximaler Größe.</div>
+  <hr>
+  <h2>Probleme bei der Nutzung von Em:</h2>
+  <p>Wenn wir die Schriftgröße in em setzen, gibt es Probleme mit verschachtelten Texten:</p>
+    <ul id="em-list" style="font-size: 16px">
+        Die Schrift hier ist 16px.<br>
+        1.25em sollten also 20px sein, oder?
+        <li>1.25em</li>
+        <li>
+          1.25em
+          <ul>
+            <li>1.25em</li>
+            <li>1.25em</li>
+            <li>
+              1.25em
+              <ul>
+                <li>1.25em</li>
+                <li>1.25em</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>1.25em</li>
+    </ul>
+    <p>Das Problem ist, dass sich die Schriftgröße basierend auf den Eltern-Elementen verändert. Daher lässt sich nicht em nicht zuverlässig zum Setzen der Schriftgröße nutzen.</p>
+
+  <h3>Bei einer mit Rem definierten Liste existiert dieses Problem nicht:</h3>
+  <p>Bei Rem im Gegensatz zu Em gibt es keine Probleme mit der Vererbung. Die Größen sind gleichmäßig:</p>
+    <ul id="rem-list">
+        Die Schrift hier ist 16px
+        <li>1.25rem</li>
+        <li>
+          1.25rem
+          <ul>
+            <li>1.25rem</li>
+            <li>1.25rem</li>
+            <li>
+              1.25rem
+              <ul>
+                <li>1.25rem</li>
+                <li>1.25rem</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>1.25rem</li>
+    </ul>
+    <h3>Bei Prozent gibt es dasselbe Problem wie bei Em:</h3>
+      <p>In der Praxis sollte die Schriftgröße NIE in Prozent gesetzt werden. Dafür haben wir bessere Alternativen</p>
+    <ul id="percent-list">
+    <li>Text</li>
+    <li>
+        <ul>
+        <li>Text</li>
+        <li>
+            <ul>
+            <li>Text</li>
+            <li>Text</li>
+            <li>
+                <ul>
+                <li>Text</li>
+                <li>Text</li>
+                </ul>
+            </li>
+            </ul>
+        </li>
+        </ul>
+    </li>
+</body>
+</html>

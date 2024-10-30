@@ -1,0 +1,211 @@
+:root {
+  --highlight: #fe217d;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid var(--black);
+
+  --card-bg: #e2fcf4;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../assets/webfonts/Pacifico-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background-color: #eeeeed;
+}
+
+/* HEADER */
+header {
+  /* border: 5px solid red; */
+  height: 7.5rem;
+  padding: 2rem 3rem;
+  box-shadow: var(--box-shadow);
+  text-transform: capitalize;
+  background-color: white;
+
+  /* Fehlt noch etwas? */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-family: "Pacifico";
+  font-size: 2.5rem;
+  margin-left: -1rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+  font-size: large;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline var(--highlight);
+  text-decoration-thickness: 3px;
+}
+
+.icons {
+  margin: 1rem;
+  /* Was brauchen wir hier? */
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* border: 1px solid blue; */
+}
+
+.icons div {
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #efefef;
+  color: var(--black);
+  font-size: 1rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
+
+  /* Und nun ??? */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons div:hover {
+  background-color: var(--highlight);
+  color: white;
+}
+
+/* MAIN */
+main {
+  /* border: 5px solid greenyellow; */
+  /* Was brauchen wir noch? */
+  margin-top: 7.5rem;
+}
+
+.home {
+  background-image: url(../images/sweetBg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+
+  /* Moment mal...hier fehlt etwas 🧐 */
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.home h3 span {
+  color: var(--highlight);
+}
+
+.home p {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  color: var(--black);
+  background-color: var(--highlight);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 3px solid var(--black);
+  border-radius: 5px;
+  padding: 5px 25px;
+  margin-bottom: 1rem;
+  width: max-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.box-container {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #e8e8e8;
+  gap: 1rem;
+  padding: 1rem;
+  /* margin: 2rem; */
+}
+
+.box {
+  background-color: var(--card-bg);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+
+  /* => Eine echte challenge... 😵 <= */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 30%;
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+.box img {
+  width: 200px;
+}
+
+.box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.box p {
+  color: var(--light-color);
+  margin: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Soft Reset</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+    }
+
+    /* Soft Reset */
+    /* * => Alle Elemente */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 1rem;
+    } 
+
+    h1, p, h3 {
+      margin: 1rem 0;
+    }
+
+    .content-box {
+      box-sizing: content-box;
+    }
+
+    .border-box {
+      box-sizing: border-box;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      background-color: orange;
+      border: 10px solid hotpink;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Soft Reset</h1>
+  <p>Das Ziel des Soft Reset im CSS ist es sicherzustellen, dass das Layout, welches wir erstellen möglichst nah an unsere Angaben herankommt. Es gibt zwei Herausforderungen dabei:</p>
+  <h3>1. Alle Elemente (inkl. Body) haben bereits Margin & Padding-Einstellungen vom Browser</h3>
+  <p>Daher macht es Sinn für uns die Margin- & Padding-Einstellungen für alle Elemente auf der Seite zurückzusetzen. So können wir die Einstellungen selektiv & kontrolliert einzeln überschreiben.</p>
+  <h3>2. Die Größe von Elementen wird vom CSS standardmäßig exklusive von Border & Padding berechnet. Das ist unintuitiv & unpraktisch.</h3>
+  <p>Wenn wir die Größe von Elementen setzen, wollen wir das die Breite eines Elementes inklusive von Border & Padding berechnet. Das heißt wenn ich ein Element mit 100px Breite definiere & es mit Padding und Border versehe, soll es trotzdem insgesamt nur 100px groß auf der Seite sein.</p>
+  <h4>Woran liegt das?</h4>
+  <p>Element haben standardmäßig die Einstellung <code>box-sizing: content-box</code>. Wir nutzen lieber die Einstellung <code>box-sizing: border-box</code></p>
+  <p>Diese <code>content-box</code> hat eine Gesamtbreite von 190px: 150px width + 20px Padding + 20px Border.</p>
+  <div class="box content-box">box-sizing: content-box; width: 150px</div>
+  <p>Diese <code>border-box</code> haht eine Gesamtbreite von 150px (inkl 20px Padding & 20px Border).</p>
+  <div class="box border-box">box-sizing: border-box; width: 150px</div>
+  <h3>Lösung für das Problem</h3>
+  <p>Fügt einfach den folgenden Code ganz nach oben zu eurem CSS hinzu, damit ihr den Soft Reset durchführt:</p>
+  <h4><code>* { margin: 0; padding: 0; box-sizing: border-box; }</code></h4>
+</body>
+</html>

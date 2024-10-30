@@ -1,0 +1,21 @@
+a:active {
+  color: red;
+}
+
+a:visited {
+  color: yellowgreen;
+}
+
+a:hover {
+  color: purple;
+}
+
+ul {
+  background-color: rgb(54, 194, 219);
+  list-style-type: circle;
+}
+
+.main-link {
+  color: hotpink;
+  font-weight: bold;
+}

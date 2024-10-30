@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.headline-xl {
+  font-family: 'Quicksand';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+}

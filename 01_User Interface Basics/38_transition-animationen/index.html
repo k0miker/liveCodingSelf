@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition-Animationen</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Transition-Animationen</h1>
+  <p>Wenn sich Eigenschaften ändern, könnt ihr die Art und Weise des Übergangs animieren:</p>
+  <p>Definition: <code>transition: [CSS-Eigenschaft] [Animationsdauer] [Animationskurve] [Delay]</code></p>
+  <div class="box simple-transition"></div>
+  <div class="box second-transition"></div>
+
+  <h3>Animationskurven</h3>
+  <p>Hier gibt es eine Übersicht über Animationskurven: <a href="https://cubic-bezier.com">https://cubic-bezier.com</a></p>
+  <div class="box curve-transition"></div>
+
+  <h3>Verschiedene Wege, um eine Transition-Animation ohne Javascript zu triggern:</h3>
+  <p>Ohne JS können wir CSS-Werte nur mit Hilfe von Pseudoklassen verändern. Zum Beispiel: <code>:hover</code>, <code>:active</code>, <code>:focus</code> oder <code>:checked</code>.</p>
+
+  <h4>:checked</h4>
+  <input type="checkbox" name="trigger-move">
+  <div class="box second-transition"></div>
+
+  <h4>:focus</h4>
+  <input type="text" name="text-input">
+
+  <h3>Box in Box bewegen</h3>
+  <div class="big-box">
+    <div class="small-box"></div>
+  </div>
+</body>
+</html>

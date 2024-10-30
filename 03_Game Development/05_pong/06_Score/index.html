@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- HTML PART -->
+  <canvas id="my-canvas"></canvas>
+  <script src="game.js" type="module"></script>
+  <div>
+    <p>Wood: <span id="woodResources">0</span></p>
+    <p>Stone: <span id="stoneResources">0</span></p>
+    <p>Iron: <span id="ironResources">0</span></p>
+  </div>
+
+  <script>
+    // JS PART
+
+    function updateDisplayResouces() {
+      const displayWood = document.getElementById('woodResources').innerText;
+      const displayStone = document.getElementById('stoneResources').innerText;
+      const displayIron = document.getElementById('ironResources').innerText;
+      displayWood = resources.wood;
+      displayStone = resources.stone;
+      displayIron = resources.iron;
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+:root {
+  font-family: sans-serif;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Erste Box */
+
+.simple-transition {
+  transition: 
+    width 1s ease-in-out,
+    background-color 2000ms linear 1s;
+}
+
+.simple-transition:hover {
+  width: 200px;
+  background-color: orange;
+}
+
+
+/* Zweite Box */
+.second-transition {
+  /* all => alle CSS-Eigenschaften */
+  transition: all 500ms ease-in-out;
+}
+
+.second-transition:hover {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+
+/* Animationskurven */
+.curve-transition {
+  transition: all 4s cubic-bezier(1,0,.2,.98);
+}
+
+.curve-transition:hover {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+/* Pseudoklassen zum Triggern der Animation nutzen */
+input[name='trigger-move']:checked + .box {
+  width: 200px;
+}
+
+input[name='text-input'] {
+  transition: all 1s ease-in-out;
+}
+
+input[name='text-input']:focus {
+  border: 4px solid orange;
+}
+
+
+/* Box in Box bewegen */
+.big-box {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  position: relative;
+}
+
+.small-box {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 2s ease-in-out;
+}
+
+.big-box:hover .small-box {
+  left: 100%;
+  top: 100%;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS im Browser</title>
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    console.log('Ich werde zuerst ausgeführt (bevor die Inhalte der Seite geladen wurden)');
+
+    /* Kurzer Test, ob wir hier auf HTML-Elemente zugreifen können: */
+    const headline = document.querySelector('h1');
+    console.log(headline); // null
+    /* (Wir können hier noch nicht auf die HTML-Elemente zugreifen, da sie noch nicht geladen wurden. Das HTML & die Skripte werden der Reihe nach von oben nach unten ausgeführt) */
+  </script>
+  <script src="./defer-script.js" defer></script>
+</head>
+<body>
+  <h1>Javascript im Browser</h1>
+  <p>JS-Skripte können grundsätzlich zum Head oder zum Body einer Seite hinzugefügt werden. Die Skripte werden der Reihenfolge nach von oben nach unten ausgeführt.</p>
+  <p>Ein Skript im Head wird standardmäßig ausgeführt bevor HTML-Elemente geladen wurden. Ein Skript am Ende des Bodys wird ausgeführt, nachdem die HTML-Elemente geladen wurden.</p>
+
+  <!-- Unsere Javascript-Dateien (in der Regel am Ende des body) -->
+  <!-- Die Skripte werden nacheinander ausgeführt (von oben nach unten)-->
+  <script>
+    console.log('Ich werde später ausgeführt (nachdem die Inhalte der Seite geladen wurden)')
+    /* Kurzer Test, ob wir hier auf HTML-Elemente zugreifen können: */
+    const headline2 = document.querySelector('h1');
+    console.log(headline2); // <h1>...</h1>
+    /* Hier funktioniert der Zugriff */
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>

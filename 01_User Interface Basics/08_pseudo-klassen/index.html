@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudoklassen</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: rgb(234, 234, 226);
+    }
+
+    .hover-fx:hover {
+      background-color: hsl(240deg 30% 40%);
+    }
+
+    h2:hover {
+      color: #3bc839;
+    }
+
+    a:visited {
+      color: hotpink;
+      /* background-color: orange; */
+    }
+
+    .active-link:active {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pseudoklassen</h1>
+  <p>Mit Pseudoklassen können wir CSS-Regeln auf einen bestimmten Status von Elementen anwenden</p>
+  <h2>:hover</h2>
+  <p class="hover-fx">Mit der <code>:hover</code> Pseudoklasse können wir ein Element stylen, wenn sich die Maus über diesem befindet.</p>
+  <h2>:active</h2>
+  <p>Die <code>:active</code> Pseudoklasse wird aktiviert, wenn ein Link geklickt wird (während des Klicks):</p>
+  <p><a class="active-link" href="">Active Link</a></p>
+  <h2>:visited</h2>
+  <p>Mit der <code>:visited</code> Pseudoklasse können wir das Aussehen eines Links definieren, nachdem dieser besucht wurde:</p>
+  <p><a href="https://google.com" target="_blank">DuckDuckGo</a></p>
+  <h2>Reihenfolge der Pseudoklassen</h2>
+  <p>Falls ein Element mehrere Pseudoklassen bekommt, dann muss das Styling in der folgenden Reihenfolge stattfinden:</p>
+  <ol>
+    <li>:visited</li>
+    <li>:hover</li>
+    <li>:active</li>
+  </ol>
+</body>
+</html>

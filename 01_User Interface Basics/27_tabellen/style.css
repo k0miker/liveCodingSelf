@@ -1,0 +1,93 @@
+:root {
+  font-family: sans-serif;
+
+  --white: #fdfcf3;
+  --sand-light: #e9e6d0;
+  --sand-medium: #d1cdb6;
+  --black: #050618;
+}
+
+body {
+  background-color: var(--sand-light);
+}
+
+table {
+  /* Einfaches Outline zwischen den Zellen */
+  border-collapse: collapse;
+
+  /* Alle Spalten haben dieselbe Breite */
+  table-layout: fixed;
+  width: 540px;
+
+  /* Position der Caption (`top` oder `bottom`) */
+  caption-side: bottom;
+
+  /* border: 8px ridge black; */
+}
+
+table td, 
+table th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+thead,
+tfoot {
+  background-color: var(--white);
+}
+
+/* even => Jedes Kind an einer `geraden` Position (zweites, viertes, sechtes, etc.) */
+/* odd => Jedes Kind an einer `ungeraden` Position (erstes, drittes, fünftes, etc.) */
+tbody tr:nth-child(even) {
+  background-color: var(--sand-medium);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--sand-light);
+}
+
+tfoot th {
+  text-align: left;
+}
+
+tfoot th,
+tfoot td {
+  border-top: 4px solid blue;
+  /* border-top => Grenze oben */
+  /* border-left => Grenze links */
+  /* border-right => Grenze rechts */
+  /* border-bottom => Grenze unten */
+}
+
+caption {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+
+/* Spalten stylen */
+
+/* Solch eine Auswahl funktioniert nicht: */
+/* tbody td:nth-child(2) {
+  background-color: orange;
+} */
+
+colgroup col:nth-child(2) {
+  border: 4px solid purple;
+}
+
+
+/* Divs zur Tabelle umwandeln */
+.table {
+  display: table; /* <table> */
+}
+
+.tr {
+  display: table-row; /* <tr> */
+}
+
+.td {
+  display: table-cell; /* <td> */
+  
+  border: 1px solid black;
+}

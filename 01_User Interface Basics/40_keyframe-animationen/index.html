@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Keyframe-Animationen</h1>
+  <!-- <div class="box farbe-wechseln"></div> -->
+  <h3><code>animation</code>-Abkürzung</h3>
+  <!-- <div class="box farbe-wechseln-short"></div> -->
+  <h3>Animation Fill Mode</h3>
+  <p>Die CSS-Eigenschaft animation-fill-mode definiert das Verhalten der Animation bevor sie startet und nachdem sie endet. Es gibt drei Optionen: forwards, backwards & both.</p>
+  <h4>Das Problem</h4>
+  <p>Wenn eine Animation nicht dauerhaft loopt, sondern einen Anfang und ein Ende hat, dann springt das Styling unseres Elements:</p>
+  <div class="box farbe-wechseln-once"></div>
+  <h4>Die Lösung</h4>
+  <p>Mit <code>animation-fill-mode: both</code> könnt ihr dieses Problem lösen:</p>
+  <div class="box fill-mode-both"></div>
+  <p>Mit <code>animation-fill-mode: forwards</code> behält die Animation die Einstellungen am Ende der Animation bei:</p>
+  <div class="box fill-mode-forwards"></div>
+  <p>Mit <code>animation-fill-mode: backwards</code> behält die Animation die Einstellungen am Anfang der Animation bei:</p>
+  <div class="box fill-mode-backwards"></div>
+
+  <h2>Lade-Animationen</h2>
+  <div class="loader"></div>
+
+  <h2 class="animate__rubberBand">Animation Libraries</h2>
+  <p>Animate.style: <a href="https://animate.style/#documentation">https://animate.style/#documentation</a></p>
+
+  <h2>Hover funktioniert nicht ganz so gut mit Keyframe-Animationen</h2>
+  <div class="box hover-animation"></div>
+  <p>Für Hover-Animationen immer transitions nutzen:</p>
+  <div class="box transition"></div>
+</body>
+</html>

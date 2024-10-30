@@ -1,0 +1,40 @@
+:root {
+  font-family: sans-serif;
+}
+
+.products > div {
+  background-color: orange;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+@media (min-width: 640px) {
+  .products {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .products > div {
+    flex-basis: 40%;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .products > div {
+    flex-basis: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products > div {
+    flex-basis: 20%;
+  }
+}

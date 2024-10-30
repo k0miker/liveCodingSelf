@@ -1,0 +1,70 @@
+:root {
+  font-family: sans-serif;
+}
+
+.before-list li:nth-child(1)::before {
+  /* Inhalt des Pseudoelements */
+  /* Entweder Text, "", url(...) */
+  content: "Hallo Before";
+
+  /* Styling des Inhaltes*/
+  font-size: 0.8rem;
+  color: orange;
+  background-color: black;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.before-list li:nth-child(1)::after {
+  /* Inhalt des Pseudoelements */
+  /* Entweder Text, "", url(...) */
+  content: "Hallo After";
+
+  /* Styling des Inhaltes*/
+  font-size: 0.8rem;
+  color: orange;
+  background-color: black;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+
+.before-list li:nth-child(2)::before {
+  /* Wenn wir den Content leer lassen, dann können wir ein rein grafisches Element definieren */
+  content: "";
+
+  display: inline-block;
+  background-color: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+}
+
+.before-list li:nth-child(2)::after {
+  /* Wenn wir den Content leer lassen, dann können wir ein rein grafisches Element definieren */
+  content: "🥰";
+
+  display: inline-block;
+  background-color: green;
+  border-radius: 50%;
+  padding: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+
+.before-list li:nth-child(3)::before {
+  content: url(./img/heart.svg);
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 8px;
+}
+
+
+.hover-effect:hover::before {
+  content: "🖥️";
+  background-color: orange;
+}

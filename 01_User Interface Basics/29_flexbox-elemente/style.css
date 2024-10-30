@@ -1,0 +1,217 @@
+:root {
+  font-family: sans-serif;
+}
+
+.flex-container-00 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+
+  width: 100%;
+  background-color: rgb(89, 24, 89);
+  margin-top: 2rem;
+}
+
+.flex-container-00 div {
+  background-color: rgb(248, 248, 193);
+  padding: 1rem;
+}
+
+.flex-container-00 div:nth-child(1) {
+  flex-basis: 100px;
+}
+
+.flex-container-00 div:nth-child(2) {
+  flex-basis: 30%;
+}
+
+.flex-container-00 div:nth-child(2) {
+  flex-basis: 10%;
+}
+
+
+.flex-container-01 {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+
+  width: 100%;
+  background-color: rgb(89, 24, 89);
+}
+
+.flex-container-01 .circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(248, 248, 193);
+  border-radius: 50%;
+}
+
+.flex-container-01 .grow-element {
+  /* Dieses Element soll den restlichen Platz einnehmen */
+  flex-grow: 1; /* Standard-Wert: 0 */
+
+  background-color: yellow;
+  border-radius: 25px;
+
+  /* Text zentrieren */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-02 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+
+  width: 100%;
+  background-color: rgb(89, 24, 89);
+  margin-top: 2rem;
+}
+
+.flex-container-02 div {
+  flex-basis: 50px;
+  height: 50px;
+  background-color: yellow;
+}
+
+.flex-container-02 div:nth-child(1),
+.flex-container-02 div:nth-child(5) {
+  flex-grow: 0;
+}
+
+.flex-container-02 div:nth-child(2),
+.flex-container-02 div:nth-child(4) {
+  flex-grow: 1;
+}
+
+.flex-container-02 div:nth-child(3) {
+  flex-grow: 3;
+}
+
+
+/* Flex Shrink */
+
+.flex-container-03 {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+
+  width: 100%;
+  background-color: rgb(89, 24, 89);
+  margin-top: 2rem;
+}
+
+.flex-container-03 div {
+  background-color: rgb(187, 187, 255);
+
+  flex-basis: 200px;
+  height: 20px;
+
+  /* Verändert die Größe gar nicht */
+  flex-shrink: 0;
+}
+
+.flex-container-03 div:nth-child(1),
+.flex-container-03 div:nth-child(4) {
+  /* Verändert die Größe gar nicht */
+  flex-shrink: 0;
+}
+
+.flex-container-03 div:nth-child(2),
+.flex-container-03 div:nth-child(5) {
+  flex-shrink: 1;
+}
+
+.flex-container-03 div:nth-child(3) {
+  flex-shrink: 2;
+}
+
+
+
+.flex-container-05 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  background-color: rgb(89, 24, 89);
+  margin-top: 2rem;
+}
+
+.flex-container-05 div {
+  flex: 1 1 30%;
+  /* flex-basis: 30%; */
+  /* flex-grow: 1; */
+  height: 40px;
+
+  background-color: yellow;
+}
+
+
+/* order */
+
+.flex-container-06 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  background-color: rgb(89, 24, 89);
+  margin-top: 2rem;
+}
+
+.flex-container-06 div {
+  flex: 1 1 30%;
+  height: 40px;
+  background-color: yellow;
+}
+
+.flex-container-06 div:nth-child(5) {
+  order: -1;
+}
+
+.flex-container-06 div:nth-child(4) {
+  order: -2;
+}
+
+.flex-container-06 div:nth-child(2) {
+  order: 2;
+}
+
+
+/* align-self */
+.flex-container-07 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+
+  width: 100%;
+  height: 200px;
+  background-color: rgb(89, 24, 89);
+  margin-top: 2rem;
+}
+
+.flex-container-07 div {
+  width: 80px;
+  height: 40px;
+  background-color: yellow;
+}
+
+.flex-container-07 div:nth-child(2) {
+  align-self: flex-end;
+}
+
+.flex-container-07 div:nth-child(4) {
+  align-self: center;
+}
+
+.flex-container-07 div:nth-child(5) {
+  height: auto;
+  align-self: stretch;
+}
+

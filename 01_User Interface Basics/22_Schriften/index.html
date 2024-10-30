@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Google Fonts müssen im Head heruntergeladen werden (vor eurer CSS-Dateien) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Danfo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- CSS-Dateien kommen nach den Schriften -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Schriften</h1>
+  <h2>HTML-Elemente</h2>
+  <h3>Welche Inline-Elemente gibt es zum Styling von Text?</h3>
+  <p><code>Code-Beispiele</code> <strong>Text hervorheben</strong> <em>Text kursiv darstellen bzw. betont hervorheben</em> <samp>Text-Ausgaben</samp> <mark>Text markieren</mark><small>Schrift klein darstellen</small> <cite>Autor eines Zitats</cite> <u>Text unterstreichen</u> <q>Ein kurzes Zitat kommt hierhin</q> <i>Alternative für kursiven Text</i> <sub>Text tiefer stellen</sub> <sup>Text hoch stellen</sup> <kbd>Tastatur-Eingaben</kbd> <acronym>Als Wort gesprochene Abkürzungen</acronym> <strike>Durchgestrichenber Text</strike> <abbr>Als Buchstabenfolge gesprochene Abkürzung</abbr> <b>Text hervorheben</b> <time>Zeit-Angaben</time> <del>Entfernter Text darstellen</del>  <var>Für Variablen in Text</var></p>
+  <p>Ein ganz wichtiges Inline-Element ist das span-Element: <span class="bg-yellow">Generisches Element für Auswahl von Text ohne eigenes Styling</span></p>
+  <p>Eine Übersicht findet ihr hier: <a href="https://www.w3schools.com/html/html_blocks.asp">Inline-Elemente</a></p>
+
+  <h2>CSS-Eigenschaften</h2>
+  <h3>Welche CSS-Eigenschaften gibt es zum Styling von Schriften?</h3>
+  <h4>text-transform: capitalize | uppercase | lowercase | none</h4>
+  <p class="text-transform">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quam qui alias, obcaecati doloribus, odit reprehenderit pariatur iure maxime recusandae quidem illo omnis assumenda, temporibus odio suscipit distinctio eligendi corporis?</p>
+  <h4>text-decoration: underline | overline | line-through | none</h4>
+  <p class="text-decoration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dicta, culpa illum esse sint ratione impedit, totam consequatur iste minima ut quis saepe vero cum vitae error non ex incidunt!</p>
+  <h3>Font-Styling</h3>
+  <h4>font-weight => Schriftdicke</h4>
+  <h4>color => Schriftfarbe</h4>
+  <h4>font-size => Schriftgröße</h4>
+  <h4>font-family => Schriftart</h4>
+  <h4>text-shadow => Textschatten</h4>
+  <h4>line-height => Zeilenhöhe anpassen</h4>
+  <h4>letter-spacing => Buchstaben-Abstand</h4>
+  <h4>word-spacing => Wort-Abstand</h4>
+  <p class="font-style">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit pariatur dolores numquam et sit illo atque optio, ipsa accusantium, consectetur est eaque temporibus enim ea, quibusdam sed doloremque nisi laboriosam.</p>
+  <p class="serif-font"><b>Serif Font: </b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error nihil unde, ipsum, sunt animi hic</p>
+  <p class="sans-serif-font"><b>Sans-Serif Font:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error nihil unde, ipsum, sunt animi hic</p>
+  <p class="mono-font"><b>Monospace Font: </b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error nihil unde, ipsum, sunt animi hic</p>
+  <p class="cursive-font"><b>Cursive Font:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error nihil unde, ipsum, sunt animi hic</p>
+
+  <h2>Eigene Schriftarten implementieren</h2>
+  <h3>Google Fonts hinzufügen</h3>
+  <p>Eine Google Font können wir per link oder @import zu unserer Seite hinzufügen. Der Code dazu muss in den Head des HTML-Dokuments.</p>
+  <p class="embed-google-font-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias, rem excepturi unde rerum cupiditate necessitatibus at suscipit quidem mollitia maxime vitae veniam. Accusantium officiis soluta id, aut magni nemo!</p>
+  <p class="embed-google-font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestias, rem excepturi unde rerum cupiditate necessitatibus at suscipit quidem mollitia maxime vitae veniam. Accusantium officiis soluta id, aut magni nemo!</p>
+  <h3>Lokale Schriftdateien hinzufügen</h3>
+  <p><mark>Wichtig:</mark> Es gibt ein Datenschutz-Problem bei der Implementierung von Google Fonts per Link. Das heißt in professionellen Webseiten-Projekten Schriften immer als lokale Dateien implementieren.</p>
+  <p class="local-font-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nam eveniet numquam impedit quas! Impedit nobis, libero aliquam sint repellat dolorem autem reprehenderit doloremque sapiente ea deserunt, distinctio sunt maiores.</p>
+  <p class="local-font-bold-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nam eveniet numquam impedit quas! Impedit nobis, libero aliquam sint repellat dolorem autem reprehenderit doloremque sapiente ea deserunt, distinctio sunt maiores.</p>
+  <p class="danfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nam eveniet numquam impedit quas! Impedit nobis, libero aliquam sint repellat dolorem autem reprehenderit doloremque sapiente ea deserunt, distinctio sunt maiores.</p>
+</body>
+</html>

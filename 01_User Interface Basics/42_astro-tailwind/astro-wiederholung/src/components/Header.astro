@@ -1,0 +1,23 @@
+---
+// Frontmatter-Bereich
+// Astro-Komponenten, CSS-Dateien, JS-Dateien, Bilder importieren
+// JS-Variablen für die Seite definieren
+
+const { title } = Astro.props;
+---
+
+<div class="headline-xl">
+  <h1>{title}</h1>
+</div>
+
+<style>
+  /* Internes CSS wird nur auf HTML-Elemente innerhalb der Datei angewendet */
+
+  h1 {
+    color: orange;
+  }
+
+  div {
+    background-color: white;
+  }
+</style>

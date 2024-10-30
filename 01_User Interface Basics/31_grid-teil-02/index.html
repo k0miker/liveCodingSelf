@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>CSS Grids</h1>
+  <h2>Wiederholung</h2>
+  <main>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+    <div>06</div>
+    <div>07</div>
+    <div>08</div>
+  </main>
+  <section class="grid-02">
+    <div>1fr</div>
+    <div>2fr</div>
+    <div>100px</div>
+    <div>1fr</div>
+  </section>
+  <h2>Grid-Template-Areas</h2>
+  <p>Die grid-template-areas-Eigenschaft und die grid-area-Eigenschaft sind Teil des CSS Grid Layouts und ermöglichen eine benannte und visuelle Art der Definition von Grid-Layouts.</p>
+  <p>Im Prinzip können wir Grid-Bereiche benennen und dann Elemente anhand des Bereich-Namens dort positionieren:</p>
+  <section class="grid-03">
+    <div class="header">header</div>
+    <div class="sidebar">sidebar</div>
+    <div class="main">main</div>
+    <div class="footer">footer</div>
+  </section>
+  <h2>span-Keyword</h2>
+  <p>Mit dem span-Keyword können wir definieren über wie viele Zeilen bzw. Spalten sich ein Element erstrecken soll. Die Positionierung wird uns so erleichtert:</p>
+  <section class="grid-04">
+    <div class="first">01</div>
+    <div class="second">02</div>
+    <div class="third">03</div>
+  </section>
+  <p class="margin-top">Mit <code>span</code> können wir auch einfach nur die Größe eines Elements definieren ohne die exakte Position festzulegen. Die Elemente werden dann automatisch im Grid positioniert.</p>
+  <section class="grid-05">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div class="wide">04</div>
+    <div>05</div>
+    <div>06</div>
+    <div>07</div>
+  </section>
+</body>
+</html>

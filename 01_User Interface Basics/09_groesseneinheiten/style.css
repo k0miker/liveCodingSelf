@@ -1,0 +1,24 @@
+/* Auf diese Schriftgröße bezieht sich Rem: */
+/* html {
+  font-size: 16px;
+} */
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(52, 52, 52);
+  color: rgb(225, 229, 214);
+}
+
+.box {
+  background-color: rgb(225, 118, 30);
+  margin-top: 16px;
+}
+
+.child-box {
+  background-color: rgb(147, 75, 17);
+}
+
+h2 {
+  margin-top: 8rem;
+}
+

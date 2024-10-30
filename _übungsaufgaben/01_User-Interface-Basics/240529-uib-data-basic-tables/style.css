@@ -1,0 +1,27 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border: 3px solid black;
+  border-collapse: collapse;
+  /* table-layout: fixed; */
+}
+
+th, td {
+  border: 2px ridge black;
+  padding: 10px;
+  text-align: center;
+  /* width: 300px; */
+}
+
+img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* Falls ihr mit Klassen anstatt einer th arbeitet */
+.bold {
+  font-weight: bold;
+}
+

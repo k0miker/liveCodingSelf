@@ -1,0 +1,82 @@
+:root {
+  font-size: 10px;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0 auto;
+  border: 2px solid #575052;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+
+  /* Aufgabe 02 */
+  width: 50rem;
+  height: 50rem;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  color: #e62260;
+  background-color: #e7becb;
+
+  height: 10rem;
+  font-size: 5.2rem;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  color: #2b5c32;
+
+  /* Aufgabe 04 */
+  height: 10%;
+  font-size: 2.6rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  /* Aufgabe 05 */
+  height: 30rem;
+}
+
+li {
+  color: #963629;
+
+  /* Aufgabe 05 */
+  /* Schriftgröße 20px in em */
+  font-size: 2em;
+}
+
+.li1 {
+  background-color: antiquewhite;
+
+  /* Aufgabe 05 */
+  height: 2.5em;
+}
+
+.li2 {
+  background-color: #e9d1b3;
+
+  /* Aufgabe 05 */
+  height: 5em;
+}
+
+.li3 {
+  background-color: #d6a67a;
+
+  /* Aufgabe 05 */
+  height: 7.5em;
+}
+
+.p1 {
+  background-color: #a7dfcc;
+}
+
+.p2 {
+  background-color: #afe2ae;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Selektoren</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>CSS-Selektoren</h1>
+  <ul>
+    <li><code>div p</code> : Alle Elemente vom Typ <code>p</code>, die sich
+      innerhalb von einem Element vom Type <code>div</code> befinden.</li>
+    <li><code>div > p</code> : Alle <code>p</code>-Elemente, die als direktes
+      Eltern-Element ein <code>div</code>-Element haben (bzw. direkte Kinder von einem div sind).</li>
+    <li><code>div + p</code> : Alle <code>p</code>-Elemente, die
+      direkt nach einem <code>div</code>-Element positioniert sind.
+      (Geschwister-Element und direkt folgend)</li>
+    <li><code>div ~ p</code> : Alle <code>ul</code>-Elemente, die nach einem
+      <code>div</code>-Element kommen. <code>ul</code>-Elemente müssen
+      Geschwister von einem <code>div</code>-Element sein und nach diesem
+      positioniert sein.</li>
+    <li><code>d..iv p:nth-child(2)</code> : Alle p-Elemente, die sich innerhalb eines div befinden (egal wie tief) & die das zweite Kind ihres Eltern-Elementes sind.</li>
+  </ul>
+  <p>Es gibt auch noch weitere Selektoren wie <code>:first-child</code>, <code>:last-child</code> oder <code>:nth-of-type()</code>. Eine Übersicht über alle Optionen findet ihr <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors?retiredLocale=de">hier</a></p>
+  <h2>Beispiel:</h2>
+  <p>p: Direkter Nachbar vor dem div</p>
+  <div>
+    <p>p: Kind von div</p>
+    <p>p: Zweites Kind von div</p>
+    <section>
+      <p>p: Kind von section </p>
+      <p>p: Zweites Kind von section </p>
+    </section>
+  </div>
+  <p>p: Direkter Nachbar nach dem div </p>
+  <p>p: Nicht direkter Nachbar von div</p>
+  <p>p: Nicht direkter Nachbar von div</p>
+</body>
+</html>

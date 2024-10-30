@@ -1,0 +1,82 @@
+/* `:root` ist dasselbe wie `html`, es hat aber eine höhere Spezifizität */
+:root {
+  font-family: sans-serif;
+  color: rgb(26, 19, 95);
+  background-color: rgb(226, 226, 211);
+
+  /* Hier ist die Basis-Schriftgröße für Rem gesetzt: */
+  /* (Normalerweise überschreiben wir diese niemals!) */
+  font-size: 16px;
+}
+
+.box {
+  background-color: rgb(42, 42, 185);
+  color: white;
+  margin-top: 1rem;
+}
+
+.secondary-box {
+  background-color: rgba(42, 42, 185, 0.502);
+  color: white;
+}
+
+/* Pixel */
+.pixel-box {
+  width: 150px;
+  height: 100px;
+}
+
+/* Prozent */
+.percentage-box {
+  width: 100%;
+  height: 100%;
+}
+
+/* Em */
+.em-box {
+  /* 1em = 10px */
+  font-size: 10px;
+  width: 15em;
+  height: 10em;
+}
+
+/* Rem-Box */
+.rem-box {
+  /* 1rem = 16px, das ist die Basis-Schriftgröße im :root/html-Element */
+  width: 9.375rem;
+  height: 6.25rem;
+}
+
+/* VH-VW-Box */
+.vh-vw-box {
+  width: 40vw;
+  height: 20vh;
+}
+
+.vh-vw-box-limited {
+  width: 40vw;
+  height: 20vh;
+
+  /* Mit max-width & max-height können wir die maximale Größe limitieren */
+  max-width: 150px;
+  max-height: 100px;
+
+  /* Mit min-width & min-height können wir die minimale Größe definieren: */
+  /* min-width: 150px;
+  min-height: 100px; */
+}
+
+/* Em-Liste */
+#em-list li {
+  font-size: 1.25em;
+}
+
+/* Rem-Liste */
+#rem-list li {
+  font-size: 1.25rem;
+}
+
+/* Percent-Liste */
+#percent-list li {
+  font-size: 125%;
+}

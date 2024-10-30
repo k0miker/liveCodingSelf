@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+    }
+
+    .box {
+      background-color: orange;
+      width: 100px;
+      height: 100px;
+    }
+
+    .horizontal-center {
+      margin-left: auto;
+      margin-right: auto;
+
+      /* margin: 0 auto; */
+    }
+
+    .container {
+      margin: 16px;
+      background-color: rgb(190, 190, 190);
+    }
+
+    .small-box {
+      height: 50px;
+      width: 50px;
+      background-color: orange;
+    }
+
+    .flex-container {
+      background-color: grey;
+      height: 150px;
+      
+      /* Aus Box eine Flexbox machen: */
+      display: flex;
+
+      /* Horizontale Zentrierung: */
+      justify-content: center;
+
+      /* Vertikale Zentrierung: */
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Horizontale Zentrierung</h1>
+  <p>Um ein Element horizontal zu zentrieren, gibt es einen kleinen Trick.</p>
+  <p>Dazu setzen wir die horizontale Margin eines Elementes auf <code>auto</code>.</p>
+  <h4>Margin-Auto:</h4>
+  <p><code>margin-left: auto; margin-right: auto;</code></p>
+  <div class="box horizontal-center"></div>
+  <div class="container">
+    <div class="small-box horizontal-center"></div>
+  </div>
+  <h4>Center-Element:</h4>
+  <center><div style="background-color: orange; width: 200px;">
+    hallo
+  </div></center>
+  <h4>Flex-Box:</h4>
+  <p>Mit der Flexbox ist die horizontale & vertikale Zentrierung ganz einfach. Mehr Details später oder hier: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox-Visualisierung</a></p>
+  <div class="flex-container">
+    <div class="small-box"></div>
+  </div>
+</body>
+</html>

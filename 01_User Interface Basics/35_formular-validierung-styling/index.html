@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anmelde-Formular</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <h1>Anmelde-Formular</h1>
+    <form action="https://formspree.io/f/xdoqqgbd" method="post">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="john.doe@gmail.com" required>
+      
+      <label for="password">Passwort:</label>
+      <!-- pattern => Regular Expression hinzufügen (testet den String basierend auf einem Set an den Regeln) -->
+      <!-- <input type="password" name="password" id="password" minlength="8" maxlength="20" pattern="^(?=.*[A-Z])(?=.*[\W_]).+$" required> -->
+      <input type="password" name="password" id="password" minlength="8" maxlength="20" required>
+
+      <label for="geschlecht">Geschlecht:</label>
+      <select name="geschlecht" id="geschlecht">
+        <option value="männlich">männlich</option>
+        <option value="weiblich">weiblich</option>
+        <option value="divers">divers</option>
+      </select>
+
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="John Doe" placeholder="Dein Name">
+
+      <label for="date">Geburtsdatum:</label>
+      <input type="date" name="date" id="date" min="1904-06-12" max="2006-06-12">
+
+      <label for="children">Anzahl deiner Kinder:</label>
+      <input type="number" name="children" id="children" value="0" min="0" max="19">
+
+      <label for="postleitzahl">Postleitzahl:</label>
+      <!-- Eingabefelder bei denen nur fünf Zahlen erlaubt sind -->
+      <!-- <input type="text" name="postleitzahl" id="postleitzahl" placeholder="11334" pattern="[0-9]{5}"> -->
+      <!-- <input type="text" name="postleitzahl" id="postleitzahl" placeholder="11334" pattern="\d{5}"> 
+      -->
+
+      <!-- Eingabefeld, bei dem fünf Zahlen & Buchstaben erlaubt sind-->
+      <input type="text" name="postleitzahl" id="postleitzahl" placeholder="11334" minlength="5" maxlength="5">
+
+      <label for="profilbild">Profilbild:</label>
+      <!-- <input type="file" name="profilbild" id="profilbild" accept="image/*"> -->
+       <input type="file" name="profilbild" id="profilbild" accept=".png,.jpg,.jpeg">
+
+      <fieldset>
+        <legend>Welche Version möchtest du?</legend>
+        <input type="radio" name="version" id="luxus" value="luxus">
+        <label for="luxus">Luxus</label>
+        <input type="radio" name="version" id="premium" value="premium">
+        <label for="premium">Premium</label>
+        <input type="radio" name="version" id="standard" value="standard" checked>
+        <label for="standard">Standard</label>
+      </fieldset>
+
+      <button type="submit">Account erstellen</button>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+    <script>
+        // Fehlerhafte URL => Keinen Server erreicht => catch block wird ausgeführt
+        const url = "https://sdfsfsfsdf323r.de"; 
+
+        // Server erreicht => Todo nicht vorhanden => if(!response.ok) Block wird ausgeführt
+        // const url = "https://jsonplaceholder.typicode.com/todos/1000000";
+
+        fetch(url)
+            .then(response => {
+                console.log("response", response)
+                console.log("response.ok", response.ok)
+
+                if(!response.ok) {
+                    console.log(`HTTP error! status: ${response.status}`);
+                    alert(`Es gab einen Fehler: ${response.status}`);
+
+                    return {};
+                    // besser wäre es eigentlich, hier einen error zu "werfen" oder das promise zu "rejecten"
+                    // => in Zukunft ;) "
+                }
+
+                return response.json();
+            })
+            .then( json => {
+                console.log("JSON Antwort", json)
+            } )
+            .catch( error => {
+                console.log( "error in catch", error);
+                // hier würden wir jetzt Nutzern Feedback in der UI geben oder Ähnliches
+                alert("Kontaktaufnahme mit Server gescheitert");
+            })
+            
+    </script>
+</head>
+
+<body>
+ <h1>This is the way</h1>
+</body>
+
+</html>

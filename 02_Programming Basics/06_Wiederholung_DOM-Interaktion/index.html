@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- defer -> Skript erst ausführen, nachdem Inhalte geladen wurden -->
+  <!-- <script defer src="./script.js"></script> -->
+</head>
+<body>
+  <h1>DOM-Interaktion</h1>
+
+  <ul>
+    <li>Eins</li>
+    <li>Zwei</li>
+    <li>Drei</li>
+  </ul>
+
+  <button id="click-me">Klick Mich</button>
+
+  <div>
+    <input type="text" placeholder="Eingabe" id="text-input">
+    <p id="input-feedback"></p>
+  </div>
+
+  <div>
+    <form>
+      <input type="radio" name="color" id="color-red">
+      <label for="color-red">Rot</label>
+      <input type="radio" name="color" id="color-blue">
+      <label for="color-blue">Blue</label>
+      <input type="radio" name="color" id="color-green">
+      <label for="color-green">Grün</label>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farben</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: rgb(234, 234, 226);
+    }
+
+    .named-colors {
+      background-color: tomato;
+      color: orange;
+    }
+
+    .rgb-color {
+      background-color: rgb(255 0 0);
+      color: rgb(255 255 255);
+    }
+
+    .rgb-color-transparent {
+      /* Rot-Ton mit 50% Transparenz */
+      background-color: rgb(255 0 0 / 0.5);
+    }
+
+    .rgb-purple {
+      background-color: rgb(151 39 201);
+    }
+
+    .hsl-color {
+      /* h: 0-360deg s: 0-100% l: 0-100% */
+      color: hsl(224deg 50% 50%);
+      background-color: hsl(10deg 50% 90%);
+    }
+
+    .hsl-color-transparent {
+      /* Rot-Ton mit 20% Transparenz */
+      background-color: hsl(255 0 0 / 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Farben in CSS</h1>
+  <p>Im CSS haben wir verschiedene Möglichkeiten Farben zu definieren.</p>
+  <p>In diesem Artikel sind alle Optionen beschrieben: <a href="https://www.joshwcomeau.com/css/color-formats/">Color Formats in CSS</a></p>
+  <h2 class="named-colors">Benannte Farben</h2>
+  <p>Es gibt eine Liste an benannten Farben, die wir in CSS nutzen können. Dazu müssen wir nur den Namen der Farbe referenzieren. Alle Farben findet ihr in der Dokumentation: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">MDN Dokumentation</a></p>
+  <h2 class="rgb-color">RGB-Definition</h2>
+  <p class="rgb-purple">Alle Pixel auf einem Bildschirm bestehen aus Rot-, Grün- & Blau-Anteilen. In CSS können wir <code>rgb(255 255 255)</code> nutzen, um diese drei Farb-Anteile zu definieren. Die Werte sind jeweils von 0 bis 255.</p>
+  <h2>Hex-Code-Definition</h2>
+  <p>Der Hex-Code ist einfach nur eine andere Schreibweise für die RGB-Definition.</p>
+  <ul>
+    <li><code>#FF00FF</code> => <code>rgb(255 0 255)</code></li>
+    <li><code>#FF00FF00</code> => <code>rgb(255 0 255 / 0)</code></li>
+  </ul>
+  <h2 class="hsl-color">HSL-Definition</h2>
+  <p>Die HSL-Definition ist ein weiterer Weg, wie Farben definiert werden können. Wir definieren hier den Farbton (Hue), die Sättigung (Saturation) & die Helligkeit (Lightness) einer Farbe. Diese Definition macht es uns einfacher Farbpaletten zu definieren.</p>
+  <h2>Farb-Transparenz</h2>
+  <p>Die Transparenz lässt sich direkt in der Farbdefinition mit definieren. Der Wert ist 0-1 (0 -> 0% Transparenz & 1 -> 100% Transparenz).</p>
+  <ul>
+    <li class="rgb-color-transparent"><code>rgb(200 100 89 / 0.5)</code> => 50% Transparenz</li>
+    <li class="hsl-color-transparent"><code>hsl(200 100 89 / 0.2)</code> => 20% Transparenz</li>
+  </ul>
+</body>
+</html>

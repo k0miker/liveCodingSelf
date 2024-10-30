@@ -1,0 +1,56 @@
+:root {
+  font-family: sans-serif;
+}
+
+.center-grid {
+  display: grid;
+  /* Maximalbreite der mittleren Spalte: 1280px */
+  grid-template-columns: 1fr minmax(0px, 1280px) 1fr;
+}
+
+main {
+  grid-column: 2 / 3;
+  background-color: rgb(206, 206, 206);
+}
+
+.twelve-column-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.5rem;
+}
+
+.content {
+  grid-column: span 12;
+}
+
+.content-02 {
+  grid-column: span 12;
+  background-color: rgb(255, 255, 163);
+}
+
+.content-02 .text {
+  grid-column: span 7;
+  background-color: rgb(157, 255, 0);
+}
+
+.content-02 .image {
+  grid-column: span 4;
+  background-color: orange;
+}
+
+.content-02 .numbers {
+  grid-column: span 1;
+  background-color: rgb(255, 89, 0);
+}
+
+.team {
+  grid-column: span 12;
+
+}
+
+.team > div {
+  grid-column: span 4;
+  background-color: yellow;
+  padding: 4rem;
+}
+

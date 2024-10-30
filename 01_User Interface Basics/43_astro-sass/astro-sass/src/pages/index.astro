@@ -1,0 +1,37 @@
+---
+// Import von SCSS-Dateien
+import '../scss/style.scss'
+// Wichtig: Variablen werden nicht mit importiert
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
+</html>
+
+<style lang="scss">
+	// Um Variablen aus anderen Dateien auszulesen, müssen wir diese mit @import importieren
+	// Das gesamte SCSS in diesen Dateien wird dann ausgeführt
+	@import '../scss/colors';
+	@import '../scss/style.scss';
+
+	$grey: #c2c2c2;
+
+	h1 {
+		background-color: $grey;
+		// color: $red;
+		color: $green;
+	}
+
+	// div {
+	// 	@apply bg-yellow-500;
+	// }
+</style>

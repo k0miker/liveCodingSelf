@@ -1,0 +1,79 @@
+/* Aufgabe 01 */
+body {
+  margin: 0;
+}
+
+header {
+  background-color: cyan;
+
+  /* Aufgabe 01, Option 1 */
+  /* position: fixed;
+  width: 100%; */
+
+  /* Aufgabe 01, Option 2 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+h3 {
+  /* Aufgabe 01, Option 1 */
+  /* margin-top: 0; */
+}
+
+main {
+  /* Aufgabe 01 */
+  padding-top: 5rem;
+  /* margin-top: 6rem; */
+}
+
+
+/* Das zweite Listen-Element stylen */
+/* Option 1: */
+.list ul li:nth-child(2) {
+  color: blue;
+}
+
+/* Option 02 */
+.blue-text {
+  color: blue;
+}
+
+
+/* Bilder nebeneinander darstellen */
+.image {
+  display: inline-block;
+}
+
+
+/* H3-Elemente stylen */
+.headline {
+  color: rgb(255, 140, 0);
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+
+/* Links im Footer stylen */
+footer a:visited {
+  color: green;
+}
+
+footer a:hover {
+  color: red;
+}
+
+
+/* Padding & Margin zum Box-Model hinzufügen */
+.box-model {
+  padding: 5px;
+  margin: 10%;
+}
+
+.tree-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}

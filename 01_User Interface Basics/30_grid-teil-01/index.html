@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>CSS Grids</h1>
+    <h2>01: Grundlagen</h2>
+    <p>
+      Das Layout des Grids definiert ihr mit
+      <code>grid-template-columns</code> & <code>grid-template-rows</code>.
+    </p>
+    <p>
+      Die Kinder eines Grids nehmen automatisch eine Zelle in der Größe ein und
+      füllen das Grid dann Zelle für Zelle aus.
+    </p>
+    <div class="grid-container-01">
+      <div>Erstes</div>
+      <div>Zweites</div>
+      <div>Drittes</div>
+      <div>Viertes</div>
+      <div>Fünftes</div>
+      <div>Sechstes</div>
+      <div>Siebtes</div>
+      <div>Achtes</div>
+      <div>Neuntes</div>
+      <div>Zehntes</div>
+    </div>
+    <h2>02: Elemente im Grid positionieren</h2>
+    <div class="grid-container-02">
+      <div class="erste-box">Erstes</div>
+      <div class="zweite-box">Zweites</div>
+      <div class="dritte-box">Drittes</div>
+      <div class="vierte-box">Viertes</div>
+    </div>
+    <h2>03: Die Fr-Einheit</h2>
+    <p>Sie gibt an, wie viel von dem verfügbaren Platz in einem Grid für eine bestimmte Spalte oder Zeile genutzt werden soll. Dabei wird der verfügbare Platz in gleich große Teile aufgeteilt, wobei fr die Größe dieser Teile repräsentiert.</p>
+    <div class="grid-container-03">
+      <div>2fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>5fr Breite</div>
+    </div>
+    <div class="grid-container-04">
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+    </div>
+    <div class="grid-container-05">
+      <div>1fr</div>
+      <div>1fr</div>
+      <div>300px</div>
+      <div>1fr</div>
+      <div>1fr</div>
+    </div>
+    <h2>04: Die Repeat-Funktion</h2>
+    <p>Mit der Repeat-Funktion können wir direkt mehrere Spalten/Zeilen mit derselben Größe definieren:</p>
+    <div class="grid-container-06">
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+      <div>1fr Breite</div>
+    </div>
+    <h2>05: Die MinMax-Funktion</h2>
+    <p>Mit der MinMax-Funktion können wir die Größe von Spalten & Zeilen limitieren (Minimal- & Maximalgrößen):
+    </p>
+    <p>Achtet darauf, dass der Maximalwert größer als der Minimalwert sein muss, damit es wie erwartet funktioniert.</p>
+    <p>Wenn nicht genügend Größe vorhanden ist, schrumpfen zuerst die fr-Elemente und dann die minmax-Elemente:</p>
+    <div class="grid-container-07">
+      <div>1fr</div>
+      <div>minmax(100px, 500px)</div>
+      <div>1fr</div>
+    </div>
+    <div class="grid-container-08">
+      <div>200px</div>
+      <div>minmax(100px, 500px)</div>
+      <div>1fr</div>
+    </div>
+    <p>So können wir einen Layout-Container erstellen, der maximal 1280px groß ist. Sich auf der Seite zentriert. Und auf kleineren Bildschirmen die gesamte Breite einnimmt:</p>
+    <div class="grid-container-09">
+      <div>1fr</div>
+      <div>minmax(0px, 1280px)</div>
+      <div>1fr</div>
+    </div>
+    <h2>06: Grid-Überlauf</h2>
+    <p>Wenn ein Grid mehr Elemente als definierte Zellen hat, dann werden automatisch weitere Zellen generiert.</p>
+    <p>Die Größe dieser automatisch generierten Zellen definieren wir mit den Einstellungen <code>grid-auto-columns</code> & <code>grid-auto-rows</code>.</p>
+    <h3>Beispiel: grid-auto-rows</h3>
+    <div class="grid-container-10">
+      <div>Erstes (Höhe: 50px)</div>
+      <div>Zweites (Höhe: 50px)</div>
+      <div>Automatisch generiert (Höhe: 100px)</div>
+      <div>Automatisch generiert (Höhe: 100px)</div>
+      <div>Automatisch generiert (Höhe: 100px)</div>
+      <div>Automatisch generiert (Höhe: 100px)</div>
+      <div>Automatisch generiert (Höhe: 100px)</div>
+      <div>Automatisch generiert (Höhe: 100px)</div>
+    </div>
+    <h3>Beispiel: grid-auto-columns</h3>
+    <div class="grid-container-11">
+      <div>Erstes (Breite: 1fr)</div>
+      <div>Zweites (Breite: 1fr)</div>
+      <div>Automatisch generiert (Breite: 200px)</div>
+    </div>
+  </body>
+</html>

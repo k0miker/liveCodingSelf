@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage</title>
+
+    <script>
+
+        function localStoragePlayground() {
+            // wenn name nicht im LS existiert, dann wird null zurückgeben
+            let name = localStorage.getItem("name"); 
+            console.log("name", name);
+            if(!name) {
+                name = prompt("Wie ist dein Name?");
+                localStorage.setItem("name", name)
+            } else {
+                alert("Willkommen zurück " + name );
+            }
+            console.log("name", name);
+        }
+        // localStoragePlayground();
+
+        // ** Arrays im LocalStorage speichern ** 
+        // Analog Objects
+
+        const todosLS = localStorage.getItem("todos")
+        let todos = []
+
+        if (todosLS) {
+            // Wenn Daten aus dem localStorage gefunden werden, verwende diese
+            todos = JSON.parse(todosLS);
+
+            // wir müssen das Ganze wieder parsen, da im LocalStorage nur Strings
+            // gespeichert werden können
+        } else {
+            const url = 'https://jsonplaceholder.typicode.com/todos';
+            fetch(url)
+                .then(response => {
+                    return response.json()
+                })
+                .then( json => {
+                    // json beinhaltet nun ein JAvascript Array
+                    // Das können wir nicht direkt im LocalStorage speichern
+                    // => mache aus Array einen JSON String
+                    localStorage.setItem("todos", JSON.stringify(json));
+
+                    // das Array speichern wir in unsere ursprüngliche Variable todos
+                    // damit wir im Code damit weiter arbeiten könnten
+                    // (z.B. in der UI bzw. Website anzeigen)
+                    todos = json;
+                })
+
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+    <h1>Localstorage</h1>
+
+    <!-- localStorage.clear() löscht alle Einträge -->
+    <button onclick="localStorage.clear(); location.reload()">Name löschen und Seite neuladen</button>
+</body>
+</html>

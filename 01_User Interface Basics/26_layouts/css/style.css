@@ -1,0 +1,213 @@
+:root {
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-top: 4rem;
+}
+
+/* Navigation */
+.navigation {
+  background-color: var(--purple-dark);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 5;
+
+  padding: 10px;
+}
+
+.navigation ul {
+  display: inline-block;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation a {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.navigation i {
+  margin-right: 1rem;
+  color: var(--white);
+}
+
+
+/* Section Header */
+.header {
+  width: 100%;
+  height: 400px;
+  background-color: orange;
+  
+  position: relative;
+}
+
+.header .headline-container {
+  background-color: orangered;
+  
+  /* Horizontal zentriert & über den Rand bewegt */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* Option 2: Section Header */
+.header-2 {
+  position: relative;
+  z-index: -1;
+}
+
+.header-2 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.header-2 .headline-container {
+  background-color: orangered;
+  position: relative;
+  top: -20px;
+  
+  display: block;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+
+/* Beneficts Section 1 */
+.benefits-1 {
+  background-color: pink;
+  /* height: 100px; */
+
+  /* Horizontale Zentrierung */
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.benefits-1 .left,
+.benefits-1 .right,
+.benefits-1 .center {
+  display: inline-block;
+  /* width: 33.33%; */
+  width: calc(100% / 3);
+  height: 100%;
+
+  /* float entfernt den Whitespace zwischen Inline-Block-Elementen */
+  float: left;
+}
+
+.benefits-1 .box {
+  background-color: var(--purple-light);
+  border-radius: 11px;
+  padding: 16px;
+  margin: 0 16px;
+}
+
+.benefits-1 .icon-container {
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--white);
+}
+
+.left {
+  background-color: orange; 
+}
+
+.right {
+  background-color: orangered;
+}
+
+.center {
+  background-color: purple;
+}
+
+
+
+
+/* Benefits Section 2 */
+.benefits-2 {
+  background-color: pink;
+  height: 100px;
+
+  /* Flexbox aus Container machen */
+  display: flex;
+}
+
+.benefits-2 .left,
+.benefits-2 .right,
+.benefits-2 .center {
+  width: calc(100% / 3);
+  height: 100%;
+} 
+
+
+/* Link-Liste */
+
+.link-list {
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+.link-list > div {
+  background-color: var(--purple-light);
+  border-radius: 8px;
+  margin-top: 16px;
+  padding: 2rem 4rem;
+}
+
+.layout-tipps li {
+  list-style-type: circle;
+  margin-left: 4rem;
+}
+
+
+/* Color Box */
+
+.link-list .top {
+  position: relative;
+  overflow: hidden;
+}
+
+.top .color-box {
+  background-color: var(--yellow);
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 32px;
+}
+
+/* Color Box mit ::before */
+.link-list .middle {
+  /* position: relative definiert den Container für position: absolute */
+  position: relative;
+  overflow: hidden;
+}
+
+.link-list .middle::before {
+  content: "";
+
+  background-color: var(--blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 32px;
+
+
+}

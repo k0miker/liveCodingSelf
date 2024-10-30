@@ -1,0 +1,129 @@
+* {
+  /* Die Größe der Box soll inklusive Padding & Border berechnet werden */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aufgabe 02 */
+.outline {
+  height: 500px;
+  width: 500px;
+
+  border: 20px solid plum;
+  
+  box-sizing: content-box;
+}
+
+/* Aufgabe 02 - Lösung 01: Die Größen & Margin-Abstände in Pixel ausrechnen */
+
+.box-1, .box-2, .box-3, .box-4 {
+  width: 125px;
+  height: 125px;
+  background-color: greenyellow;
+}
+
+.box-2, .box-4 {
+  border: 12px solid grey;
+}
+
+.box-1 {
+  margin-left: 375px;
+}
+
+.box-2 {
+  margin-left: 250px;
+}
+
+.box-3 {
+  margin-left: 125px;
+}
+
+.box-4 {
+  margin-left: 0px;
+}
+
+/* Aufgabe 02 - Lösung 01: Die Größen & Margin-Abstände in Prozent ausrechnen */
+
+.outline-2 {
+  width: 50%;
+  aspect-ratio: 1;
+
+  border: 20px solid plum;
+  
+  box-sizing: content-box;
+}
+
+.box-1-2, .box-2-2, .box-3-2, .box-4-2 {
+  width: 25%;
+  height: 25%;
+  background-color: greenyellow;
+}
+
+.box-2-2, .box-4-2 {
+  border: 12px solid grey;
+}
+
+.box-1-2 {
+  margin-left: 75%;
+}
+
+.box-2-2 {
+  margin-left: 50%;
+}
+
+.box-3-2 {
+  margin-left: 25%;
+}
+
+.box-4-2 {
+  margin-left: 0%;
+}
+
+
+/* Aufgabe 03 */
+.container-1 {
+  width: 50%;
+  aspect-ratio: 1;
+}
+
+.square-container-1 {
+  width: 25%;
+  height: 25%;
+}
+
+.square-container-2 {
+  width: 50%;
+  height: 25%;
+  padding-left: 25%;
+  background-color: red;
+}
+
+.square-container-3 {
+  width: 75%;
+  height: 25%;
+  padding-left: 50%;
+  background-color: red;
+}
+
+.square-container-4 {
+  width: 100%;
+  height: 25%;
+  padding-left: 75%;
+  background-color: red;
+}
+
+.square {
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: yellow;
+  border: 4px solid orange;
+}
+
+
+.gradient-box {
+  width: 50%;
+  aspect-ratio: 1;
+
+  background: linear-gradient(-135deg, white 50%, red 50%);
+}

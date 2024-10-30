@@ -1,0 +1,17 @@
+:root {
+  font-family: sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.secondary-headline {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: green;
+}
+
+.underline {
+  text-decoration: underline;
+}

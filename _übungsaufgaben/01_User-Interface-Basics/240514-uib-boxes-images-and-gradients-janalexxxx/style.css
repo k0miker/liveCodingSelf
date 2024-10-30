@@ -1,0 +1,28 @@
+body {
+  height: 100vh;
+
+  /* Aufgabe 01: */
+  /* Kurze Variante: */
+  background: url(./assets/background-sunset.jpg) no-repeat center;
+  background-size: cover;
+  
+  /* Lange Variante: */
+  /* background-image: url(./assets/background-sunset.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+
+  /* Aufgabe 02: */
+  background-image: linear-gradient(#fff, rgba(0, 0, 0, 0.5), #000), url(./assets/background-sunset.jpg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: white;
+
+  /* Aufgabe 03: */
+  background-image: radial-gradient(circle at 65%, rgba(255, 255, 255, 1), #f9f9f9, #555);
+}

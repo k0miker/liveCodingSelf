@@ -1,0 +1,39 @@
+:root {
+  font-family: sans-serif;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+
+  transition: all 1s ease-in-out;
+}
+
+.translate:hover {
+  transform: translate(50px, 100px);
+}
+
+.rotate:hover {
+  transform: rotate(360deg);
+}
+
+.scale:hover {
+  transform: scale(0.5, 4);
+  /* transform: scale(1.2); */
+}
+
+.skew:hover {
+  /* transform: skew(45deg, 0deg); */
+  transform: skew(0deg, -45deg);
+}
+
+.combined:hover {
+  transform: translate(100px, 20px) rotate(180deg) scale(2);
+}
+
+
+

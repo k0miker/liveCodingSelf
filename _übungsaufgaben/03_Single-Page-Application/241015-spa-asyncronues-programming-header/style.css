@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  margin: 0;
+  background: #000;
+}
+
+button {
+  padding: 0.5em 2em;
+  margin: 2em;
+}
+i {
+  opacity: 0;
+}

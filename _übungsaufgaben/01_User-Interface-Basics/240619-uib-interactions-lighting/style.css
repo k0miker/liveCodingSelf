@@ -1,0 +1,107 @@
+:root {
+  font-family: sans-serif;
+  --yellow: #fff900;
+  --orange: #ff6c00;
+  --grey: #484848;
+  --grey-dark: #262626;
+  --font-size: 80px;
+
+  --animation-length: 1s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--grey-dark);
+}
+
+.word {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--grey);
+}
+
+.word span {
+  animation: lighting var(--animation-length) ease-in-out infinite;
+}
+
+.word span:nth-child(1) {
+  animation-delay: 0.125s;
+}
+
+.word span:nth-child(2) {
+  animation-delay: calc(2 * 0.125s);
+}
+
+.word span:nth-child(3) {
+  animation-delay: calc(3 * 0.125s);
+}
+
+.word span:nth-child(4) {
+  animation-delay: calc(4 * 0.125s);
+}
+
+.word span:nth-child(5) {
+  animation-delay: calc(5 * 0.125s);
+}
+
+.word span:nth-child(6) {
+  animation-delay: calc(6 * 0.125s);
+}
+
+.word span:nth-child(7) {
+  animation-delay: calc(7 * 0.125s);
+}
+
+.word span:nth-child(8) {
+  animation-delay: calc(8 * 0.125s);
+}
+
+
+@keyframes lighting {
+  0% {
+    color: var(--grey);
+  }
+
+  4.25% {
+    color: var(--yellow);
+    text-shadow: 2px 2px 36px var(--orange), -2px -2px 36px var(--orange), 0 0 20px white;
+  }
+
+  7% {
+    color: var(--yellow);
+    text-shadow: 2px 2px 36px var(--orange), -2px -2px 36px var(--orange), 0 0 20px white;
+  }
+
+  /* Die Animation soll bis 12.5% durch sein, da es sich um 8 Buchstaben handelt */
+  /* 100% / 8 -> 12.5% || Jeder Buchstabe hat 12.5% Zeit für die Animation */
+  12.5% {
+    color: var(--grey);
+    text-shadow: none;
+  }
+
+  100% {
+    color: var(--grey);
+  }
+}
+
+
+@keyframes lighting2 {
+  0% {
+    color: var(--grey);
+    text-shadow: none;
+  }
+
+  50% {
+    color: var(--yellow);
+    text-shadow: 0 0 24px white;
+  }
+
+  100% {
+    color: var(--grey);
+    text-shadow: none;
+  }
+}
+

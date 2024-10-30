@@ -1,0 +1,22 @@
+:root {
+  font-family: sans-serif;
+}
+
+.photo-grid {
+  display: grid;
+  /* Die Anzahl der Spalten wird an den verfügbaren Platz angepasst. */
+  /* Die Mindestbreite für eine Spalte sind 200px. */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.photo-grid > div {
+  background-color: orange;
+}

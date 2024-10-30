@@ -1,0 +1,44 @@
+/* Schriftarten importieren */
+@font-face {
+  font-family: 'Inter';
+  src: url(../assets/fonts/Inter-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../assets/fonts/Inter-Black.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../assets/fonts/Inter-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Schriftstile definieren */
+
+.text-body {
+  /* Inter Regular */
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.26;
+  color: var(--white);
+}
+
+.text-link {
+  font-family: "Inter";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}

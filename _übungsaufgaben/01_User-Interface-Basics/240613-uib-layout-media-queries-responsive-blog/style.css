@@ -1,0 +1,185 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* colors */
+  --primary: teal;
+  --white: #fdfdfd;
+  --black: #030303;
+
+  /* padding/margin */
+  --small: 1rem;
+  --large: 1.8rem;
+}
+
+body {
+  font-size: 1.4rem;
+  color: var(--primary);
+  font-family: monospace;
+}
+
+/* HEADER */
+header {
+  background-color: var(--black);
+  color: var(--white);
+  padding: var(--small);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  text-align: center;
+}
+
+header ul li {
+  cursor: pointer;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+/* BANNER SECTION */
+.banner__section {
+  /* border: 1px solid purple; */
+  margin: var(--small) var(--large);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.banner__section .current__blog {
+  width: 640px;
+}
+
+.banner__section .current__blog h1 {
+  margin: var(--large) var(--small);
+}
+
+/* BANNER SECTION ASIDE */
+.banner__section__aside {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  margin: var(--large);
+  /* border: 1px solid blue; */
+}
+
+.banner__section__aside h3 {
+  text-align: end;
+  align-self: flex-end;
+  width: 15rem;
+  margin: var(--large) 0;
+}
+
+/* ARTICLE SECTION */
+.article__section {
+  width: 640px;
+  margin: var(--small);
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.article__section article {
+  margin: var(--small);
+}
+
+.article__section .author__info {
+  font-style: italic;
+  margin: var(--small);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--black);
+  color: var(--primary);
+  padding: var(--small);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+footer div h3 {
+  margin: var(--small) 0;
+}
+
+footer div input {
+  width: 100%;
+  margin: var(--small) 0 var(--large) 0;
+}
+
+footer div button {
+  display: block;
+  color: var(--white);
+  background-color: inherit;
+  border: none;
+  padding: 0.4rem var(--small);
+}
+
+/* MEDIA QUERIES */
+
+/* 
+Unterschiede:
+- navbar rechts bündig und einzeilig
+- aside section rechtsbündig
+- footer Text zentriert
+*/
+
+/* Desktop View */
+@media (min-width: 768px) {
+  header {
+    justify-content: flex-end;
+  }
+
+  header ul {
+    display: flex;
+  }
+
+  header ul li {
+    padding: var(--large);
+  }
+
+  .banner__section__aside {
+    display: flex;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer div {
+    width: 903px;
+  }
+
+  footer button {
+    margin: 0 auto;
+  }
+}

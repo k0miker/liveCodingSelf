@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="./traversing.js"></script>
+
+  <!-- defer erklärt https://javascript.info/script-async-defer -->
+
+  <link rel="stylesheet" href="dom.css">
+  <title>Traversing!</title>
+</head>
+
+<body>
+
+  <h1>
+    <script>
+      // kleine Spielerei: Was passiert hier?
+      let title = document.getElementsByTagName('title')[0].innerText;
+      document.write(title);
+    </script>
+  </h1>
+
+  <main>
+
+    <section class="first-section">
+      <h2>Section Eins</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, doloremque amet voluptatem quis temporibus
+        vel recusandae architecto sed nemo exercitationem?</p>
+    </section>
+
+    <section class="second-section">
+      <h2>Section Zwei</h2>
+      <ul>
+        <li>List item 1 </li>
+        <li id="active">
+          <span>List</span>
+          <br>
+          item 2
+        </li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+      </ul>
+    </section>
+
+    <section class="third-section">
+      <h2>Section Drei</h2>
+
+    </section>
+    <section class="fourth-section">
+      <h2>Section Vier</h2>
+
+    </section>
+  </main>
+
+</body>
+
+</html>

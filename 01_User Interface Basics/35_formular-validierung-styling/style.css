@@ -1,0 +1,90 @@
+:root {
+  font-family: sans-serif;
+}
+
+/* Alternative: Flexbox wäre auch eine gute Idee fürs Layout */
+
+form > label,
+form > input {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+form > label,
+fieldset,
+form button {
+  margin-top: 1.5rem;
+}
+
+#children {
+  width: 60px;
+}
+
+
+/* Eingabefelder basierend auf Status der Validierung stylen: */
+/* input:valid {
+  outline: 2px solid green;
+} */
+
+/* input:invalid {
+  outline: 2px solid red;
+} */
+
+
+/* Dieses Styling wird immer ausgeführt */
+/* Hier wollen wir nur die ausgefüllten Eingabefelder stylen: */
+
+/* input:not(:placeholder-shown):valid  => Elemente ohne Placeholder-Text */
+/* Elemente, die ausgefüllt sind => input[value]:not([value=""]):valid */
+/* input:not(:placeholder-shown):valid, 
+input[value]:not([value=""]):valid, 
+select:valid 
+{
+  outline: 2px solid green;
+}*/
+
+
+/* :focus => Nur ausgewähltes Element wird gestylt */
+input:focus:valid {
+  outline: 2px solid green;
+}
+
+input:focus:invalid {
+  outline: 2px solid red;
+}
+
+
+
+/* Platzhalter-Text stylen */
+/* ::placeholder  */
+input[type="email"]::placeholder {
+  font-family: monospace;
+}
+
+
+input:focus {
+  border: 2px solid rgb(255, 217, 0);
+}
+
+
+/* accent-color => setzt die Farbe von Checkboxen & Radio Buttons */
+input[type="radio"] {
+  accent-color: rgb(208, 0, 255);
+  /* Größe skalieren: */
+  transform: scale(1.5);
+}
+
+/* :focus gilt nur während der Radio-Button fokussiert ist */
+input[type="radio"]:focus {
+  accent-color: blue;
+}
+
+/* :checked => der Radio Button mit dem 'checked' Attribute */
+input[type="radio"]:checked {
+  accent-color: blue;
+}
+
+
+
+
+

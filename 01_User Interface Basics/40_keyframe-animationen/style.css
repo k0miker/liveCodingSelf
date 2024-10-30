@@ -1,0 +1,109 @@
+:root {
+  font-family: sans-serif;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 8px;
+}
+
+.farbe-wechseln {
+  /* Animation verlinken */
+  animation-name: farbe-wechseln;
+  /* Animationsdauer setzen */
+  animation-duration: 4s;
+  /* Animationskurve definieren */
+  animation-timing-function: ease-in-out;
+
+  /* Anzahl der Iterationen definieren (infinite => unendlicher Loop) */
+  animation-iteration-count: infinite;
+
+  /* Richtung, in die die Animation abgespielt werden soll */
+  animation-direction: alternate;
+}
+
+.farbe-wechseln-short {
+  /* Mit der Abkürzung können wir alles zusammen setzen */
+  animation: farbe-wechseln 4s ease-in-out alternate infinite;
+}
+
+.farbe-wechseln-once {
+  /* Diese Animation wird einmal ausgeführt */
+  animation: farbe-wechseln 4s ease-in-out normal 1;
+  animation-delay: 2s;
+}
+
+.fill-mode-both {
+  animation: farbe-wechseln 4s ease-in-out normal 1;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+.fill-mode-forwards {
+  animation: farbe-wechseln 4s ease-in-out normal 1;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.fill-mode-backwards {
+  animation: farbe-wechseln 4s ease-in-out normal 1;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+/* Eine Keyframe-Animation muss extra definiert werden: */
+@keyframes farbe-wechseln {
+  0% {
+    background-color: yellow;
+    transform: scale(0.5);
+  }
+  50% {
+    background-color: red;
+    transform: scale(1.5) translate(200px, 100px);
+  }
+  100% {
+    background-color: rgb(0, 255, 149);
+    transform: scale(1.2);
+  }
+}
+
+
+
+/* Lade-Animation */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 120px;
+  height: 20px;
+  border-radius: 20px;
+  background:
+   linear-gradient(orange 0 0) 0/0% no-repeat
+   lightblue;
+  animation: l2 2s infinite steps(10);
+}
+@keyframes l2 {
+    100% {background-size:110%}
+}
+
+
+.animate__rubberBand {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+.hover-animation:hover {
+  animation: farbe-wechseln 4s ease-in-out alternate infinite;
+}
+
+.transition {
+  transition: all 2s ease-in-out;
+}
+
+.transition:hover {
+  background-color: orange;
+  transform: scale(1.5);
+}
+
+

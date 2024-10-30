@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // mit einem post request Daten senden:
+        const getData = async () => {
+            const url = "https://jsonplaceholder.typicode.com/todos"; // URL
+            const options = {
+                method: "POST", // METHODE
+                headers: { // HEADER
+                    "Content-Type": "application/json" // im body schicken wir json mit
+                },
+                // wir machen aus einem js Objekt einen JSON Strng
+                body: JSON.stringify({text: "do the dishes"}) // BODY
+            }
+            const response = await fetch(url, options);
+            const result = await response.json(); // {text: "do the dishes", id: 201}
+            console.log(result);
+        }
+        getData();
+    </script>
+</body>
+</html>

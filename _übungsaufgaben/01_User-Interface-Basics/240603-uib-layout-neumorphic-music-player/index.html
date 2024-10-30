@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/77e2fdfffe.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Music Player</title>
+</head>
+
+<!-- Font Awesome Icons -->
+<!-- 
+  <i class="fas fa-search"></i>
+  <i class="fas fa-power-off"></i>
+  <i class="fas fa-play"></i>
+  <i class="fas fa-backward"></i>
+  <i class="fas fa-forward"></i> 
+-->
+
+<!-- Emmet -->
+<!-- main>section>div+h3+div^section>img+h2+h4+meter^section>div*3^hr -->
+
+
+<body>
+  <main class="flex__container">
+    <section class="header__section">
+      <div><i class="fas fa-search"></i></div>
+      <h3>My Playlist</h3>
+      <div><i class="fas fa-power-off"></i></div>
+    </section>
+    <section class="info__section">
+      <img src="./assets/track-image.jpeg" alt="Album Image">
+      <h2>Track #2</h2>
+      <h4>Artist</h4>
+      <meter max="100" value="70"></meter>
+
+      <!-- <input type="range" min="0" max="100" value="50" class="slider"> -->
+
+    </section>
+    <section class="control__section">
+      <div><i class="fas fa-backward"></i></div>
+      <div><i class="fas fa-play"></i></div>
+      <div><i class="fas fa-forward"></i></div>
+    </section>
+    <hr>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "rewire": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DigitalCareerInstitute/PB-conditionals-fizzbuzz-simple",
+    "id": 201931778
+  }
+}

@@ -1,0 +1,59 @@
+/* `:root` ist dasselbe wie `html`, es hat aber eine höhere Spezifizität */
+:root {
+  font-family: sans-serif;
+  color: rgb(26, 19, 95);
+  background-color: rgb(226, 226, 211);
+}
+
+.box {
+  background-color: rgb(42, 42, 185);
+  color: white;
+  margin-top: 1rem;
+}
+
+.text-small {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+/* Bilder ohne Verzerrung */
+
+.img-square {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+/* Image Filter */
+.blur-filter {
+  filter: blur(4px);
+}
+
+.sw-filter {
+  filter: grayscale(100%);
+}
+
+.mixed-filter {
+  filter: contrast(80%) sepia(100%) blur(1px);
+}
+
+/* Image Filter on hover anwenden */
+.hover-filter:hover {
+  filter: grayscale(100%);
+}
+
+
+/* Box-Shadow */
+.box-shadow {
+  /* box-shadow: x-Verschiebung y-Verschiebung Blur Spread Farbe */
+  box-shadow: 4px 16px 10px 5px red;
+}

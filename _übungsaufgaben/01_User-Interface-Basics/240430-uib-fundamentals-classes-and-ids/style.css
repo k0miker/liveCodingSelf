@@ -1,0 +1,25 @@
+/* What a mess! */
+
+body {
+  color: blue;
+}
+
+.important {
+  color: blue;
+}
+
+#highlight {
+  color: blue;
+}
+
+h2 {
+  color: red;
+}
+
+header {
+  background-color: aqua;
+}
+
+main {
+  background-color: darkgrey;
+}

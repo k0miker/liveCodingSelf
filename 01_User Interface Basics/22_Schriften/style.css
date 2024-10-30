@@ -1,0 +1,155 @@
+.bg-yellow {
+  background-color: yellow;
+}
+
+.text-transform {
+  /* text-transform: lowercase; */
+  text-transform: uppercase;
+  /* text-transform: capitalize; */
+  /* text-transform: none; */
+}
+
+.text-decoration {
+  /* text-decoration: line-through; */
+  /* text-decoration: underline; */
+  text-decoration: overline;
+}
+
+.font-style {
+  /* font-weight: Dicke der Schrift */
+  /* Werte: 100 / 300 / 400 etc oder bold / thin / normal */
+  font-weight: 600;
+
+  /* color: Schriftfarbe */
+  color: #e99f1f;
+
+  /* font-size: Schriftgröße */
+  /* Am Besten in rem eingeben; pixel funktionren aber auch */
+  font-size: 2rem;
+
+  /* font-family: Schriftart */
+  /* Option 1: Wir benennn die Schrift, die wir benutzen wollen, z.B. 'Arial' */
+  /* Option 2: Den Schrifttyp definieren: sans-serif | serif | monospace | cursive */
+  /* Wir können mehrere Fallback-Optionen definieren; Falls eine Schrift nicht geladen werden kann, wird die nächste genommen */
+  font-family: 'Arial', 'Times New Roman', sans-serif;
+
+  /* text-shadow: Schatten zum Text hinzufügen */
+  text-shadow: #662222 2px 4px 10px;
+
+  /* line-height: Zeilenhöhe anpassen */
+  line-height: 1.5;
+
+  /* letter-spacing: Abstand zwischen Buchstaben */
+  letter-spacing: 0.1em;
+
+  /* word-spacing: Abstand zwischen Wörtern */
+  word-spacing: 1em;
+
+  /* font-variant: Schrift-Variante */
+  /* Werte: small-caps | normal */
+  /* small-caps => Schrift bestehend aus Großbuchstaben, aber mit kleinen & großen Varianten */
+  font-variant: small-caps;
+
+  /* Falls vorhanden, können wir verschiedene Versionen einer Schriftart mit font-stretch auswählen. Zum Beispiel Condensed vs. Expanded */
+  font-stretch: extra-expanded;
+
+  /* font-style: normal | italic | oblique */
+  /* Zur kursiven Version einer Schrift wechseln */
+  font-style: italic;
+
+  /* Text-Einzug der ersten Zeile */
+  text-indent: 40px; 
+
+  /* Text-Ausrichtung */
+  /* text-align: left | right | center | justify */
+  text-align: right;
+}
+
+.serif-font {
+  /* Schriftart mit Serifen */
+  font-family: serif;
+}
+
+.sans-serif-font {
+  /* Schriftart ohne Serifen */
+  font-family: sans-serif;
+}
+
+.mono-font {
+  /* Jeder Buchstabe hat dieselbe Breite; Super für Code */
+  font-family: monospace;
+}
+
+.cursive-font {
+  /* Handgeschriebene Schriftart */
+  font-family: cursive;
+}
+
+
+/* Google Fonts als Link implementieren */
+
+.embed-google-font-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.embed-google-font-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+/* Lokale Schriftdateien implementieren */
+
+/* Option 1: Lokale Schriftdateien als @font-face definieren */
+
+@font-face {
+  font-family: "Vollkorn";
+  src: url(./fonts/Vollkorn-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  src: url(./fonts/Vollkorn-Italic.ttf) format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  src: url(./fonts/Vollkorn-Black.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  src: url(./fonts/Vollkorn-BlackItalic.ttf) format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+.local-font-bold-italic {
+  font-family: "Vollkorn";
+  font-weight: 900;
+  font-style: italic;
+}
+
+.local-font-regular {
+  font-family: "Vollkorn";
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Option 2: @import zur Implementierung von Schriftdateien nutzen */
+/* Aber Informationen wie font-weight & font-style werden dann nicht automatisch gesetzt. Bei Schriften mit mehreren Schnitt-Versionen immer @font-face benutzen. */
+@import url(./fonts/Danfo-Regular.ttf);
+
+.danfo {
+  font-family: "Danfo";
+}

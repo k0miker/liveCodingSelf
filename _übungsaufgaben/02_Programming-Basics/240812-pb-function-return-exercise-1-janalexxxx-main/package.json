@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "rewire": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DigitalCareerInstitute/PB-function-return-exercise-1",
+    "id": 343374399
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+html {
+	color: #fff;
+	font-family: 'Work Sans', sans-serif;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
+	overflow-x: hidden;
+	text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+	color: currentColor;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+main * {
+	flex-shrink: 0;
+	flex-grow: 0;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/6ffd2b57d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="navigation">
+      <nav>
+        <i class="fa-solid fa-circle-half-stroke"></i>
+        <ul>
+          <li><a class="text-link" href="">Link</a></li>
+          <li><a class="text-link" href="">Link</a></li>
+          <li><a class="text-link" href="">Link</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h2>Header implementieren (mit position absolute)</h2>
+    <section class="header">
+      <img src="" alt="" />
+      <div class="headline-container">
+        <h1>Hugs For Bugs</h1>
+      </div>
+    </section>
+    <h2>Header implementieren (mit position relative)</h2>
+    <section class="header-2">
+      <img src="./assets/img/mountains.jpg" alt="">
+      <div class="headline-container">
+        <h1>Hugs For Bugs</h1>
+      </div>
+    </section>
+    <h2>Dreigeteilten Container (mit inline-block & float)</h2>
+    <section class="benefits-1">
+      <div class="left">
+        <div class="box">
+          <div class="icon-container">
+            <i class="fa-solid fa-circle-half-stroke fa-2xl"></i>
+          </div>
+          <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, placeat velit! Ipsam in vel temporibus fugit unde provident quidem corrupti, recusandae dolores molestiae alias obcaecati sunt harum enim sint labor.</p>
+        </div>
+      </div>
+      <div class="center">
+        <div class="box">
+          <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, placeat velit! Ipsam in vel temporibus fugit unde provident quidem corrupti, recusandae dolores molestiae alias obcaecati sunt harum enim sint labor.</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="box">
+          <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, placeat velit! Ipsam in vel temporibus fugit unde provident quidem corrupti, recusandae dolores molestiae alias obcaecati sunt harum enim sint labor. provident quidem corrupti, recusandae dolores molestiae alias obcaecati sunt harum enim sint labor. </p>
+        </div>
+      </div>
+    </section>
+
+    <h2>Dreigeteilten Container (mit Flexbox)</h2>
+    <section class="benefits-2">
+      <div class="left"></div>
+      <div class="center"></div>
+      <div class="right"></div>
+    </section>
+
+    <h2>Drei Elemente untereinander</h2>
+    <section class="link-list">
+      <div class="top">
+        <div class="color-box"></div>
+        <a class="text-link" href="">Link</a>
+      </div>
+      <div class="middle">
+        <a class="text-link" href="">Link</a>
+      </div>
+      <div><a class="text-link" href="">Link</a></div>
+    </section>
+
+    <h2>Layout-Tipps</h2>
+    <ul class="layout-tipps">
+      <li>Die Höhe von Elementen nur setzen, wenn es absolut notwendig ist. Ein Element sollte sich an den Inhalt anpassen können.</li>
+      <li><code>position: relative</code> nur für kleine Änderungen der Position nutzen</li>
+      <li>Wenn möglich (& sinnvoll) relative Einheiten verwenden, damit das Layout flexibler ist</li>
+      <li>Testet euer Layout immer wieder, indem ihr Textgrößen verändert, Text-Inhalte verändert oder die Breite des Browser-Fensters anpasst</li>
+      <li>Komplexere Layouts benötigen Container-Boxen. Nehmt euch die Zeit das Layout zu planen und sauber aufzubauen.</li>
+    </ul>
+  </body>
+</html>

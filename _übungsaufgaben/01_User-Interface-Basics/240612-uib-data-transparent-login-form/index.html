@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transparent Login</title>
+
+  <!-- Fontawesome -->
+  <!-- Eure Einbindung für Fontawesome -->
+  <script src="https://kit.fontawesome.com/77e2fdfffe.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- main>h1+form>fieldset*2>legend+div>input^^input -->
+
+<body>
+  <main>
+    <h1>Login</h1>
+    <!-- <form action="{Eure Formspree Einbindung}" method="POST"></form> -->
+    <form action="https://formspree.io/f/mqkngeka" method="POST">
+      <fieldset>
+        <legend><i class="fas fa-at"></i></legend>
+        <div class="input-box">
+          <input type="email" name="email" autocomplete="off" placeholder="Your email..." required />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><i class="fas fa-lock"></i></legend>
+        <div class="input-box">
+          <input type="password" name="password" autocomplete="off" placeholder="Your password..." required />
+        </div>
+      </fieldset>
+      <input type="submit" value="Sign in" />
+    </form>
+  </main>
+
+</body>
+
+</html>

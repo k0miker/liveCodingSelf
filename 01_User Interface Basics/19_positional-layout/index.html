@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positions-Layout</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+      color: rgb(224, 224, 207);
+      background-color: rgb(30, 29, 32);
+    }
+
+    code {
+      background-color: rgb(75, 74, 74);
+      padding: 0.2rem;
+      color: pink;
+    }
+
+    h2 {
+      margin-top: 4rem;
+    }
+
+    .box {
+      background-color: rgb(168, 66, 7);
+      width: 150px;
+      height: 100px;
+      margin-top: 1rem;
+    }
+
+    /* position: relative */
+    .relative-1 {
+      position: relative;
+      top: 4rem;
+      left: 120px;
+      z-index: -2;
+    }
+
+    .relative-2 {
+      background-color: rgb(165, 108, 3);
+      position: relative;
+      bottom: 60px;
+      right: 60px;
+    }
+
+    .relative-3 {
+      background-color: rgb(41, 165, 3);
+      position: relative;
+      bottom: 80px;
+      left: 60px;
+      z-index: -1;
+    }
+
+    /* position: absolute */
+    div.container {
+      position: relative;
+      background-color: rgb(143, 94, 2);
+      height: 200px;
+    }
+
+    .absolute-1 {
+      position: absolute;
+      /* Abstand zum unteren Rand des Containers: 16px */
+      bottom: 16px;
+      /* Abstand zum rechten Rand des Containers: 64px */
+      right: 64px;
+      /* Abstand zum linken Rand des Containers: 16px */
+      left: 16px;
+      /* Abstand zum oberen Rand des Containers: 64px */
+      top: 64px;
+      background-color: rgb(236, 154, 14);
+      z-index: 2;
+    }
+
+    .absolute-2 {
+      background-color: orangered;
+      position: absolute;
+      right: 20%;
+      top: 16px;
+      height: 64px;
+      z-index: 1;
+    }
+
+    /* position: fixed */
+    .fixed-1 {
+      background-color: rgb(26, 9, 180);
+      color: rgb(153, 150, 171);
+      width: 100px;
+      height: 100px;
+
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -5;
+    }
+
+    .fixed-2 {
+      background-color: rgb(26, 9, 180);
+
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+    }
+
+    /* position: sticky */
+    .sticky {
+      background-color: purple;
+
+      position: sticky;
+      /* Das Element soll bei 120px Abstand vom oberen Rand & 64px zum unteren Rand kleben bleiben: */
+      top: 120px;
+      bottom: 64px;
+    }
+
+    .dummy-text {
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+  <h1>Positions-Layout</h1>
+  <p>Mit der CSS-Eigenschaft <code>position</code> können wir die Positionierung eines Elements beeinflussen.</p>
+  <h2><code>position: static</code></h2>
+  <p>Der Standard-Wert der Position. Element normal im Flow-Layout positionieren.</p>
+  <h2><code>position: relative</code></h2>
+  <p>Wir verschieben das Element mit <code>top</code>, <code>left</code>, <code>right</code> & <code>bottom</code> relativ zur eigentlichen Position im Flow-Layout. Die Verschiebung hat keinen Einfluss auf die Position der anderen Elemente auf der Seite.</p>
+  <p>Mit dem <code>z-index</code> können wir die Reihenfolge des Renderings definieren. Je höher der Wert ist, desto weiter vorne ist das Element. Der Standardwert ist <code>0</code></p>
+  <div class="box"></div>
+  <div class="box relative-1">position: relative; top: 4rem; left: 120px;</div>
+  <div class="box relative-2">position: relative; bottom: 60px; right: 60px;</div>
+  <div class="box relative-3">position: relative; bottom: 80px; left: 60px;</div>
+  <h2><code>position: absolute</code></h2>
+  <p>Mit <code>position: absolute</code> können wir Elemente relativ zu den Grenzen eines Containers positionieren.</p>
+  <p>Der Container ist das nächste Eltern-Element mit <code>position: relative</code>.</p>
+  <p>Das Element wird dann aus dem Flow der Seite genommen. Nicht benutzen, wenn ein Element im Flow positioniert sein soll.</p>
+  <p>Mit <code>top</code>, <code>left</code>, <code>right</code> & <code>bottom</code> könnt ihr den Abstand zu den Seiten des Containers definieren.</p>
+  <div class="container">
+    position: relative;
+    <div class="absolute-1">position: absolute; top: 64px; right: 64px; left: 16px; bottom: 16px;</div>
+    <div class="absolute-2">position: absolute; top: 16px; right: 20%;</div>
+  </div>
+  <p>Beispiele für Anwendungen:</p>
+  <ul>
+    <li>Modals, Popups (Elemente über dem Inhalt der Webseite)</li>
+  </ul>
+  <h2><code>position: fixed</code></h2>
+  <p>Das Element wird im Browser-Fenster fixiert.</p>
+  <p>Mit <code>top</code>, <code>left</code>, <code>right</code> & <code>bottom</code> könnt ihr den Abstand zum Rand des Browser-Fensters definieren.</p>
+  <div class="fixed-1">position: fixed; top: 0; left: 0;</div>
+  <div class="fixed-2">position: fixed; bottom: 16px; left: 16px; right: 16px;</div>
+  <h2><code>position: sticky</code></h2>
+  <p>Das Element bleibt am Bildschirmrand in definiertem Abstand 'kleben'.</p>
+  <p>Mit <code>top</code>, <code>left</code>, <code>right</code> & <code>bottom</code> könnt ihr den Abstand zum Fensterrand definieren.</p>
+  <div class="sticky">position: sticky; top: 120px; bottom: 64px;</div>
+
+  <p class="dummy-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta optio cupiditate itaque unde aliquid. Nesciunt exercitationem illo, voluptate, fuga non est voluptates quis itaque eum mollitia optio et nemo sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eligendi dolor corrupti facilis, voluptate molestiae adipisci voluptatem architecto assumenda veniam pariatur delectus hic numquam fuga praesentium impedit aperiam consectetur necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae possimus nihil ducimus dolor repellendus ipsum, eligendi, culpa consectetur omnis quia ad architecto officia rerum accusantium nisi ab consequatur repellat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos, consequuntur modi cupiditate qui deserunt sint vero, impedit ipsam consectetur facilis molestiae asperiores officia quo officiis. Unde aperiam placeat quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit provident animi perferendis temporibus possimus reprehenderit assumenda? Ratione officia optio nulla dicta, nostrum, quibusdam, similique earum ea quo laborum inventore. Tempora! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis est deserunt laudantium quae repellendus vitae amet voluptate! Omnis voluptates voluptate eum illum, molestias iste odit dolores saepe officiis maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, hic? Error, temporibus nesciunt? Velit eaque reiciendis blanditiis eos, ab fugiat voluptates eum reprehenderit, optio quia repellendus harum a. Modi, beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere excepturi fuga assumenda enim fugiat itaque iure dolore reprehenderit rerum dolorum minus, ratione doloribus nostrum accusantium sed maxime provident id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, soluta non adipisci ut magnam dolorum, ducimus suscipit, natus nulla unde sint deleniti recusandae a. Itaque eos asperiores pariatur quisquam vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem molestiae, praesentium necessitatibus vero iusto facilis reiciendis? Officia, corporis eveniet reprehenderit accusamus excepturi tenetur facere? Architecto libero debitis ipsa dolore.</p>
+</body>
+</html>

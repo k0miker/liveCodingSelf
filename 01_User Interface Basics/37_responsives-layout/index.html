@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsives Layout</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Responsives Layout (Mobile First)</h1>
+  <header>Header</header>
+  <main>
+    <section id="article-1" class="blog-article">
+      <h2>Blog-Artikel 1</h2>
+      <!-- Responsive Bilder in unterschiedlichen Auflósungen -->
+       <picture>
+        <!-- Dieses Bild wird ab 1024px geladen -->
+        <source media="(min-width: 1024px)" srcset="./img/berge@3x.png">
+        <!-- Dieses Bild wird ab 768px geladen -->
+        <source media="(min-width: 768px)" srcset="./img/berge@2x.png">
+        <img src="./img/berge@1x.png" alt="">
+       </picture>
+      
+    </section>
+    <section id="article-2" class="blog-article">Blog-Artikel 1</section>
+    <section id="about-me">About Me</section>
+    <section id="popular-posts">Popular Posts</section>
+    <section id="follow-me">Follow Me</section>
+  </main>
+  <footer>Footer</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* Lösung 01 */
+
+/* body {
+  color: greenyellow;
+}
+
+body p {
+  color: palegoldenrod;
+}
+
+body h1 {
+  color: yellowgreen;
+}
+
+body header div {
+  color: palegoldenrod;
+}
+
+body div {
+  color: yellowgreen;
+}
+
+
+main {
+  h2 {
+    color: palegoldenrod;
+  }
+  b, div, button {
+    color: yellowgreen;
+  }
+} */
+
+
+/* Lösung 02 */
+h1, 
+b, 
+/* h2 ~ button => Alle button-Element, welche nachfolgende Geschwister-Elemente von h2 sind */
+h2 ~ button, 
+div, 
+html body {
+  color: greenyellow;
+}
+
+h2,
+p,
+header div {
+  color: palegoldenrod;
+}

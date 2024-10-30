@@ -1,0 +1,49 @@
+---
+import skiImage from '../assets/images/ski.jpg'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1 class="bg-red-500 text-white py-8 px-16 ml-4 mt-4 text-2xl">Astro</h1>
+		<h2 class="text-[2rem] mt-[20%]">Zweite Überschrift</h2>
+
+		<div class="bg-yellow-500 text-blue-900 border-orange-600 border-4">
+			<p>Hallo Standard-Farben</p>
+		</div>
+
+		<div class="bg-midnight-dark text-tahiti">
+			<p>Hallo eigene Farben</p>
+			<p class="text-midnight-500">Hallo eigene Farben</p>
+		</div>
+
+		<div class="bg-yellow-500 w-1/2 h-[300px]">
+			<p>Ich bin 50% breit & 300px hoch</p>
+		</div>
+
+		<div class="w-full h-[200px] relative">
+			<img class="w-full h-full object-cover" src={skiImage.src} alt="">
+			<div class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-midnight-dark opacity-70">
+				<p class="text-white text-lg font-bold bg-yellow-500">Text über dem Bild</p>
+			</div>
+		</div>
+
+		<div class="bg-red-500 hover:bg-yellow-500 hover:p-8">
+			<p>Hover-Effekt</p>
+		</div>
+
+		<div class="bg-yellow-500 p-8 sm:bg-orange-500 md:text-white md:text-2xl md:bg-red-500 lg:bg-purple-500">
+			<p>Responsivität</p>
+		</div>
+	</body>
+</html>
+
+<style>
+
+</style>

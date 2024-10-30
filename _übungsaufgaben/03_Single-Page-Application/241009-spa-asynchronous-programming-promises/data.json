@@ -1,0 +1,964 @@
+[
+  {
+    "matchID": 58577,
+    "matchDateTime": "2020-09-18T20:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-18T18:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 40,
+      "teamName": "FC Bayern München",
+      "shortName": "Bayern",
+      "teamIconUrl": "https://i.imgur.com/jJEsJrj.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 9,
+      "teamName": "FC Schalke 04",
+      "shortName": "Schalke",
+      "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/FC_Schalke_04_Logo.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-20T16:15:35.617",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92144,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 8,
+        "pointsTeam2": 0,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92145,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 3,
+        "pointsTeam2": 0,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84640,
+        "scoreTeam1": 3,
+        "scoreTeam2": 0,
+        "matchMinute": 31,
+        "goalGetterID": 1478,
+        "goalGetterName": "Lewandowski",
+        "isPenalty": true,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84639,
+        "scoreTeam1": 2,
+        "scoreTeam2": 0,
+        "matchMinute": 19,
+        "goalGetterID": 6631,
+        "goalGetterName": "Goretzka",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84643,
+        "scoreTeam1": 6,
+        "scoreTeam2": 0,
+        "matchMinute": 69,
+        "goalGetterID": 15523,
+        "goalGetterName": " T. Müller",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84638,
+        "scoreTeam1": 1,
+        "scoreTeam2": 0,
+        "matchMinute": 4,
+        "goalGetterID": 18085,
+        "goalGetterName": "Gnabry",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84641,
+        "scoreTeam1": 4,
+        "scoreTeam2": 0,
+        "matchMinute": 47,
+        "goalGetterID": 18085,
+        "goalGetterName": "Gnabry",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84642,
+        "scoreTeam1": 5,
+        "scoreTeam2": 0,
+        "matchMinute": 59,
+        "goalGetterID": 18085,
+        "goalGetterName": "Gnabry",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84644,
+        "scoreTeam1": 7,
+        "scoreTeam2": 0,
+        "matchMinute": 71,
+        "goalGetterID": 18086,
+        "goalGetterName": "Sanê",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84645,
+        "scoreTeam1": 8,
+        "scoreTeam2": 0,
+        "matchMinute": 81,
+        "goalGetterID": 18020,
+        "goalGetterName": "Musiala",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 34,
+      "locationCity": "München",
+      "locationStadium": "Allianz Arena"
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58579,
+    "matchDateTime": "2020-09-19T15:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-19T13:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 91,
+      "teamName": "Eintracht Frankfurt",
+      "shortName": "Frankfurt",
+      "teamIconUrl": "https://i.imgur.com/X8NFkOb.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 83,
+      "teamName": "Arminia Bielefeld",
+      "shortName": "Bielefeld",
+      "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Logo_mit_Rand.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-19T17:23:39.12",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92154,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 1,
+        "pointsTeam2": 1,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92155,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 0,
+        "pointsTeam2": 0,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84673,
+        "scoreTeam1": 0,
+        "scoreTeam2": 1,
+        "matchMinute": 51,
+        "goalGetterID": 15632,
+        "goalGetterName": "Soukou",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84681,
+        "scoreTeam1": 1,
+        "scoreTeam2": 1,
+        "matchMinute": 63,
+        "goalGetterID": 13092,
+        "goalGetterName": "Silva",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 442,
+      "locationCity": "Frankfurt",
+      "locationStadium": "Commerzbank-Arema"
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58580,
+    "matchDateTime": "2020-09-19T15:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-19T13:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 65,
+      "teamName": "1. FC Köln",
+      "shortName": "Köln",
+      "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/1._FC_Koeln_Logo_2014–.svg/296px-1._FC_Koeln_Logo_2014–.svg.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 175,
+      "teamName": "TSG 1899 Hoffenheim",
+      "shortName": "Hoffenheim",
+      "teamIconUrl": "https://i.imgur.com/gF0PfEl.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-20T16:13:04.427",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92152,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 2,
+        "pointsTeam2": 3,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92153,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 1,
+        "pointsTeam2": 2,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84689,
+        "scoreTeam1": 2,
+        "scoreTeam2": 2,
+        "matchMinute": 86,
+        "goalGetterID": 7337,
+        "goalGetterName": "Drexler",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84654,
+        "scoreTeam1": 0,
+        "scoreTeam2": 1,
+        "matchMinute": 4,
+        "goalGetterID": 14873,
+        "goalGetterName": "Kramaric",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84660,
+        "scoreTeam1": 1,
+        "scoreTeam2": 2,
+        "matchMinute": 45,
+        "goalGetterID": 14873,
+        "goalGetterName": "Kramaric",
+        "isPenalty": true,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84691,
+        "scoreTeam1": 2,
+        "scoreTeam2": 3,
+        "matchMinute": 92,
+        "goalGetterID": 14873,
+        "goalGetterName": "Kramaric",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": true,
+        "comment": null
+      },
+      {
+        "goalID": 84656,
+        "scoreTeam1": 1,
+        "scoreTeam2": 1,
+        "matchMinute": 22,
+        "goalGetterID": 16302,
+        "goalGetterName": "Andersson",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 31,
+      "locationCity": "Köln",
+      "locationStadium": "Rhein Energie Stadion "
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58582,
+    "matchDateTime": "2020-09-19T15:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-19T13:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 16,
+      "teamName": "VfB Stuttgart",
+      "shortName": "Stuttgart",
+      "teamIconUrl": "https://i.imgur.com/v0tkpNx.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 112,
+      "teamName": "SC Freiburg",
+      "shortName": "Freiburg",
+      "teamIconUrl": "https://i.imgur.com/r3mvi0h.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-20T16:16:30.977",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92156,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 2,
+        "pointsTeam2": 3,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92157,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 0,
+        "pointsTeam2": 2,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84684,
+        "scoreTeam1": 1,
+        "scoreTeam2": 3,
+        "matchMinute": 71,
+        "goalGetterID": 18082,
+        "goalGetterName": "Kalajdzic",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84686,
+        "scoreTeam1": 2,
+        "scoreTeam2": 3,
+        "matchMinute": 81,
+        "goalGetterID": 18084,
+        "goalGetterName": "Wamangituka",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84657,
+        "scoreTeam1": 0,
+        "scoreTeam2": 2,
+        "matchMinute": 26,
+        "goalGetterID": 18087,
+        "goalGetterName": "Sallai",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84666,
+        "scoreTeam1": 0,
+        "scoreTeam2": 3,
+        "matchMinute": 48,
+        "goalGetterID": 14905,
+        "goalGetterName": " Grifo",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84655,
+        "scoreTeam1": 0,
+        "scoreTeam2": 1,
+        "matchMinute": 8,
+        "goalGetterID": 1395,
+        "goalGetterName": "Petersen",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 493,
+      "locationCity": "Stuttgart",
+      "locationStadium": "Mercedes-Benz Arena"
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58583,
+    "matchDateTime": "2020-09-19T15:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-19T13:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 80,
+      "teamName": "1. FC Union Berlin",
+      "shortName": "Union Berlin",
+      "teamIconUrl": "https://assets.dfb.de/uploads/000/018/232/small_union-Berlin.jpg",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 95,
+      "teamName": "FC Augsburg",
+      "shortName": "Augsburg",
+      "teamIconUrl": "https://i.imgur.com/sdE62e2.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-19T17:25:19.37",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92158,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 1,
+        "pointsTeam2": 3,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92159,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 0,
+        "pointsTeam2": 1,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84687,
+        "scoreTeam1": 1,
+        "scoreTeam2": 2,
+        "matchMinute": 82,
+        "goalGetterID": 13007,
+        "goalGetterName": "Gregoritsch",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84658,
+        "scoreTeam1": 0,
+        "scoreTeam2": 1,
+        "matchMinute": 41,
+        "goalGetterID": 14274,
+        "goalGetterName": "Vargas",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84688,
+        "scoreTeam1": 1,
+        "scoreTeam2": 3,
+        "matchMinute": 89,
+        "goalGetterID": 7523,
+        "goalGetterName": "Hahn",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84685,
+        "scoreTeam1": 1,
+        "scoreTeam2": 1,
+        "matchMinute": 75,
+        "goalGetterID": 16949,
+        "goalGetterName": "Bülter",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 80,
+      "locationCity": "Berlin",
+      "locationStadium": "alter Försterei"
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58584,
+    "matchDateTime": "2020-09-19T15:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-19T13:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 134,
+      "teamName": "Werder Bremen",
+      "shortName": "Bremen",
+      "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/SV-Werder-Bremen-Logo.svg/681px-SV-Werder-Bremen-Logo.svg.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 54,
+      "teamName": "Hertha BSC",
+      "shortName": "Hertha",
+      "teamIconUrl": "https://i.imgur.com/apFwbYZ.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-10-05T20:38:58.057",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92160,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 1,
+        "pointsTeam2": 4,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92161,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 0,
+        "pointsTeam2": 1,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84661,
+        "scoreTeam1": 0,
+        "scoreTeam2": 2,
+        "matchMinute": 45,
+        "goalGetterID": 16913,
+        "goalGetterName": "Lukebakio",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84659,
+        "scoreTeam1": 0,
+        "scoreTeam2": 1,
+        "matchMinute": 42,
+        "goalGetterID": 18083,
+        "goalGetterName": "Pekarik",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84682,
+        "scoreTeam1": 0,
+        "scoreTeam2": 3,
+        "matchMinute": 63,
+        "goalGetterID": 18088,
+        "goalGetterName": "Cunha",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84690,
+        "scoreTeam1": 1,
+        "scoreTeam2": 4,
+        "matchMinute": 90,
+        "goalGetterID": 15645,
+        "goalGetterName": "Cordoba",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84683,
+        "scoreTeam1": 1,
+        "scoreTeam2": 3,
+        "matchMinute": 69,
+        "goalGetterID": 16084,
+        "goalGetterName": "Davie Selke",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 36,
+      "locationCity": "Bremen",
+      "locationStadium": "Weserstadion"
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58578,
+    "matchDateTime": "2020-09-19T18:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-19T16:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 7,
+      "teamName": "Borussia Dortmund",
+      "shortName": "BVB",
+      "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/560px-Borussia_Dortmund_logo.svg.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 87,
+      "teamName": "Borussia Mönchengladbach",
+      "shortName": "Gladbach",
+      "teamIconUrl": "https://i.imgur.com/KSIk0Eu.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-20T16:10:48.95",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92174,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 3,
+        "pointsTeam2": 0,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92175,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 1,
+        "pointsTeam2": 0,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84692,
+        "scoreTeam1": 1,
+        "scoreTeam2": 0,
+        "matchMinute": 35,
+        "goalGetterID": 14994,
+        "goalGetterName": "Reyna",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84693,
+        "scoreTeam1": 2,
+        "scoreTeam2": 0,
+        "matchMinute": 54,
+        "goalGetterID": 17905,
+        "goalGetterName": "Haaland",
+        "isPenalty": true,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84694,
+        "scoreTeam1": 3,
+        "scoreTeam2": 0,
+        "matchMinute": 77,
+        "goalGetterID": 17905,
+        "goalGetterName": "Haaland",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 184,
+      "locationCity": "Dortmund",
+      "locationStadium": "Signal-Iduna-Park"
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58581,
+    "matchDateTime": "2020-09-20T15:30:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-20T13:30:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 1635,
+      "teamName": "RB Leipzig",
+      "shortName": "Leipzig",
+      "teamIconUrl": "https://i.imgur.com/Rpwsjz1.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 81,
+      "teamName": "1. FSV Mainz 05",
+      "shortName": "Mainz",
+      "teamIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Logo_Mainz_05.svg/1200px-Logo_Mainz_05.svg.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-20T17:23:54.23",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92182,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 3,
+        "pointsTeam2": 1,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92183,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 2,
+        "pointsTeam2": 0,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [
+      {
+        "goalID": 84704,
+        "scoreTeam1": 2,
+        "scoreTeam2": 1,
+        "matchMinute": 48,
+        "goalGetterID": 18089,
+        "goalGetterName": "Mateta",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84705,
+        "scoreTeam1": 3,
+        "scoreTeam2": 1,
+        "matchMinute": 51,
+        "goalGetterID": 18090,
+        "goalGetterName": "Haidara",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84702,
+        "scoreTeam1": 1,
+        "scoreTeam2": 0,
+        "matchMinute": 17,
+        "goalGetterID": 15248,
+        "goalGetterName": "Forsberg",
+        "isPenalty": true,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      },
+      {
+        "goalID": 84703,
+        "scoreTeam1": 2,
+        "scoreTeam2": 0,
+        "matchMinute": 21,
+        "goalGetterID": 11523,
+        "goalGetterName": " Poulsen",
+        "isPenalty": false,
+        "isOwnGoal": false,
+        "isOvertime": false,
+        "comment": null
+      }
+    ],
+    "location": {
+      "locationID": 478,
+      "locationCity": "Leipzig",
+      "locationStadium": "Red Bull Arena"
+    },
+    "numberOfViewers": null
+  },
+  {
+    "matchID": 58585,
+    "matchDateTime": "2020-09-20T18:00:00",
+    "timeZoneID": "W. Europe Standard Time",
+    "leagueId": 4442,
+    "leagueName": "1. Fußball-Bundesliga 2020/2021",
+    "leagueSeason": 2020,
+    "leagueShortcut": "bl1",
+    "matchDateTimeUTC": "2020-09-20T16:00:00Z",
+    "group": {
+      "groupName": "1. Spieltag",
+      "groupOrderID": 1,
+      "groupID": 36486
+    },
+    "team1": {
+      "teamId": 131,
+      "teamName": "VfL Wolfsburg",
+      "shortName": "Wolfsburg",
+      "teamIconUrl": "https://i.imgur.com/ucqKV4B.png",
+      "teamGroupName": null
+    },
+    "team2": {
+      "teamId": 6,
+      "teamName": "Bayer Leverkusen",
+      "shortName": "Leverkusen",
+      "teamIconUrl": "https://upload.wikimedia.org/wikipedia/de/thumb/f/f7/Bayer_Leverkusen_Logo.svg/1200px-Bayer_Leverkusen_Logo.svg.png",
+      "teamGroupName": null
+    },
+    "lastUpdateDateTime": "2020-09-20T19:51:07.883",
+    "matchIsFinished": true,
+    "matchResults": [
+      {
+        "resultID": 92184,
+        "resultName": "Endergebnis",
+        "pointsTeam1": 0,
+        "pointsTeam2": 0,
+        "resultOrderID": 1,
+        "resultTypeID": 2,
+        "resultDescription": "Ergebnis nach Ende der offiziellen Spielzeit"
+      },
+      {
+        "resultID": 92185,
+        "resultName": "Halbzeit",
+        "pointsTeam1": 0,
+        "pointsTeam2": 0,
+        "resultOrderID": 2,
+        "resultTypeID": 1,
+        "resultDescription": "Zwischenstand zur Halbzeit"
+      }
+    ],
+    "goals": [],
+    "location": {
+      "locationID": 20,
+      "locationCity": "Wolfsburg",
+      "locationStadium": "Volkswagen Arena "
+    },
+    "numberOfViewers": null
+  }
+]

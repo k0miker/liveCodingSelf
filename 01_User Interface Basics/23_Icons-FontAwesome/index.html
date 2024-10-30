@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icons & FontAwesome</title>
+
+    <!-- FontAwesome Icons im <head> verlinken -->
+    <!-- CDN-Implementation -->
+    <!-- <script
+      src="https://kit.fontawesome.com/6ffd2b57d1.js"
+      crossorigin="anonymous"
+    ></script> -->
+    
+    <!-- Lokale Implementation -->
+    <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/regular.css">
+
+    <!-- Unser CSS hinzufügen -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Icons & FontAwesome</h1>
+    <h2>Icons als SVG-Dateien implementieren</h2>
+    <h4>Als img-Element</h4>
+    <p>
+      Eine SVG-Datei können wir mit einem <code>img</code>-Element hinzufügen.
+      Genau wie ein Bild. Dann können wir das SVG aber nur wie ein Bild stylen:
+    </p>
+    <img class="heart-icon" src="./assets/img/heart.svg" alt="" />
+    <h4>Als svg-Element</h4>
+    <p>
+      Wenn wir das Icon als SVG-Datei implementieren & stylen wollen, dann
+      müssen wir das <code>svg</code>-Element direkt in unser HTML hinzufügen:
+    </p>
+    <svg
+      class="heart-icon-svg"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="-5.0 -10.0 110.0 135.0"
+    >
+      <path
+        d="m40.805 64.895-21.262-21.262c-3.7227-3.7227-5.582-8.6289-5.582-13.531 0-4.9023 1.8594-9.8086 5.582-13.527 3.7227-3.7227 8.6289-5.582 13.531-5.582 4.9023 0 9.8086 1.8594 13.531 5.582l3.3945 3.3945 3.3945-3.3945c3.7227-3.7227 8.6289-5.582 13.531-5.582 4.9023 0 9.8086 1.8594 13.527 5.582 3.7227 3.7227 5.582 8.6289 5.582 13.527 0 4.9023-1.8594 9.8086-5.582 13.531l-21.262 21.262c-2.5312 2.5312-5.8633 3.8008-9.1914 3.8008s-6.6602-1.2656-9.1953-3.8008zm-23.605-2.1992c-0.039063 0.066407-0.082031 0.12891-0.12891 0.19141-0.10937 0.17969-0.1875 0.37109-0.23047 0.57031-0.078125 0.33203 0 0.67969 0.31641 0.88672l11.477 7.4766c1.0586 0.6875 1.3633 2.1055 0.67188 3.1641-0.69141 1.0586-2.1055 1.3633-3.1641 0.67188l-11.477-7.4766c-2.2148-1.4414-2.7695-3.6641-2.293-5.75 0.09375-0.41406 0.23438-0.82031 0.41016-1.2148l-4.0586-15.883c-0.085937-0.34375-0.30078-0.61719-0.57422-0.78906-0.28516-0.17578-0.62891-0.24219-0.97656-0.16406l-0.54297 0.12109c-0.19531 0.046875-0.35547 0.10938-0.48438 0.19922-0.11719 0.085937-0.23047 0.21094-0.33984 0.38281-0.10547 0.17188-0.17188 0.32812-0.19922 0.47656-0.023438 0.15234-0.015625 0.32812 0.03125 0.52734l6.6133 27.984c0.22656 0.96094 0.60547 1.8086 1.1328 2.5391 0.53125 0.73047 1.2188 1.3594 2.0625 1.8711l10.266 6.2773c1.0781 0.65625 1.4219 2.0664 0.76172 3.1484-0.65625 1.0781-2.0664 1.4219-3.1484 0.76172l-10.266-6.2773c-1.375-0.83984-2.5039-1.8711-3.3906-3.0938s-1.5195-2.6211-1.8867-4.1875l-6.6133-27.984c-0.18359-0.77344-0.21094-1.5469-0.085938-2.3047 0.125-0.76562 0.40234-1.4883 0.82422-2.168 0.42188-0.67578 0.95312-1.2383 1.5938-1.6914 0.63281-0.44531 1.3398-0.75781 2.1133-0.93359l0.53906-0.12109c1.5586-0.34766 3.1055-0.046875 4.3633 0.72266 1.2695 0.77734 2.2422 2.0234 2.6406 3.5664l3.4453 13.48c1.3711-0.44141 2.9062-0.33203 4.4141 0.62891l14.496 9.2422c1.1367 0.72656 2.1133 1.5156 2.9727 2.4141 0.046875 0.046874 0.085937 0.09375 0.12109 0.13672 0.82812 0.88672 1.5391 1.8555 2.168 2.9414l0.070312 0.12891 1.7773 3.082c0.62891 1.0938 0.25391 2.4922-0.84375 3.1211-1.0938 0.62891-2.4922 0.25391-3.1211-0.84375l-1.7734-3.0703-0.074218-0.11719c-0.46875-0.80859-0.96484-1.5039-1.5234-2.1016l-0.10156-0.097656c-0.62109-0.64844-1.3242-1.2148-2.1328-1.7305l-14.496-9.2422c-0.31641-0.19922-0.68359-0.10938-0.97656 0.10938-0.14844 0.11328-0.28516 0.25391-0.40234 0.40625zm65.727 0.19141c-0.046875-0.058594-0.085937-0.12109-0.12891-0.1875-0.11719-0.15625-0.25391-0.29297-0.40234-0.40625-0.29297-0.22656-0.66016-0.31641-0.97656-0.10938l-14.496 9.2422c-0.82422 0.52344-1.5273 1.0898-2.1328 1.7227l-0.003906 0.007812 0.003906 0.003906c-0.61328 0.64062-1.1445 1.3633-1.625 2.1914l-0.007812 0.007813 0.007812 0.003906-1.8477 3.1992c-0.63281 1.0938-2.0352 1.4688-3.1328 0.83594-1.0938-0.63281-1.4688-2.0352-0.83594-3.1289l1.8477-3.1992 0.003907 0.003907c0.67578-1.168 1.4219-2.1797 2.2852-3.0859l0.007813 0.003907c0.87109-0.91016 1.8477-1.7031 2.9688-2.418l14.496-9.2422c1.5078-0.96094 3.043-1.0664 4.4141-0.62891l3.4453-13.484c0.39453-1.543 1.3711-2.7891 2.6406-3.5664 1.2617-0.76953 2.8125-1.0703 4.3633-0.72266 0.17969 0.046874 0.36328 0.082031 0.53906 0.12109 0.77734 0.17188 1.4844 0.48438 2.1172 0.93359l0.007813 0.003906 0.003906-0.003906c0.62891 0.44531 1.1562 1.0117 1.5859 1.6914 0.42188 0.67969 0.69922 1.4023 0.82422 2.168 0.125 0.76172 0.097656 1.5312-0.085938 2.3047l-6.6133 27.984c-0.36719 1.5664-1.0039 2.9648-1.8867 4.1875-0.88281 1.2227-2.0156 2.2539-3.3906 3.0938l-10.266 6.2773c-1.0781 0.66016-2.4883 0.31641-3.1484-0.76172-0.66016-1.0781-0.31641-2.4883 0.76172-3.1484l10.266-6.2773c0.84375-0.51562 1.5312-1.1406 2.0625-1.8711 0.52734-0.73047 0.90625-1.5742 1.1328-2.5391l6.6133-27.984c0.046875-0.19922 0.058594-0.375 0.03125-0.52734-0.023438-0.14844-0.089844-0.30859-0.19531-0.47656-0.10156-0.16406-0.21875-0.29297-0.34375-0.38281l0.003906-0.007812c-0.12109-0.085938-0.28125-0.14844-0.47656-0.19531l-0.54297-0.12109c-0.34375-0.078126-0.69141-0.007813-0.97656 0.16406-0.27734 0.16797-0.48828 0.44531-0.57422 0.78906l-4.0586 15.883c0.17578 0.39453 0.31641 0.80078 0.41406 1.2148 0.47656 2.0859-0.078125 4.3047-2.293 5.75l-11.477 7.4766c-1.0586 0.6875-2.4766 0.38672-3.1641-0.67188-0.69141-1.0586-0.38672-2.4766 0.67188-3.1641l11.477-7.4766c0.32031-0.21094 0.39453-0.55469 0.31641-0.88672-0.046875-0.19922-0.12109-0.39062-0.23047-0.57031zm-60.137-22.5 21.262 21.262c1.6367 1.6367 3.793 2.4531 5.9453 2.4531 2.1562 0 4.3125-0.81641 5.9453-2.4531l21.262-21.262c2.8242-2.8242 4.2383-6.5508 4.2383-10.285 0-3.7305-1.4141-7.4531-4.2383-10.285-2.8242-2.8242-6.5547-4.2383-10.285-4.2383s-7.457 1.4141-10.285 4.2383l-5.0195 5.0195c-0.89844 0.89844-2.3477 0.89844-3.2461 0l-5.0195-5.0195c-2.8242-2.8242-6.5508-4.2383-10.285-4.2383-3.7305 0-7.457 1.4141-10.285 4.2383-2.8242 2.8242-4.2383 6.5547-4.2383 10.285 0 3.7305 1.4141 7.457 4.2383 10.285z"
+      />
+    </svg>
+    <h2>FontAwesome-Icons implementieren</h2>
+    <h4>CDN-Implementation</h4>
+    <p>Das Laden via CDN ist wie bei den Google Fonts auch datenschutzrechtlich in Deutschland nicht okay (nach DGSVO). In einem finalen Projekt müsst ihr FontAwesome lokal implementieren.</p>
+    <ol>
+      <li>
+        Erstelle einen Account auf
+        <a href="https://fontawesome.com/">FontAwesome</a>
+      </li>
+      <li>Erstelle ein eigenes Icon Kit</li>
+      <li>FontAwesome <code>script</code> zum HEAD hinzufügen</li>
+      <li>Icon auswählen & HTML-Element zur Seite hinzufügen</li>
+    </ol>
+    <h4>Lokale Implementation</h4>
+    <p>Für die lokale Implementation müsst ihr zuerst FontAwesome von der Webseite herunterladen. Ihr erhaltet dann einen Ordnern mit mehreren Unterordnern. Der Ordner webfonts enthält die Schriftdateien mit den Icons. Der css-Ordner enthält die CSS-Dateien zu den einzelnen Schriften, die ihr dann zum <code>head</head></code> der Webseite hinzufügen müsst. Zuerst die Datei <code>fontawesome.css</code> und danach dann die CSS-Dateien der zu nutzenden Schriften wie <code>solid.css</code> oder <code>regular.css</code></p>
+    <h4>Verschiedene Icon-Sets</h4>
+    <h5>Solid Icon-Set: fa-solid</h5>
+    <i class="fa-solid fa-house house-icon"></i>
+    <i class="fa-solid fa-user"></i>
+    <h5>Regular Icon-Set: fa-regular</h5>
+    <i class="fa-regular fa-user"></i>
+    <h5>Brand Icon-Set: fa-brands</h5>
+    <i class="fa-brands fa-wordpress"></i>
+    <h5>Wenn ein Icon nicht Teil der Free-Version ist, dann sieht das so aus:</h5>
+    <i class="fa-regular fa-house"></i>
+    <h4>Styling von FontAwesome-Icons</h4>
+    <h5>Größe setzen</h5>
+    <ul>
+      <li>Option 1: Die Größe des Icons mit <code>font-size</code> definieren</li>
+      <li>Option 2: Font-Awesome-Klassen benutzen: <a href="https://docs.fontawesome.com/web/style/size">Sizing Classes</a>. Die Klassen sind <code>fa-xl, fa-sm, fa-lg usw.</code></li>
+    </ul>
+    <i class="fa-solid fa-house house-icon"></i>
+    <i class="fa-solid fa-house fa-2xl"></i>
+    <h5>Animationen hinzufügen</h5>
+    <p>Es gibt auch FontAwesome-Klassen für Animationen, die wir zu unseren Icons hinzufügen können</p>
+    <p>Eine Übersicht findet ihr in der Dokumentation: <a href="https://docs.fontawesome.com/web/style/animate">FontAwesome Dokumentation</a></p>
+    <i class="fa-solid fa-house fa-2xl fa-beat"></i>
+    <i class="fa-solid fa-house fa-2xl fa-fade"></i>
+  </body>
+</html>

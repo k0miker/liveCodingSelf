@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Einführung</title>
+  <style>
+    /* Das hier ist Internes CSS */
+    /* Innerhalb des style-Tags kann ich CSS schreiben */
+    
+    /* Im CSS wählen wir das zu stylende Element zuerst aus & definiren dann die Stil-Regeln, die wir auf dieses Element anwenden wollen: */
+    h1 {
+      color: rgb(58, 48, 48);
+    }
+
+    p {
+      color: blue;
+      /* color: #FF90F0; */
+    }
+  </style>
+
+  <!-- Externes CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>CSS-Einführung</h1>
+  <p>Mittels CSS können wir die Inhalte unserer Webseite stylen.</p>
+  <p>Es gibt drei verschiedene Wege CSS zu integrieren:</p>
+  <ul>
+    <li>Internes CSS</li>
+    <li>Externes CSS</li>
+    <li>Inline CSS</li>
+  </ul>
+  <h6>Externes CSS ist der Standard-Weg, um CSS zu integrieren. Wir wollen CSS & HTMl voneinander getrennt halten.</h6>
+
+  <h5 style="color: orange;">Inline CSS</h5>
+  <p style="color: orangered;">Man kann CSS auch inline direkt zu HTML-Elementen hinzufügen. Diese CSS-Regel har dann oberste Priorität. Wir wollen Inline CSS aber gar nicht (!) benutzen.</p>
+
+</body>
+</html>

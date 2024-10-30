@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "test": "jest --runInBand --detectOpenHandles --forceExit"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "autograding": {
+    "setup": "cd ./node_modules/puppeteer && npm install"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "puppeteer": "^22.6.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DCI-Webdev/uib-layout-media-queries-responsive-blog",
+    "id": 786889377
+  }
+}

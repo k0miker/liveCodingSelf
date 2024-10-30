@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const holDaten = async () => {
+            // openwhyd.org hat restriktive CORS Settings, deshalb müssen wir hier mit einem proxy 
+            // arbeiten wenn wir deren Daten direkt im Frontend anzeigen wollen. 
+            const response = await fetch("https://corsproxy.io/?https://openwhyd.org/hot?format=json");
+            const data = await response.json();
+            console.log(data);
+        }
+        holDaten();
+    </script>
+</body>
+</html>

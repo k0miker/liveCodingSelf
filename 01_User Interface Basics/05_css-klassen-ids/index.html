@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Klassen & IDs</title>
+    <style>
+      /* Dieselbe Stilregel auf mehrere Elente anwenden */
+      h1,
+      h2,
+      ul li {
+        background-color: rgb(173, 228, 173);
+        color: rgb(71, 71, 71);
+      }
+
+      /* Klassen */
+      .text-highlight {
+        font-weight: 800;
+        font-style: italic;
+        color: rgb(61, 27, 128);
+      }
+
+      .bg-yellow {
+        background-color: rgb(249, 249, 194);
+      }
+
+      .padding-small {
+        padding-left: 20px;
+        padding-right: 40px;
+      }
+
+      /* IDs */
+      #id-headline {
+        color: rgb(39, 18, 8);
+        background-color: orangered;
+      }
+
+      #id-body-text {
+        font-size: 14px;
+      }
+
+      /* Verschachtelte Elemente auswählen */
+      ul li h4 {
+        background-color: orange;
+      }
+
+      ol li h4 {
+        background-color: blue;
+      }
+
+      li h4 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS-Klassen & IDs</h1>
+    <p>
+      Klassen & IDs sind zusätzliche Wege wie wir CSS-Stile auf HTML-Elemente
+      anweden können. IDs und Klassen können wir auf alle HTML-Elemente
+      anwenden.
+    </p>
+    <h2>Klassen</h2>
+    <p>
+      Mit einer Klasse kann ich einen CSS-Stil auf so viele Elemente wie ich
+      möchte anwenden. Ich kann den Stil wiederverwenden.
+    </p>
+    <p class="text-highlight bg-yellow">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit soluta
+      nostrum accusamus dolor vitae.
+    </p>
+    <h4 class="bg-highlight padding-small">Lorem ipsum</h4>
+    <h2 id="id-headline">IDs</h2>
+    <p id="id-body-text" class="padding-small">
+      Mit einer ID können wir ein spezifisches Element auf der Seite
+      identifizieren. Eine ID muss eindeutig sein - d.h. nur ein Element darf
+      eine bestimmte ID haben. Mittels CSS können wir dann Stil-Regeln direkt
+      auf dieses Element anwenden.
+    </p>
+    <h2>Verschachtelte Elemente auswählen</h2>
+    <p>
+      Wir können CSS-Selektoren so definieren, dass nur Elemente mit einer
+      bestimmten Verschachteltung ausgewählt werden:
+    </p>
+    <ul>
+      <li><h4>Verschachtelte Überschrift (ul li h4)</h4></li>
+    </ul>
+    <ol>
+      <li><h4>Verschachtelte Überschrift (ol li h4)</h4></li>
+    </ol>
+    <h4>Nicht verschachtelte Überschrift (h4)</h4>
+  </body>
+</html>

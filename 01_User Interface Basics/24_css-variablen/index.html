@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Variablen</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+
+      /* CSS-Variablen können in :root definiert werden */
+      --primary-color: rgb(63, 63, 63);
+      --transparent-white: rgba(255, 255, 255, 0.431);
+      --shadow: 4px 4px 2px rgba(0, 0, 0, 0.562);
+    }
+
+    p {
+      color: var(--primary-color);
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: var(--primary-color);
+      box-shadow: var(--shadow);
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS-Variablen</h1>
+  <p>Sobald wir Werte in unserem CSS mehrmals verwenden möchten, macht es Sinn diese in einer Variablen zu speichern. So ist der Wert im CSS nur einmal definiert und kann ganz einfach geändert werden.</p>
+  <p>Dazu haben wir CSS-Variablen.</p>
+  <p>Definition von CSS-Variablen: <code>--variablen-name: wert;</code></p>
+  <p>Nutzung von CSS-Variablen: <code>var(--variablen-name)</code></p>
+  <p>Typische Anwendungsfälle:</p>
+  <ul>
+    <li>Definition von Farben bzw. der Farbpalette</li>
+    <li>Schatten</li>
+    <li>Farbverläufe</li>
+    <li>...</li>
+  </ul>
+  <div></div>
+</body>
+</html>

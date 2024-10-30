@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox-Elemente</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Flexbox-Elemente</h1>
+  <p>Es gibt eine Reihe an Einstellungen für die Flexbox-Elemente, mit denen wir deren Verhalten und Position beeinflussen können.</p>
+
+  <h2>flex-basis</h2>
+  <p><code>flex-basis</code> definiert die Anfangsgröße eines Elementes. Der Standardwert ist <code>auto</code>. Diese Größe ist nicht fix (wie bei <code>width/height</code>), sondern reagiert auch auf die <code>flex-grow</code> & <code>flex-shrink</code>-Einstellungen.</p>
+  <p><code>flex-basis</code> ist die Größe entlang der Hauptachse.</p>
+  <div class="flex-container-00">
+    <div>flex-basis: 100px;</div>
+    <div>flex-basis: 30%;</div>
+    <div>flex-basis: 10%;</div>
+  </div>
+
+  <h2>flex-grow</h2>
+  <p>Bestimmt, wie schnell das Element wachsen soll, wenn zusätzlicher Platz verfügbar ist. Je höher der Wert, desto mehr Platz nimmt das Element in Anspruch. Der Standardwert ist 0.</p>
+  <div class="flex-container-01">
+    <div class="circle"></div>
+    <div class="grow-element">flex-grow: 1</div>
+    <div class="circle"></div>
+  </div>
+  <div class="flex-container-02">
+    <div>flex-grow: 0</div>
+    <div>flex-grow: 1</div>
+    <div>flex-grow: 3</div>
+    <div>flex-grow: 1</div>
+    <div>flex-grow: 0</div>
+  </div>
+
+  <h2>flex-shrink</h2>
+  <p>Bestimmt, wie schnell das Element schrumpfen soll, wenn nicht genügend Platz vorhanden ist. Je höher der Wert desto schneller schrumpft das Element. Der Standardwert ist 1.</p>
+  <div class="flex-container-03">
+    <div>flex-shrink: 0;</div>
+    <div>flex-shrink: 1;</div>
+    <div>flex-shrink: 2;</div>
+    <div>flex-shrink: 0;</div>
+    <div>flex-shrink: 1;</div>
+  </div>
+  <h2>flex-Abkürzung</h2>
+  <p><code>flex: [flex-grow] [flex-shrink] [flex-basis]</code></p>
+  <p>Mittels <code>flex</code> können wir die drei Werte flex-basis, flex-grow & flex-shrink zusammen setzen</p>
+  <div class="flex-container-05">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <h2>order</h2>
+  <p>Mit <code>order</code> können wir die Reihenfolge der Flex-Elemente ändern. Der Standardwert ist 0. Je höher der Wert ist, desto weiter hinten ist das Element angeordnet.</p>
+  <div class="flex-container-06">
+    <div>order: 0</div>
+    <div>order: 2</div>
+    <div>order: 0</div>
+    <div>order: -2</div>
+    <div>order: -1</div>
+  </div>
+  <h2>align-self</h2>
+  <p>Mit <code>align-self</code> können wir das <code>align-items</code>-Verhalten für ein einzelnes Element überschreiben.</p>
+  <div class="flex-container-07">
+    <div></div>
+    <div>align-self: flex-end</div>
+    <div></div>
+    <div>align-self: center</div>
+    <div>align-self: stretch</div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

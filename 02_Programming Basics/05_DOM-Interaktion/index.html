@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Javascript & DOM-Interaktion</h1>
+
+  <h3>CSS-Styling & Klick-Interaktion</h3>
+  <h2 id="headline">Hallo</h2>
+  <p id="click-count">Anzahl der Klicks: <span>0</span></p>
+
+  <h3>Keyboard-Interaktion</h3>
+  <p>Box-Rotation mit Pfeiltasten</p>
+  <div id="rotate-box" class="box"></div>
+
+  <h3>Texteingabe</h3>
+  <input id="text-input" type="text" placeholder="Username">
+  <p id="input-error"></p>
+
+  <h3>Checkboxen & Radio-Buttons</h3>
+  <form id="color-form">
+    <input type="checkbox" id="red-checkbox" >
+    <label for="red-checkbox">Rot</label>  
+    <input type="number" id="green-input">
+    <label for="green-input">Green</label>
+  </form>
+
+  <div id="checkbox-box" class="box">
+    Farbe ändert sich
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

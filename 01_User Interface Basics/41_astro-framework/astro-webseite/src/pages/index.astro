@@ -1,0 +1,53 @@
+---
+// Frontmatter-Bereich
+// * Import von externen Dateien (z.B. CSS, JS, Bilder, etc.)
+// * Setzen von JS-Variablen für die Seite/Komponente
+
+// CSS-Import
+import '../css/fonts.css'
+import '../css/style.css'
+
+// Komponenten-Import
+import Navigation from '../components/Navigation.astro'
+import ProductsSection from '../components/ProductsSection.astro'
+
+// Bilder-Import
+import skiImage from '../assets/img/ski.jpg'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<Navigation/>
+		<img class="header-img" src={skiImage.src} alt="">
+		<h1 class="headline-xl">Hallo Astro</h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est culpa fugit perferendis commodi eligendi velit nulla sit iure, nobis iusto ad explicabo voluptatem sapiente iste quas maiores repellat, obcaecati illum?</p>
+		<a href="/about-me">About Me</a>
+		<a href="/products/snowboard">Snowboard-Seite</a>
+
+		<ProductsSection/>
+	</body>
+</html>
+
+<style>
+	/* CSS für die Seite */
+	h1 {
+		color: orange;
+	}
+
+	.header-img {
+		width: 100%;
+		object-fit: cover;
+		height: 200px;
+	}
+</style>
+
+<script>
+	// Javascript für die Seite
+</script>

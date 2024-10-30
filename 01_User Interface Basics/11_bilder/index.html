@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilder</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Bilder</h1>
+  <h4>Online-Bild mit einer absoluten URL zur Webseite hinzufügen</h4>
+  <img src="https://image.geo.de/30122996/t/vW/v4/w480/r0/-/deutscher-schaeferhund-c-8071188-jpg--69522-.jpg">
+  <h4>Lokales Bild mit relativer URL hinzufügen</h4>
+  <img src="./img/hund.jpg">
+  <hr>
+  <h2>Die Größe von Bildern anpassen</h2>
+  <p>Wir können mit <code>width</code> & <code>height</code> die Größe unserer Bilder anpassen.</p>
+  <p>Aber wenn wir auf das Seitenverhältnis nicht achten wird das Bild verzerrt.</p>
+  <img src="./img/hund.jpg" style="width: 100px; height: 50px">
+  <h4>Wie können wir sicherstellen, dass das Seitenverhältnis gleich bleibt?</h4>
+  <p>Wir setzen zum Beispiel nur eine Seite. Dann bleibt das Seitenverhältnis:</p>
+  <img src="./img/hund.jpg" style="width: 50%;">
+  <h4>Woran liegt das?</h4>
+  <p>Das liegt daran, dass der Standard-Wert von `width` & `height` `auto` ist:</p>
+  <img src="./img/hund.jpg" style="width: 100%; height: auto;">
+  <p class="text-small">width: 100%; height: auto;</p>
+  <img src="./img/hund.jpg" style="width: auto; height: 150px;">
+  <p class="text-small">width: auto; height: 150px;</p>
+  <hr>
+  <h2>img-Attribute</h2>
+  <h3>alt-Attribut</h3>
+  <p>Das alt-Attribut enthält eine textliche Beschreibung des Bildes.</p>
+  <p><strong>Wichtig:</strong> Das alt-Attribut muss (!) ausgefüllt sein.</p>
+  <p>Der alt-Text wird angezeigt, wenn das Bild nicht geladen werden kann & wenn jemand mit einem Screen-Reader eure Seite anschaut.</p>
+  <img src="./img/fake.jpg" alt="Foto von einem Schäferhund, der entspannt auf einer grünen Wiese liegt">
+  <h3>Title-Attribut</h3>
+  <p>Das Title-Attribut ist der Titel des Bildes.</p>
+  <p>Der Titel wird angezeigt, wenn wir mit der Maus über das Bild hovern.</p>
+  <img src="./img/hund.jpg" title="Mein Hund auf der Wiese" style="width: 100px;">
+  <hr>
+  <h2>Was machen wir, wenn ein Ausschnitt des Bildes gezeigt werden soll (ohne Verzerrung)?</h2>
+  <p>Dazu gibt es die CSS-Eigenschaft <code>object-fit</code>. Diese definiert wie sich das Bild verhalten soll, wenn dessen definiertes Größenformat anders ist als das Originalformat. Der Standard-Wert ist <code>object-fit: fill;</code></p>
+  <h4>object-fit: cover</h4>
+  <p>Mit <code>object-fit: cover;</code> füllt das Bild die gesamte Größe aus ohne verzerrt zu werden:</p>
+  <img src="./img/hund.jpg" class="img-square cover">
+  <h4>object-fit: contain</h4>
+  <p>Mit <code>object-fit: contain;</code> wird das gesamte Bild innerhalb des Containers angezeigt.</p>
+  <img src="./img/hund.jpg" class="img-square contain">
+  <h2>Styling von Bildern</h2>
+  <h4>Border</h4>
+  <p>Mit der Border können wir den Rahmen rund um das Bild stylen. Alle Optionen findet ihr hier: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">MDN-Dokumentation</a></p>
+  <img src=".//img/hund.jpg" class="img-square cover" style="border: 4px solid orangered">
+  <img src=".//img/hund.jpg" class="img-square cover" style="border: 4px ridge orangered">
+  <img src=".//img/hund.jpg" class="img-square cover" style="border: 4px dotted orangered">
+  <img src=".//img/hund.jpg" class="img-square cover" style="border: 4px dashed orangered">
+  <img src=".//img/hund.jpg" class="img-square cover" style="border: 4px groove orangered">
+  <img src=".//img/hund.jpg" class="img-square cover" style="border: 4px inset orangered">
+  <img src=".//img/hund.jpg" class="img-square cover" style="border: 4px outset orangered">
+  <h4>Border-Radius</h4>
+  <p>Mit <code>border-radius</code> können wir die Abrundung der Ecken definieren. Das gilt für alle Elemente unserer Webseite, nicht nur für Bilder:</p>
+  <img src="./img/hund.jpg" class="img-square cover" style="border-radius: 8px">
+  <img src="./img/hund.jpg" class="img-square cover" style="border-radius: 8px 32px 16px 4px">
+  <img src="./img/hund.jpg" class="img-square cover" style="border-radius: 50%">
+  <h4>Image Filter</h4>
+  <p>Es gibt auch Filter für Bilder in CSS. Eine Liste mit allen Filtern findet ihr hier: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects/Using_filter_effects">MDN Dokumentation</a></p>
+  <img src="./img/hund.jpg" class="img-square cover blur-filter">
+  <img src="./img/hund.jpg" class="img-square cover sw-filter">
+  <img src="./img/hund.jpg" class="img-square cover mixed-filter">
+  <img src="./img/hund.jpg" class="img-square cover hover-filter">
+  <h4>Box-Shadow</h4>
+  <p>Mit <code>box-shadow</code> können wir einen Schatten zu unseren Elementen hinzufügen:</p>
+  <img src="./img/hund.jpg" class="img-square cover box-shadow">
+
+  <h4>Transparenz</h4>
+  <p>Die Transparenz von einem Bild können wir entweder als <code>filter: opacity(50%)</code> oder mit <code>opacity: 0.5</code> setzen.</p>
+  <img src="./img/hund.jpg" class="img-square cover" style="opacity: 0.5">
+  <img src="./img/hund.jpg" class="img-square cover" style="filter: opacity(0.5)">
+  <h4>Transform-Manipulation</h4>
+  <p>Transform-Manipulationen machen wir später nochmal im Detail. Aber es gibt eine Reihe an Möglichkeiten: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">MDN-Dokumentation</a></p>
+  <p>Mittels <code>transform: rotate(100deg)</code> können wir unser Bild rotieren:</p>
+  <img src="./img/hund.jpg" class="img-square cover" style="transform: rotate(100deg)">
+  <h2>Positionierung von Bilder innerhalb von Text</h2>
+  <p>Mit der Eigenschaft <code>float</code> können wir die Positione eines Bildes innerhalb von Text definieren:</p>
+  <h4>Standardverhalten</h4>
+  <img src="./img/hund.jpg" class="img-square cover">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quisquam harum totam suscipit, amet velit beatae, ullam sit ea qui voluptas voluptatibus reprehenderit, nisi libero!</p>
+  <h4>float: left</h4>
+  <img src="./img/hund.jpg" class="img-square cover" style="float: left;">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quisquam harum totam suscipit, amet velit beatae, ullam sit ea qui voluptas voluptatibus reprehenderit, nisi libero!</p>
+  <h4>float: right</h4>
+  <img src="./img/hund.jpg" class="img-square cover" style="float: right;">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quisquam harum totam suscipit, amet velit beatae, ullam sit ea qui voluptas voluptatibus reprehenderit, nisi libero!</p>
+  <h2>Dateiformate für Bilder</h2>
+  <h3>JPEG</h3>
+  <p>Endung .jpg/.jpeg</p>
+  <p>Standardformat für Fotos. Komprimiertes Dateiformat (kleine Datei, viel Information).</p>
+  <p>Super für Fotos mit viel Detail. Unterstützt keine Transparenz.</p>
+  <img src="./img/hund.jpg" class="img-square cover">
+  <h3>PNG</h3>
+  <p>Unterstützt Transparenz. Endung in .png. Super für großflächig, einfarbige Bereiche.</p>
+  <img src="./img/free-logo.png" style="width: 100px; height: auto;">
+  <h3>GIF</h3>
+  <p>Endung .gif</p>
+  <p>Kurzes loopende & stark komprimiertes Video.</p>
+  <img src="./img/giphy.gif" style="width: 100px;">
+  <h3>SVG</h3>
+  <p>.svg</p>
+  <p>Vektoren-Bild. Besteht nicht aus Pixeln, sondern aus Vektoren. Ist unendlich scharf & skalierbar.</p>
+  <p>Dadurch macht es für Logos & Icons Sinn.</p>
+  <img src="./img/logo.svg" style="width: 200px">
+  <h3>WEBP</h3>
+    <p>Sehr stark komprimiertes Foto. Eines der ältesten fürs das Web optimierten Formate.</p>
+    <h3>ICO</h3>
+    <p>Format, das wir fürs Favicon nutzen. Optimiert für extrem kleine Icons.</p>
+</body>
+</html>

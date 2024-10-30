@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overflow</title>
+  <style>
+    :root {
+      font-family: sans-serif;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    div {
+      font-size: 0.8rem;
+    }
+
+    .p-10 {
+      padding: 10px;
+    }
+
+    .height-20 {
+      height: 20px;
+    }
+
+    .margin-top {
+      margin-top: 4rem;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-scroll {
+      overflow: scroll;
+    }
+
+    /* Beispiel Overflow-Hidden */
+    .small-box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border-radius: 8px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>Overflow</h1>
+  <p>Mit Overflow können wir definieren wie Inhalt dargestellt werden soll, der über den Rand des eigenen Containers hinausgeht.</p>
+  <h3>Wie verhalten sich Boxen eigentlich?</h3>
+  <p>Die Größe einer Box passt sich an den Inhalt an, wenn <code>width</code> & <code>height</code> nicht limitiert sind.</p>
+  <div class="orange p-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium alias nobis, cum vel excepturi rerum soluta consequatur animi est explicabo odio eveniet atque facilis? Rerum.</div>
+  <p>Wenn <code>width</code> oder <code>height</code> limitiert sind, kann es dazu kommen, dass der Inhalt einer Box nicht mehr in diese hineinpasst:</p>
+  <div class="orange p-10 height-20">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt error molestiae in soluta hic. Magni autem praesentium sed, molestias dolor libero eveniet. Debitis, repellat ex!</div>
+  <h3 class="margin-top">Mit Overflow können wir die Darstellung dieses übersteheneden Inhaltes definieren:</h3>
+
+  <h5>overflow: visible</h5>
+  <p>Das ist das Standardverhalten. Der überstehende Inhalt ist sichtbar.</p>
+  <div class="orange p-10 height-20">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt error molestiae in soluta hic. Magni autem praesentium sed, molestias dolor libero eveniet. Debitis, repellat ex!</div>
+
+  <h5 class="margin-top">overflow: hidden</h5>
+  <p>Der überstehende Inhalt wird versteckt</p>
+  <div class="orange p-10 height-20 overflow-hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt error molestiae in soluta hic. Magni autem praesentium sed, molestias dolor libero eveniet. Debitis, repellat ex!</div>
+
+  <h5>overflow: scroll</h5>
+  <p>Der überstehende Inhalt ist scrollbar.</p>
+  <div class="orange p-10 height-20 overflow-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt error molestiae in soluta hic. Magni autem praesentium sed, molestias dolor libero eveniet. Debitis, repellat ex!</div>
+
+  <h4>Overflow nur in einzelne Richtungen definieren</h4>
+  <p>Mit den CSS-Eigenschaften <code>overflow-x</code> & <code>overflow-y</code> können wir das Overflow-Verhalten pro Achse einzeln einstellen.</p>
+
+  <h3>Beispiele Overflow-Hidden</h3>
+  <div class="small-box overflow-hidden">
+    <img src="./img/giphy.gif">
+  </div>
+</body>
+</html>

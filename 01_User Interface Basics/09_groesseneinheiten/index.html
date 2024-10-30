@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Größeneinheiten</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>CSS-Größeneinheiten</h1>
+    <p>
+      Alle CSS-Größeneinheiten sind komplett austauschbar. Überall wo wir z.B.
+      Pixel nutzen können, können wir auch alle anderen Einheiten nutzen.
+    </p>
+    <h2>Pixel</h2>
+    <p>
+      Der Pixel ist eine absolute Einheit. Ein Pixel ist auf allen Geräten
+      gleich groß. Die optische Größe ist damit auf allen Geräten gleich groß.
+    </p>
+    <p style="font-size: 24px">Dieser Text ist 24px groß.</p>
+    <p style="font-size: 12px">Dieser Text ist 12px groß.</p>
+    <div class="box" style="width: 200px; height: 100px">
+      Diese Box ist 200px breit & 100px hoch.
+    </div>
+    <hr>
+    <h2>Prozent</h2>
+    <p>
+      Relative Größeneinheit. Prozentzahl bezieht sich immer auf die Größe des
+      Elternelementes (bzw. Containers).
+    </p>
+    <div class="box" style="width: 50%">Diese Box ist 50% breit</div>
+    <div class="box" style="width: 25%">Diese Box ist 25% breit</div>
+    <div class="box" style="width: 50%; height: 200px">
+      Diese Box ist 50% * 200px
+      <div class="child-box" style="width: 30%; height: 50%">
+        Diese Box ist 30% breit & 50% hoch.
+      </div>
+    </div>
+    <p>
+      Der <code>body</code> hat keine definierte Höhe. Daher können wir hier
+      auch nicht die Höhe in Prozent angeben:
+    </p>
+    <div class="box" style="width: 50%; height: 50%">
+      Diese Box ist 50% breit & 50% hoch. Aber die Höhe wird ignoriert...
+    </div>
+    <hr>
+    <h2>Em</h2>
+    <p>
+      Em ist eine relative Größe und bezieht sich auf die Schriftgröße des
+      Elements.
+    </p>
+    <p>
+      Wenn die Schriftgröße des Elements 16px ist, dann ist 1em sind 16px & 2em
+      sind 32px.
+    </p>
+    <div class="box" style="width: 10em; height: 10em">
+      Diese Box ist 10em breit & 10em hoch. 10em sind hier 160px, da die
+      Standard-Schriftgröße bei 16px liegt.
+    </div>
+    <hr>
+    <h2>Rem</h2>
+    <p>Rem ist eine relative Größe. Rem steht für "Root Em". Steht im Verhältnis zur Schriftgröße des Root-Elements (html-Tag).</p>
+    <p>Rem ist unser Standard für das Setzen von Schriftgrößen. Damit skalieren unsere Schriften sauber, wenn ein Nutzer seine Basis-Schriftgröße verändert.</p>
+    <div class="box" style="width: 10rem; height: 10rem">
+      Diese Box ist 10rem breit & 10rem hoch. 10rem sind hier 160px, da die Standard-Schriftgröße bei 16px liegt.
+  </div>
+  <p style="font-size: 2rem;">Diese Schrift ist 2rem groß (32px).</p>
+  <p style="font-size: 0.75rem;">Diese Schrift ist 0.75rem groß (12px).</p>
+  <hr>
+  <h2>VH & VW</h2>
+  <p>Vorteil: Ihr könnt immer die Größe relativ zur Größe des Browser-Fensters setzen</p>
+  <p>vh (view height) -> Höhe des Fensters</p>
+  <p>1vh == 1% der Fensterhöhe && 100vh == 100% der Fensterhöhe</p>
+  <p>vw (view width) -> Breite des Fensters</p>
+  <p>1vw == 1% der Fensterbreite && 100vw == 100% der Fensterbreite</p>
+  <div class="box" style="width: 50vw; height: 50vh;">
+    Diese Box ist 50vw breit & 50vh hoch
+</div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Flexbox</h1>
+  <p>Die CSS Flexbox ist ein Layout-Modell, das die Struktur von Boxen in einem Container optimiert. Die Flexbox bietet eine flexible Möglichkeit Layouts zu gestalten und ist besonders nützlich für responsives Design.</p>
+  <p>Mit der Einstellung <code>display: flex</code> machen wir aus einem Container eine Flexbox:</p>
+  <h3>Unsere erste Flexbox</h3>
+  <p>Innerhalb der Flexbox können wir ganz einfach eine variable Anzahl an Elementen darstellen. Die Art und Weise der Anordung definieren wir mit den Einstellunge <code>flex-direction</code> & <code>flex-wrap</code>.</p>
+  <p>Mit <code>flex-flow</code> können wir <code>flex-direction & flex-wrap</code> zusammen setzen.</p>
+  <section class="flex-container-01">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+    <div>06</div>
+    <div>07</div>
+    <div>08</div>
+  </section>
+
+  <h3>Ausrichtung der Inhalte mit <code>justify-content</code></h3>
+  <p>Mit <code>justify-content</code> können wir die Anordnung der Elemente entlang der Hauptachse definieren</p>
+  <section class="flex-container-02">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <!-- <div>04</div> -->
+  </section>
+
+  <h3>Ausrichtung der Inhalte mit <code>align-items</code></h3>
+  <p>Mit <code>align-items</code> können wir die Anordnung der Elemente entlang der Querachse definieren</p>
+  <section class="flex-container-03">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </section>
+
+  <h3>Ausrichtung mehrerer Zeilen im Flexbox-Container mit <code>align-content</code></h3>
+  <p>Mit <code>align-content</code> können wir die Ausrichtung mehrerer Zeilen innerhalb des Containers definieren.</p>
+  <section class="flex-container-04">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+    <div>06</div>
+    <div>07</div>
+    <div>08</div>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+    <div>06</div>
+    <div>07</div>
+    <div>08</div>
+  </section>
+
+  <h3>Die Flexbox hilft uns auch bei einigen Layout-Herausforderungen, die wir bereits hatten:</h3>
+  <h4>Einfache relative Unterteilung eines Containers:</h4>
+  <section class="flex-container-05">
+    <div>30%</div>
+    <div>50%</div>
+    <div>20%</div>
+  </section>
+  <h4>Einfache horizontale & vertikale Zentrierung:</h4>
+  <section class="flex-container-06">
+    <div>Ich bin zentriert</div>
+    <!-- <div>
+      <div>Ich bin innerhalb des Containers</div>
+      <div>Ich auch</div>
+    </div>
+    <div>Ich bin auch hier</div> -->
+  </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root {
+  font-family: sans-serif;
+}
+
+.heart-icon {
+  width: 200px;
+  height: auto;
+  /* filter: blur(4px); */
+}
+
+.heart-icon-svg {
+  width: 200px;
+  height: auto;
+
+  /* Farbe des SVG setzen */
+  fill: rgb(105, 83, 233);
+  
+  /* filter: blur(4px); */
+}
+
+.house-icon {
+  /* Größe vom Icon setzen wir mit font-size */
+  font-size: 32px;
+
+  background-color: rgb(228, 228, 129);
+  padding: 4px;
+  border-radius: 8px;
+}

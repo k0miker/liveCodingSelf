@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #353a40;
+  --bg-color-btn: #09aa16;
+  --font-color-light: #fff;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: var(--bg-color);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--font-color-light);
+}
+
+/* MAIN */
+main h2 {
+  padding: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+}
+
+main p {
+  padding: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+}
+
+/* STYLE VARIANTE 1 */
+/* form {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+
+textarea {
+  width: 10rem;
+  max-height: 300px;
+  max-width: 300px;
+  overflow: auto;
+}
+
+.btn {
+  cursor: pointer;
+  max-width: fit-content;
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--font-color-light);
+  border-radius: 0.5rem;
+  background-color: var(--bg-color-btn);
+} */
+
+/* STYLE VARIANTE 2 */
+/* form {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+label {
+  margin-bottom: 1rem;
+}
+
+label[for="comments"] {
+  margin-bottom: 0;
+}
+
+input {
+  display: block;
+}
+
+textarea {
+  width: 10rem;
+  max-height: 300px;
+  max-width: 300px;
+  overflow: auto;
+}
+
+.btn {
+  cursor: pointer;
+  max-width: fit-content;
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--font-color-light);
+  border-radius: 0.5rem;
+  background-color: var(--bg-color-btn);
+} */
+
+/* STYLE VARIANTE 3 */
+form {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 10rem;
+  max-height: 300px;
+  max-width: 300px;
+  overflow: auto;
+}
+
+.btn {
+  cursor: pointer;
+  max-width: fit-content;
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--font-color-light);
+  border-radius: 0.5rem;
+  background-color: var(--bg-color-btn);
+}

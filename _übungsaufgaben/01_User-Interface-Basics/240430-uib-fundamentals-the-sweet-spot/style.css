@@ -1,0 +1,52 @@
+.sweet-spot {
+  background-color: #ef6fad;
+  color: #eadce2;
+}
+
+h2 {
+  background-color: #d8d2d5;
+  color: #ff1ac6;
+}
+
+.p-1 {
+  background-color: hotpink;
+}
+
+h3 {
+  background-color: yellow;
+}
+
+/* Liste mit Links */
+ul,
+.link-area {
+  background-color: rgb(54, 194, 219);
+  list-style-type: none;
+}
+
+.link-area {
+  padding-left: 2.5rem;
+}
+
+.contact-link {
+  color: rgb(27, 211, 227);
+  font-weight: bold;
+  /* font-weight: 600; */
+}
+
+
+/* Task 3 */
+h3:hover {
+  color: blue;
+}
+
+a:active {
+  color: red;
+}
+
+a:visited {
+  color: yellowgreen;
+}
+
+a:hover {
+  color: purple;
+}

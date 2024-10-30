@@ -1,0 +1,22 @@
+h1, 
+b, 
+/* h2 ~ button => Das button-Element, welches das nächste Geschwister-Element von h2 ist */
+h2 ~ button, 
+div, 
+body {
+  color: greenyellow;
+}
+
+h2,
+p,
+header div {
+  color: palegoldenrod;
+}
+
+
+
+/* Es gibt mehrere besondere CSS-Selektoren zur Auswahl von verwandten Elementen : */
+
+/* h1 ~ p => Alle <p>-Elemente, die Geschwister von einem h1-Element sind
+h1 + p => Das p-Element, welches ein direkter Nachbar zum h1-Element ist (direkt folgendes Geschwister-Element)
+h1 > p => Alle p-Elemente, die ein h1-Element als direktes Eltern-Element haben. */

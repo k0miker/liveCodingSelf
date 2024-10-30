@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <!-- Created with Emmet: main#wrapper.bordered>div#inner.bordered -->
+    <main id="wrapper" class="square border-big">
+      <div id="inner" class="square pinkybox"></div>
+    </main>
+
+    <style>
+      .square {
+        /* If aspect-ratio is new, experiment to see what it does */
+        aspect-ratio: 1;
+      }
+      .border-big {
+        border-width: 0.5em;
+      }
+      #wrapper {
+        width: 300px;
+        border-style: solid;
+        background: lightblue;
+      }
+      #inner {
+        width: 100px;
+      }
+      .pinkybox {
+        background: hotpink;
+        color: lightblue;
+        border-style: dashed;
+      }
+    </style>
+  </body>
+</html>
