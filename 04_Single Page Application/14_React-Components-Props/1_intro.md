@@ -92,3 +92,33 @@ const App = () => {
 	)
 }
 ```
+
+Wer erinnert sich an das **Destructuring** von Objekten?
+- Info:  Props ist ein Objekt
+
+    ```js
+    // Destructuring 1
+    const Welcome = (props) => {
+        const { name } = props
+        return <h1>Hello, {name}</h1>
+    };
+
+    export default Welcome;
+    ```
+
+    ```js
+    // Destructuring 2
+    const Welcome = ({ name }) => {
+        return <h1>Hello, {name}</h1>
+    };
+
+    export default Welcome
+    ```
+
+## Zusammenfassung
+
+- React-Apps bestehen aus Komponenten
+- Komponenten können verschachtelt werden
+- Komponenten sind Funktionen
+- Komponenten geben JSX zurück
+- Komponenten übergeben Daten mittels Props

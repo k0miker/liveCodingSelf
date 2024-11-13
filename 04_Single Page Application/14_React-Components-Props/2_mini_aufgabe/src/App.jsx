@@ -1,23 +1,24 @@
-import ProductList from "./components/ProductList";
-
+import WinCheck
+  from "./components/WinCheck";
 const App = () => {
 
-  const number = Math.round( Math.random() * 20 ); //  Zufallszahl zwischen 0 und 20
+  // Hier kurz schon mal auf Aufgabe 2 eingehen
+
+  const number = Math.round(Math.random() * 20); //  Zufallszahl zwischen 0 und 20
 
 
   return (
     <>
       <div>
-        
+
         <h1>React Rockt </h1>
         <p>Deine Zahl lautet {number}</p>
 
         {/* Conditional Rendering */}
-        { number === 20 ? <h2>Du hast Gewonnen (Rum und Döner)!</h2> : <p>Mach nochmal!</p> }
 
+      <WinCheck num={number}/>
       </div>
       <hr />
-      <ProductList productName="Kissen"/>
     </>
   )
 }
