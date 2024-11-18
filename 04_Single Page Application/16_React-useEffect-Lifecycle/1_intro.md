@@ -50,7 +50,7 @@
         useEffect(() => {
             // Wenn du den nachfolgenden console.log zweimal siehst, 
             // liegt es wahrscheinlich an <StrictMode>
-            // Versuche, ohn in main.jsx auszukommentieren
+            // Versuche, den Strictmode in main.jsx auszukommentieren
             console.log("Counter useEffect")
             return () => console.log("Counter useEffect cleanup")
         }, [])

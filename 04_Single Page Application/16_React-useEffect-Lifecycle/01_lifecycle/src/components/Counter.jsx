@@ -5,7 +5,7 @@ const Counter = () => {
   useEffect(() => {
     console.log("Counter.jsx: side-effect");
     return () => console.log("Unmount: Counter.jsx || cleanup");
-  }, []); // Ein Leeres Array bedeuted, dass edr useEffect nur 1x undzwar beim Rendern ausgeführt wird.
+  }, []); // Ein Leeres Array bedeuted, dass der useEffect nur 1x und zwar beim Rendern ausgeführt wird.
 
   console.log("Mounted: Counter.jsx | Count is: ", count);
   return (
